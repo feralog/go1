@@ -47,13 +47,8 @@ async function init() {
         await loadAllQuestions();
         console.log('Questões carregadas com sucesso');
         
-        // Tenta carregar dados do usuário
-        if (loadUserData()) {
-            currentUser = getUsername();
-            showModuleSelectionScreen();
-        } else {
-            showLoginScreen();
-        }
+        // Always start at the login screen with the main menu
+        showLoginScreen();
         
         // Configura os event listeners
         setupEventListeners();
@@ -502,6 +497,9 @@ function convertMarkdownToHTML(markdown) {
     // Remove carriage returns
     html = html.replace(/\r/g, '');
 
+    // Process tables first (before other processing)
+    html = processMarkdownTables(html);
+
     // Headers (must be done in order from h6 to h1)
     html = html.replace(/^###### (.*$)/gim, '<h6>$1</h6>');
     html = html.replace(/^##### (.*$)/gim, '<h5>$1</h5>');
@@ -595,7 +593,107 @@ function convertMarkdownToHTML(markdown) {
     html = html.replace(/<\/ol><\/p>/g, '</ol>');
     html = html.replace(/<p><pre>/g, '<pre>');
     html = html.replace(/<\/pre><\/p>/g, '</pre>');
+    html = html.replace(/<p><table>/g, '<table>');
+    html = html.replace(/<\/table><\/p>/g, '</table>');
 
+    return html;
+}
+
+/**
+ * Processa tabelas markdown e converte para HTML
+ * @param {string} text - Texto com possíveis tabelas markdown
+ * @returns {string} Texto com tabelas convertidas para HTML
+ */
+function processMarkdownTables(text) {
+    const lines = text.split('\n');
+    const result = [];
+    let inTable = false;
+    let tableRows = [];
+    let alignments = [];
+
+    for (let i = 0; i < lines.length; i++) {
+        const line = lines[i].trim();
+
+        // Detect table rows (lines with |)
+        if (line.includes('|') && line.split('|').length > 2) {
+            if (!inTable) {
+                inTable = true;
+                tableRows = [];
+            }
+
+            // Check if this is an alignment row (contains only |, :, -, and spaces)
+            if (line.match(/^[\|\:\-\s]+$/)) {
+                // Parse alignments
+                alignments = line.split('|').map(cell => {
+                    const trimmed = cell.trim();
+                    if (trimmed.startsWith(':') && trimmed.endsWith(':')) return 'center';
+                    if (trimmed.endsWith(':')) return 'right';
+                    return 'left';
+                });
+                continue; // Skip alignment row
+            }
+
+            tableRows.push(line);
+        } else {
+            if (inTable) {
+                // End of table, process accumulated rows
+                result.push(convertTableToHTML(tableRows, alignments));
+                inTable = false;
+                tableRows = [];
+                alignments = [];
+            }
+            result.push(line);
+        }
+    }
+
+    // Handle table at end of file
+    if (inTable && tableRows.length > 0) {
+        result.push(convertTableToHTML(tableRows, alignments));
+    }
+
+    return result.join('\n');
+}
+
+/**
+ * Converte linhas de tabela markdown para HTML
+ * @param {string[]} rows - Array de linhas da tabela
+ * @param {string[]} alignments - Array de alinhamentos
+ * @returns {string} HTML da tabela
+ */
+function convertTableToHTML(rows, alignments) {
+    if (rows.length === 0) return '';
+
+    let html = '<table class="table table-striped table-hover">';
+
+    // Header row
+    if (rows.length > 0) {
+        html += '<thead><tr>';
+        const headerCells = rows[0].split('|').filter(cell => cell.trim() !== '');
+        headerCells.forEach((cell, index) => {
+            const align = alignments[index] || 'left';
+            const alignAttr = align !== 'left' ? ` style="text-align: ${align}"` : '';
+            html += `<th${alignAttr}>${cell.trim()}</th>`;
+        });
+        html += '</tr></thead>';
+    }
+
+    // Body rows
+    if (rows.length > 1) {
+        html += '<tbody>';
+        for (let i = 1; i < rows.length; i++) {
+            html += '<tr>';
+            const cells = rows[i].split('|').filter(cell => cell.trim() !== '');
+            cells.forEach((cell, index) => {
+                const align = alignments[index] || 'left';
+                const alignAttr = align !== 'left' ? ` style="text-align: ${align}"` : '';
+                html += `<td${alignAttr}>${cell.trim()}</td>`;
+            });
+            html += '</tr>';
+        }
+        html += '</tbody>';
+    }
+
+    html += '</table>';
     return html;
 }
 
