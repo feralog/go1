@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(fi)",
+      "Bash(done)",
+      "Bash(node:*)",
+      "Bash(cat:*)",
+      "Bash(for file in anatomia.json ciclo_menstrual.json desenvolvimento_puberal.json embrio.json embrio2.json exame_ginecologico.json)",
+      "Bash(do echo \"Fixing $file...\")",
+      "Bash(python:*)",
+      "Bash(git init:*)",
+      "Bash(git add:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
