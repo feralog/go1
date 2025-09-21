@@ -17,13 +17,18 @@ let incorrectAnswers = 0;
 let quizStartTime = null;
 let quizTimer = null;
 let quizSeconds = 0;
+let currentFileType = '';
+let currentFileName = '';
 
 // Elementos DOM
 const screens = {
     login: document.getElementById('login-screen'),
     moduleSelection: document.getElementById('module-selection-screen'),
     quiz: document.getElementById('quiz-screen'),
-    results: document.getElementById('results-screen')
+    results: document.getElementById('results-screen'),
+    resumosSelection: document.getElementById('resumos-selection-screen'),
+    guiasSelection: document.getElementById('guias-selection-screen'),
+    fileReading: document.getElementById('file-reading-screen')
 };
 
 // Inicialização
@@ -93,20 +98,36 @@ function populateModuleList() {
  * Configura todos os event listeners
  */
 function setupEventListeners() {
-    // Start quiz button
+    // Main menu buttons
+    document.getElementById('resumos-btn').addEventListener('click', showResumosSelection);
+    document.getElementById('guias-btn').addEventListener('click', showGuiasSelection);
     document.getElementById('start-quiz-btn').addEventListener('click', handleStartQuiz);
-    
+
+    // Back buttons
+    document.getElementById('resumos-back-btn').addEventListener('click', showLoginScreen);
+    document.getElementById('guias-back-btn').addEventListener('click', showLoginScreen);
+    document.getElementById('file-back-btn').addEventListener('click', handleFileBack);
+
+    // File selection buttons
+    document.querySelectorAll('#resumos-list .list-group-item').forEach(button => {
+        button.addEventListener('click', () => loadFile('resumos', button.dataset.file));
+    });
+
+    document.querySelectorAll('#guias-list .list-group-item').forEach(button => {
+        button.addEventListener('click', () => loadFile('guias', button.dataset.file));
+    });
+
     // Module selection
     document.getElementById('logout-btn').addEventListener('click', handleLogout);
-    
+
     // Quiz
     document.getElementById('quit-quiz-btn').addEventListener('click', quitQuiz);
     document.getElementById('next-question-btn').addEventListener('click', nextQuestion);
-    
+
     // Results
     document.getElementById('retry-module-btn').addEventListener('click', () => startQuiz(currentModule));
     document.getElementById('return-to-modules-btn').addEventListener('click', showModuleSelectionScreen);
-    
+
     // Configura o salvamento automático
     window.addEventListener('beforeunload', saveUserData);
 }
@@ -420,6 +441,205 @@ function generatePerformanceAnalysis(scorePercentage) {
     }
     
     analysisContainer.textContent = analysisText;
+}
+
+/**
+ * Mostra a tela de seleção de resumos
+ */
+function showResumosSelection() {
+    hideAllScreens();
+    screens.resumosSelection.classList.remove('d-none');
+}
+
+/**
+ * Mostra a tela de seleção de guias
+ */
+function showGuiasSelection() {
+    hideAllScreens();
+    screens.guiasSelection.classList.remove('d-none');
+}
+
+/**
+ * Carrega um arquivo para leitura
+ * @param {string} type - Tipo do arquivo ('resumos' ou 'guias')
+ * @param {string} filename - Nome do arquivo
+ */
+async function loadFile(type, filename) {
+    try {
+        currentFileType = type;
+        currentFileName = filename;
+
+        // Busca o arquivo
+        const folderName = type === 'resumos' ? 'Resumos' : 'Guias';
+        const response = await fetch(`GO conteudo/${folderName}/${filename}`);
+
+        if (!response.ok) {
+            throw new Error(`Erro ao carregar arquivo: ${response.status}`);
+        }
+
+        const content = await response.text();
+
+        // Converte markdown para HTML simples
+        const htmlContent = convertMarkdownToHTML(content);
+
+        // Exibe o arquivo
+        showFileReading(type, filename, htmlContent);
+
+    } catch (error) {
+        console.error('Erro ao carregar arquivo:', error);
+        alert('Erro ao carregar o arquivo. Verifique se o arquivo existe.');
+    }
+}
+
+/**
+ * Converte markdown básico para HTML
+ * @param {string} markdown - Conteúdo em markdown
+ * @returns {string} HTML convertido
+ */
+function convertMarkdownToHTML(markdown) {
+    let html = markdown;
+
+    // Remove carriage returns
+    html = html.replace(/\r/g, '');
+
+    // Headers (must be done in order from h6 to h1)
+    html = html.replace(/^###### (.*$)/gim, '<h6>$1</h6>');
+    html = html.replace(/^##### (.*$)/gim, '<h5>$1</h5>');
+    html = html.replace(/^#### (.*$)/gim, '<h4>$1</h4>');
+    html = html.replace(/^### (.*$)/gim, '<h3>$1</h3>');
+    html = html.replace(/^## (.*$)/gim, '<h2>$1</h2>');
+    html = html.replace(/^# (.*$)/gim, '<h1>$1</h1>');
+
+    // Horizontal rules
+    html = html.replace(/^---\s*$/gim, '<hr>');
+
+    // Bold and italic (order matters)
+    html = html.replace(/\*\*\*(.*?)\*\*\*/g, '<strong><em>$1</em></strong>');
+    html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+    html = html.replace(/\*(.*?)\*/g, '<em>$1</em>');
+
+    // Code (inline and blocks)
+    html = html.replace(/```[\s\S]*?```/g, (match) => {
+        return '<pre><code>' + match.replace(/```/g, '').trim() + '</code></pre>';
+    });
+    html = html.replace(/`([^`]+)`/g, '<code>$1</code>');
+
+    // Links
+    html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank">$1</a>');
+
+    // Line breaks and paragraphs
+    html = html.replace(/\n\s*\n/g, '</p><p>');
+    html = html.replace(/\n/g, '<br>');
+
+    // Lists (improved handling)
+    const lines = html.split('<br>');
+    let inList = false;
+    let listType = '';
+    const processedLines = [];
+
+    for (let i = 0; i < lines.length; i++) {
+        const line = lines[i].trim();
+
+        if (line.match(/^[\*\-\+] /)) {
+            if (!inList) {
+                processedLines.push('<ul>');
+                inList = true;
+                listType = 'ul';
+            } else if (listType !== 'ul') {
+                processedLines.push('</ol><ul>');
+                listType = 'ul';
+            }
+            processedLines.push('<li>' + line.replace(/^[\*\-\+] /, '') + '</li>');
+        } else if (line.match(/^\d+\. /)) {
+            if (!inList) {
+                processedLines.push('<ol>');
+                inList = true;
+                listType = 'ol';
+            } else if (listType !== 'ol') {
+                processedLines.push('</ul><ol>');
+                listType = 'ol';
+            }
+            processedLines.push('<li>' + line.replace(/^\d+\. /, '') + '</li>');
+        } else {
+            if (inList) {
+                processedLines.push(listType === 'ul' ? '</ul>' : '</ol>');
+                inList = false;
+                listType = '';
+            }
+            if (line.trim() !== '') {
+                processedLines.push(line);
+            }
+        }
+    }
+
+    if (inList) {
+        processedLines.push(listType === 'ul' ? '</ul>' : '</ol>');
+    }
+
+    html = processedLines.join('<br>');
+
+    // Wrap in paragraphs
+    html = '<p>' + html + '</p>';
+
+    // Clean up
+    html = html.replace(/<p><\/p>/g, '');
+    html = html.replace(/<p><br><\/p>/g, '');
+    html = html.replace(/<br><\/p>/g, '</p>');
+    html = html.replace(/<p><br>/g, '<p>');
+    html = html.replace(/<p><h([1-6])>/g, '<h$1>');
+    html = html.replace(/<\/h([1-6])><\/p>/g, '</h$1>');
+    html = html.replace(/<p><hr><\/p>/g, '<hr>');
+    html = html.replace(/<p><ul>/g, '<ul>');
+    html = html.replace(/<\/ul><\/p>/g, '</ul>');
+    html = html.replace(/<p><ol>/g, '<ol>');
+    html = html.replace(/<\/ol><\/p>/g, '</ol>');
+    html = html.replace(/<p><pre>/g, '<pre>');
+    html = html.replace(/<\/pre><\/p>/g, '</pre>');
+
+    return html;
+}
+
+/**
+ * Mostra a tela de leitura de arquivo
+ * @param {string} type - Tipo do arquivo
+ * @param {string} filename - Nome do arquivo
+ * @param {string} content - Conteúdo HTML
+ */
+function showFileReading(type, filename, content) {
+    hideAllScreens();
+    screens.fileReading.classList.remove('d-none');
+
+    // Define o título baseado no arquivo
+    const titles = {
+        '1exame.md': 'Exame Ginecológico',
+        '2ciclomenstrual.md': 'Ciclo Menstrual',
+        '3embrio.md': 'Embriologia',
+        '4desenvolvimentopuberal.md': 'Desenvolvimento Puberal',
+        '4desenvolvimento_puberal.md': 'Desenvolvimento Puberal'
+    };
+
+    const title = titles[filename] || filename.replace('.md', '');
+    document.getElementById('file-title').textContent = title;
+
+    // Define a cor do cabeçalho
+    const header = document.getElementById('file-header');
+    header.className = `card-header text-white ${type === 'resumos' ? 'bg-info' : 'bg-success'}`;
+
+    // Exibe o conteúdo
+    document.getElementById('file-content').innerHTML = content;
+}
+
+/**
+ * Manipula o botão voltar da tela de arquivo
+ */
+function handleFileBack() {
+    if (currentFileType === 'resumos') {
+        showResumosSelection();
+    } else if (currentFileType === 'guias') {
+        showGuiasSelection();
+    } else {
+        showLoginScreen();
+    }
 }
 
 /**
