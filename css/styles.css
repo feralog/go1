@@ -49,6 +49,8 @@ body {
     border-color: rgba(109, 1, 121, 0.4);
     transform: translateX(5px);
     box-shadow: 0 4px 15px rgba(109, 1, 121, 0.2);
+    color: #2c2c2c;
+    font-weight: 600;
 }
 
 .option-btn.correct {
