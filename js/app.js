@@ -140,10 +140,8 @@ function handleStartQuiz() {
  * Manipula o logout do usuário
  */
 function handleLogout() {
-    if (confirm('Tem certeza que deseja sair? Seu progresso está salvo.')) {
-        currentUser = '';
-        showLoginScreen();
-    }
+    currentUser = '';
+    showLoginScreen();
 }
 
 /**
