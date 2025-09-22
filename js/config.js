@@ -83,6 +83,26 @@ const quizConfig = {
                     id: "propedeutica",
                     name: "Propedêutica",
                     file: "propedeutica"
+                },
+                {
+                    id: "bronquite",
+                    name: "Bronquite",
+                    file: "bronquite"
+                },
+                {
+                    id: "enfisema",
+                    name: "Enfisema",
+                    file: "enfisema"
+                },
+                {
+                    id: "diagnostico_dpoc",
+                    name: "Diagnóstico DPOC",
+                    file: "diagnostico_dpoc"
+                },
+                {
+                    id: "tratamento_dpoc",
+                    name: "Tratamento DPOC",
+                    file: "tratamento_dpoc"
                 }
             ]
         }
