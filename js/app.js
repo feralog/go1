@@ -284,10 +284,18 @@ function updateModuleProgress() {
  * @param {string} module - ID do módulo
  */
 function startQuiz(module) {
+    console.log('Starting quiz for module:', module);
     currentModule = module;
 
     // Obtém as questões do módulo
     currentQuestions = getModuleQuestions(module);
+    console.log('Loaded questions:', currentQuestions.length);
+
+    if (currentQuestions.length === 0) {
+        console.error('No questions found for module:', module);
+        alert('Erro: Nenhuma questão encontrada para este módulo. Verifique se o arquivo JSON foi carregado corretamente.');
+        return;
+    }
 
     // Reinicia as variáveis do quiz
     currentQuestionIndex = 0;
@@ -402,7 +410,15 @@ function showQuizScreen() {
  * Carrega uma questão
  */
 function loadQuestion() {
+    console.log('Loading question index:', currentQuestionIndex, 'of', currentQuestions.length);
     const question = currentQuestions[currentQuestionIndex];
+    console.log('Question object:', question);
+
+    if (!question) {
+        console.error('No question found at index:', currentQuestionIndex);
+        return;
+    }
+
     displayQuestion(question);
 
     // Atualiza o número da questão
