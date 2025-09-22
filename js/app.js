@@ -21,13 +21,17 @@ let quizSeconds = 0;
 let currentFileType = '';
 let currentFileName = '';
 
+// Novas variáveis para navegação livre
+let userAnswers = {}; // Armazena as respostas do usuário {questionIndex: selectedIndex}
+let questionStates = {}; // Armazena estados das questões {questionIndex: 'answered'|'current'|'unanswered'}
+
 // Elementos DOM
 const screens = {
     login: document.getElementById('login-screen'),
     specialtySelection: document.getElementById('specialty-selection-screen'),
     moduleSelection: document.getElementById('module-selection-screen'),
     quiz: document.getElementById('quiz-screen'),
-    results: document.getElementById('results-screen'),
+    review: document.getElementById('review-screen'),
     resumosSelection: document.getElementById('resumos-selection-screen'),
     guiasSelection: document.getElementById('guias-selection-screen'),
     fileReading: document.getElementById('file-reading-screen')
@@ -133,9 +137,9 @@ function setupEventListeners() {
 
     // Quiz
     document.getElementById('quit-quiz-btn').addEventListener('click', quitQuiz);
-    document.getElementById('next-question-btn').addEventListener('click', nextQuestion);
+    document.getElementById('finish-quiz-btn').addEventListener('click', finishQuiz);
 
-    // Results
+    // Review
     document.getElementById('retry-module-btn').addEventListener('click', () => startQuiz(currentModule));
     document.getElementById('return-to-modules-btn').addEventListener('click', showModuleSelectionScreen);
 
@@ -281,27 +285,95 @@ function updateModuleProgress() {
  */
 function startQuiz(module) {
     currentModule = module;
-    
+
     // Obtém as questões do módulo
     currentQuestions = getModuleQuestions(module);
-    
-    // REMOVIDO: Embaralha as questões
-    // shuffleArray(currentQuestions);
-    // Agora as questões ficam na ordem exata do arquivo JSON
-    
+
     // Reinicia as variáveis do quiz
     currentQuestionIndex = 0;
     correctAnswers = 0;
     incorrectAnswers = 0;
-    
+
+    // Reinicia os dados de navegação livre
+    userAnswers = {};
+    questionStates = {};
+
+    // Inicializa estados das questões
+    for (let i = 0; i < currentQuestions.length; i++) {
+        questionStates[i] = 'unanswered';
+    }
+    questionStates[0] = 'current';
+
     // Mostra a tela do quiz
     showQuizScreen();
-    
+
     // Inicia o timer
     startTimer();
-    
+
+    // Gera a navegação de questões
+    generateQuestionNavigation();
+
     // Carrega a primeira questão
     loadQuestion();
+}
+
+/**
+ * Gera a barra de navegação das questões
+ */
+function generateQuestionNavigation() {
+    const navWrapper = document.querySelector('.question-nav-wrapper');
+    navWrapper.innerHTML = '';
+
+    for (let i = 0; i < currentQuestions.length; i++) {
+        const btn = document.createElement('button');
+        btn.className = 'question-nav-btn';
+        btn.textContent = i + 1;
+        btn.dataset.questionIndex = i;
+
+        btn.addEventListener('click', () => navigateToQuestion(i));
+
+        navWrapper.appendChild(btn);
+    }
+
+    updateNavigationStates();
+}
+
+/**
+ * Atualiza os estados visuais da navegação
+ */
+function updateNavigationStates() {
+    const navButtons = document.querySelectorAll('.question-nav-btn');
+
+    navButtons.forEach((btn, index) => {
+        btn.className = 'question-nav-btn';
+
+        if (questionStates[index] === 'current') {
+            btn.classList.add('current');
+        } else if (questionStates[index] === 'answered') {
+            btn.classList.add('answered');
+        }
+    });
+
+    // Atualiza contador de respondidas
+    const answeredCount = Object.keys(userAnswers).length;
+    document.getElementById('answered-count').textContent = `Respondidas: ${answeredCount}/${currentQuestions.length}`;
+}
+
+/**
+ * Navega para uma questão específica
+ * @param {number} questionIndex - Índice da questão
+ */
+function navigateToQuestion(questionIndex) {
+    // Atualiza estados
+    questionStates[currentQuestionIndex] = userAnswers[currentQuestionIndex] !== undefined ? 'answered' : 'unanswered';
+    questionStates[questionIndex] = 'current';
+    currentQuestionIndex = questionIndex;
+
+    // Carrega a questão
+    loadQuestion();
+
+    // Atualiza navegação
+    updateNavigationStates();
 }
 
 /**
@@ -330,23 +402,36 @@ function showQuizScreen() {
  * Carrega uma questão
  */
 function loadQuestion() {
-    if (currentQuestionIndex >= currentQuestions.length) {
-        showResultsScreen();
-        return;
-    }
-    
     const question = currentQuestions[currentQuestionIndex];
     displayQuestion(question);
-    
+
     // Atualiza o número da questão
     document.getElementById('question-number').textContent = `Questão ${currentQuestionIndex + 1}/${currentQuestions.length}`;
-    
+
     // Atualiza o tipo da questão
     document.getElementById('question-type').textContent = question.type === 'conteudista' ? 'Conteudista' : 'Raciocínio';
-    
-    // Atualiza a barra de progresso
-    const progress = ((currentQuestionIndex + 1) / currentQuestions.length) * 100;
+
+    // Atualiza a barra de progresso baseada nas questões respondidas
+    const answeredCount = Object.keys(userAnswers).length;
+    const progress = (answeredCount / currentQuestions.length) * 100;
     document.getElementById('quiz-progress').style.width = `${progress}%`;
+
+    // Mostra/esconde botão de finalizar
+    const finishContainer = document.getElementById('finish-quiz-container');
+    if (currentQuestionIndex === currentQuestions.length - 1) {
+        finishContainer.classList.remove('d-none');
+    } else {
+        finishContainer.classList.add('d-none');
+    }
+
+    // Se a questão já foi respondida, pré-seleciona a resposta
+    if (userAnswers[currentQuestionIndex] !== undefined) {
+        const selectedIndex = userAnswers[currentQuestionIndex];
+        const optionButtons = document.querySelectorAll('.option-btn');
+        if (optionButtons[selectedIndex]) {
+            optionButtons[selectedIndex].classList.add('selected');
+        }
+    }
 }
 
 /**
@@ -386,59 +471,35 @@ function displayQuestion(question) {
  * @param {number} selectedIndex - Índice da opção selecionada
  */
 function handleAnswer(selectedIndex) {
-    // Obtém a questão atual
-    const question = currentQuestions[currentQuestionIndex];
-    const correctIndex = question.correctIndex;
-    const isCorrect = selectedIndex === correctIndex;
-    
-    // Atualiza o contador de respostas
-    if (isCorrect) {
-        correctAnswers++;
-        document.getElementById('correct-count').textContent = `Corretas: ${correctAnswers}`;
-    } else {
-        incorrectAnswers++;
-        document.getElementById('incorrect-count').textContent = `Incorretas: ${incorrectAnswers}`;
-    }
-    
-    // Marca as opções como corretas ou incorretas
+    // Remove seleção anterior
     const optionButtons = document.querySelectorAll('.option-btn');
-    
-    optionButtons.forEach(button => {
-        const index = parseInt(button.dataset.index);
-        
-        if (index === correctIndex) {
-            button.classList.add('correct');
-        } else if (index === selectedIndex) {
-            button.classList.add('incorrect');
-        }
-        
-        // Desabilita todos os botões
-        button.disabled = true;
-    });
-    
-    // Mostra a explicação
-    document.getElementById('explanation-text').textContent = question.explanation;
-    document.getElementById('explanation-container').classList.remove('d-none');
-    
-    // Adiciona efeito de pulse ao container de explicação
-    document.getElementById('explanation-container').classList.add('pulse');
-    setTimeout(() => {
-        document.getElementById('explanation-container').classList.remove('pulse');
-    }, 500);
-    
-    // Atualiza o progresso da questão
-    updateQuestionProgress(currentModule, currentQuestionIndex, isCorrect);
+    optionButtons.forEach(btn => btn.classList.remove('selected'));
+
+    // Marca a nova seleção
+    optionButtons[selectedIndex].classList.add('selected');
+
+    // Armazena a resposta do usuário
+    userAnswers[currentQuestionIndex] = selectedIndex;
+
+    // Atualiza estado da questão
+    questionStates[currentQuestionIndex] = 'answered';
+
+    // Atualiza navegação visual
+    updateNavigationStates();
+
+    // Atualiza progresso na barra
+    const answeredCount = Object.keys(userAnswers).length;
+    const progress = (answeredCount / currentQuestions.length) * 100;
+    document.getElementById('quiz-progress').style.width = `${progress}%`;
 }
 
 /**
- * Avança para a próxima questão
+ * Finaliza o quiz e mostra a tela de revisão
  */
-function nextQuestion() {
-    // Avança para a próxima questão
-    currentQuestionIndex++;
-    
-    // Carrega a próxima questão
-    loadQuestion();
+function finishQuiz() {
+    stopTimer();
+    calculateFinalResults();
+    showReviewScreen();
 }
 
 /**
@@ -452,62 +513,130 @@ function quitQuiz() {
 }
 
 /**
- * Mostra a tela de resultados
+ * Calcula os resultados finais do quiz
  */
-function showResultsScreen() {
-    stopTimer();
-    hideAllScreens();
-    screens.results.classList.remove('d-none');
-    
-    // Calcula a pontuação
-    const totalQuestions = correctAnswers + incorrectAnswers;
-    const scorePercentage = totalQuestions > 0 ? Math.round((correctAnswers / totalQuestions) * 100) : 0;
-    
-    // Atualiza os elementos da tela de resultados
-    document.getElementById('score-percentage').textContent = `${scorePercentage}%`;
-    document.getElementById('final-correct-count').textContent = correctAnswers;
-    document.getElementById('final-incorrect-count').textContent = incorrectAnswers;
-    document.getElementById('total-time').textContent = formatTime(quizSeconds);
-    
-    // Gera a análise de desempenho
-    generatePerformanceAnalysis(scorePercentage);
-    
-    // Atualiza a cor do círculo de pontuação
-    const scoreCircle = document.getElementById('score-circle');
-    if (scorePercentage >= 80) {
-        scoreCircle.style.borderColor = '#198754'; // Verde
-    } else if (scorePercentage >= 60) {
-        scoreCircle.style.borderColor = '#ffc107'; // Amarelo
-    } else if (scorePercentage >= 40) {
-        scoreCircle.style.borderColor = '#fd7e14'; // Laranja
-    } else {
-        scoreCircle.style.borderColor = '#dc3545'; // Vermelho
+function calculateFinalResults() {
+    correctAnswers = 0;
+    incorrectAnswers = 0;
+
+    // Conta respostas corretas e incorretas
+    for (let i = 0; i < currentQuestions.length; i++) {
+        if (userAnswers[i] !== undefined) {
+            const question = currentQuestions[i];
+            if (userAnswers[i] === question.correctIndex) {
+                correctAnswers++;
+            } else {
+                incorrectAnswers++;
+            }
+        }
     }
 }
 
 /**
- * Gera uma análise de desempenho baseada na pontuação
- * @param {number} scorePercentage - Porcentagem de acertos
+ * Mostra a tela de revisão completa
  */
-function generatePerformanceAnalysis(scorePercentage) {
-    const analysisContainer = document.getElementById('performance-analysis');
-    let analysisText = '';
-    
+function showReviewScreen() {
+    hideAllScreens();
+    screens.review.classList.remove('d-none');
+
+    // Calcula a pontuação
+    const totalQuestions = correctAnswers + incorrectAnswers;
+    const scorePercentage = totalQuestions > 0 ? Math.round((correctAnswers / totalQuestions) * 100) : 0;
+
+    // Atualiza elementos da tela de revisão
+    document.getElementById('final-score-circle').textContent = `${scorePercentage}%`;
+    document.getElementById('final-correct-count').textContent = correctAnswers;
+    document.getElementById('final-incorrect-count').textContent = incorrectAnswers;
+    document.getElementById('final-total-time').textContent = formatTime(quizSeconds);
+    document.getElementById('final-score-percentage').textContent = `${scorePercentage}%`;
+
+    // Determina nível de desempenho
+    let performanceLevel = '';
     if (scorePercentage >= 90) {
-        analysisText = 'Excelente! Você domina este conteúdo.';
+        performanceLevel = 'Excelente';
     } else if (scorePercentage >= 80) {
-        analysisText = 'Muito bom! Você tem um bom conhecimento deste conteúdo.';
+        performanceLevel = 'Muito Bom';
     } else if (scorePercentage >= 70) {
-        analysisText = 'Bom! Você está no caminho certo, mas ainda pode melhorar.';
+        performanceLevel = 'Bom';
     } else if (scorePercentage >= 60) {
-        analysisText = 'Regular. Recomendamos revisar este conteúdo novamente.';
-    } else if (scorePercentage >= 40) {
-        analysisText = 'Atenção! Você precisa estudar mais este conteúdo.';
+        performanceLevel = 'Regular';
     } else {
-        analysisText = 'Você precisa dedicar mais tempo ao estudo deste conteúdo.';
+        performanceLevel = 'Precisa Melhorar';
     }
-    
-    analysisContainer.textContent = analysisText;
+    document.getElementById('performance-level').textContent = performanceLevel;
+
+    // Gera a revisão das questões
+    generateQuestionReview();
+}
+
+/**
+ * Gera a revisão detalhada de todas as questões
+ */
+function generateQuestionReview() {
+    const container = document.getElementById('review-questions-container');
+    container.innerHTML = '';
+
+    currentQuestions.forEach((question, index) => {
+        const userAnswer = userAnswers[index];
+        const isCorrect = userAnswer === question.correctIndex;
+        const wasAnswered = userAnswer !== undefined;
+
+        const questionDiv = document.createElement('div');
+        questionDiv.className = 'review-question';
+
+        questionDiv.innerHTML = `
+            <div class="review-question-header">
+                <div class="d-flex justify-content-between align-items-center w-100">
+                    <div class="d-flex align-items-center">
+                        <div class="question-result-icon ${isCorrect ? 'correct' : 'incorrect'} me-3">
+                            ${isCorrect ? '✓' : '✗'}
+                        </div>
+                        <div>
+                            <h5 class="mb-1">Questão ${index + 1}</h5>
+                            <small class="text-muted">${question.type === 'conteudista' ? 'Conteudista' : 'Raciocínio'}</small>
+                        </div>
+                    </div>
+                    <div class="text-end">
+                        ${wasAnswered ? (isCorrect ? '<span class="badge bg-success">Correta</span>' : '<span class="badge bg-danger">Incorreta</span>') : '<span class="badge bg-secondary">Não Respondida</span>'}
+                    </div>
+                </div>
+            </div>
+
+            <div class="question-content">
+                <p class="fw-bold mb-3">${question.question}</p>
+
+                <div class="review-options">
+                    ${question.options.map((option, optIndex) => {
+                        let classes = 'review-option';
+
+                        if (optIndex === question.correctIndex) {
+                            classes += ' correct-answer';
+                        }
+
+                        if (optIndex === userAnswer) {
+                            classes += ' user-answer';
+                            if (!isCorrect) {
+                                classes += ' incorrect';
+                            }
+                        }
+
+                        return `<div class="${classes}">
+                            ${optIndex === userAnswer ? '<i class="fas fa-arrow-right me-2"></i>' : ''}
+                            ${optIndex === question.correctIndex ? '<i class="fas fa-check text-success me-2"></i>' : ''}
+                            ${option}
+                        </div>`;
+                    }).join('')}
+                </div>
+
+                <div class="review-explanation">
+                    <h6><i class="fas fa-lightbulb me-2"></i>Explicação</h6>
+                    <p class="mb-0">${question.explanation}</p>
+                </div>
+            </div>
+        `;
+
+        container.appendChild(questionDiv);
+    });
 }
 
 /**

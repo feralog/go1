@@ -140,6 +140,14 @@
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Question Navigation Bar -->
+                        <div id="question-navigation" class="question-nav-container">
+                            <div class="question-nav-wrapper">
+                                <!-- Navigation buttons will be generated dynamically -->
+                            </div>
+                        </div>
+
                         <div class="card-body">
                             <div class="d-flex justify-content-between mb-3">
                                 <div>
@@ -147,8 +155,7 @@
                                     <span class="badge bg-secondary ms-2" id="question-number"></span>
                                 </div>
                                 <div>
-                                    <span class="badge bg-success" id="correct-count">Corretas: 0</span>
-                                    <span class="badge bg-danger ms-2" id="incorrect-count">Incorretas: 0</span>
+                                    <span class="badge bg-primary" id="answered-count">Respondidas: 0/20</span>
                                 </div>
                             </div>
                             
@@ -157,13 +164,14 @@
                                 <div id="options-container" class="mb-4"></div>
                             </div>
                             
-                            <div id="explanation-container" class="d-none">
-                                <div class="alert alert-info">
-                                    <h5>Explicação:</h5>
-                                    <p id="explanation-text"></p>
+                            <!-- Finish Quiz Button (only shown on last question) -->
+                            <div id="finish-quiz-container" class="d-none mt-4">
+                                <div class="text-center">
+                                    <p class="text-muted">Você chegou à última questão!</p>
+                                    <button id="finish-quiz-btn" class="btn btn-success btn-lg">
+                                        <i class="fas fa-flag-checkered me-2"></i>Finalizar Quiz
+                                    </button>
                                 </div>
-                                
-                                <button id="next-question-btn" class="btn btn-primary w-100">Próxima Questão</button>
                             </div>
                         </div>
                         <div class="card-footer">
@@ -176,49 +184,77 @@
             </div>
         </div>
 
-        <!-- Tela de Resultados -->
-        <div id="results-screen" class="screen d-none">
+        <!-- Tela de Revisão Completa -->
+        <div id="review-screen" class="screen d-none">
             <div class="row justify-content-center">
-                <div class="col-md-8 col-lg-6">
-                    <div class="card shadow-lg mt-5">
+                <div class="col-md-12 col-lg-10">
+                    <div class="card shadow-lg mt-3">
                         <div class="card-header bg-primary text-white">
-                            <h2>Resultados</h2>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h2>Revisão do Quiz</h2>
+                                <div class="text-end">
+                                    <div id="final-score-summary" class="mb-2">
+                                        <span id="final-score-circle" class="score-badge">0%</span>
+                                    </div>
+                                    <div>
+                                        <span class="badge bg-light text-dark me-2">
+                                            <i class="fas fa-check text-success me-1"></i>
+                                            <span id="final-correct-count">0</span> Corretas
+                                        </span>
+                                        <span class="badge bg-light text-dark">
+                                            <i class="fas fa-times text-danger me-1"></i>
+                                            <span id="final-incorrect-count">0</span> Incorretas
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+
                         <div class="card-body">
-                            <div class="text-center mb-4">
-                                <div id="score-circle" class="score-circle mx-auto">
-                                    <span id="score-percentage">0%</span>
-                                </div>
-                            </div>
-
-                            <div class="row text-center mb-4">
-                                <div class="col-6">
-                                    <div class="result-box bg-success text-white p-3 rounded">
-                                        <h3 id="final-correct-count">0</h3>
-                                        <p>Corretas</p>
+                            <div class="review-summary mb-4">
+                                <div class="row text-center">
+                                    <div class="col-md-4">
+                                        <div class="summary-item">
+                                            <i class="fas fa-clock text-primary"></i>
+                                            <div>
+                                                <strong id="final-total-time">00:00</strong>
+                                                <small class="d-block text-muted">Tempo Total</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="summary-item">
+                                            <i class="fas fa-percentage text-success"></i>
+                                            <div>
+                                                <strong id="final-score-percentage">0%</strong>
+                                                <small class="d-block text-muted">Aproveitamento</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="summary-item">
+                                            <i class="fas fa-star text-warning"></i>
+                                            <div>
+                                                <strong id="performance-level">-</strong>
+                                                <small class="d-block text-muted">Desempenho</small>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-6">
-                                    <div class="result-box bg-danger text-white p-3 rounded">
-                                        <h3 id="final-incorrect-count">0</h3>
-                                        <p>Incorretas</p>
-                                    </div>
-                                </div>
                             </div>
 
-                            <div class="mb-4">
-                                <h5>Tempo Total:</h5>
-                                <p id="total-time" class="lead">00:00</p>
+                            <!-- Review Questions Container -->
+                            <div id="review-questions-container">
+                                <!-- Questions will be populated dynamically -->
                             </div>
 
-                            <div class="mb-4">
-                                <h5>Análise de Desempenho:</h5>
-                                <div id="performance-analysis"></div>
-                            </div>
-
-                            <div class="d-grid gap-2">
-                                <button id="retry-module-btn" class="btn btn-primary">Tentar Novamente</button>
-                                <button id="return-to-modules-btn" class="btn btn-secondary">Voltar para Módulos</button>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-center mt-4">
+                                <button id="retry-module-btn" class="btn btn-primary btn-lg">
+                                    <i class="fas fa-redo me-2"></i>Tentar Novamente
+                                </button>
+                                <button id="return-to-modules-btn" class="btn btn-secondary btn-lg">
+                                    <i class="fas fa-arrow-left me-2"></i>Voltar para Módulos
+                                </button>
                             </div>
                         </div>
                     </div>
