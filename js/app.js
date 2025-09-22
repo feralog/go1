@@ -284,14 +284,10 @@ function updateModuleProgress() {
  * @param {string} module - ID do módulo
  */
 function startQuiz(module) {
-    console.log('Starting quiz for module:', module);
-    alert('DEBUG: Starting quiz for module: ' + module);
     currentModule = module;
 
     // Obtém as questões do módulo
     currentQuestions = getModuleQuestions(module);
-    console.log('Loaded questions:', currentQuestions.length);
-    alert('DEBUG: Loaded ' + currentQuestions.length + ' questions');
 
     if (currentQuestions.length === 0) {
         console.error('No questions found for module:', module);
@@ -403,18 +399,15 @@ function showQuizScreen() {
 
     document.getElementById('quiz-title').textContent = title;
 
-    // Reinicia o contador de respostas
-    document.getElementById('correct-count').textContent = `Corretas: 0`;
-    document.getElementById('incorrect-count').textContent = `Incorretas: 0`;
+    // Reinicia o contador de respostas (agora usa answered-count)
+    document.getElementById('answered-count').textContent = `Respondidas: 0/${currentQuestions.length}`;
 }
 
 /**
  * Carrega uma questão
  */
 function loadQuestion() {
-    console.log('Loading question index:', currentQuestionIndex, 'of', currentQuestions.length);
     const question = currentQuestions[currentQuestionIndex];
-    console.log('Question object:', question);
 
     if (!question) {
         console.error('No question found at index:', currentQuestionIndex);
@@ -457,30 +450,11 @@ function loadQuestion() {
  * @param {Object} question - Objeto da questão
  */
 function displayQuestion(question) {
-    console.log('displayQuestion called with:', question);
-
-    // Verifica se os elementos HTML existem
-    const questionTextEl = document.getElementById('question-text');
-    const optionsContainer = document.getElementById('options-container');
-    const questionContainer = document.getElementById('question-container');
-
-    console.log('HTML elements found:', {
-        questionText: !!questionTextEl,
-        optionsContainer: !!optionsContainer,
-        questionContainer: !!questionContainer
-    });
-
-    if (!questionTextEl || !optionsContainer || !questionContainer) {
-        console.error('Required HTML elements not found!');
-        alert('Erro: Elementos HTML necessários não encontrados. Verifique se a página foi carregada corretamente.');
-        return;
-    }
-
     // Exibe o texto da questão
-    questionTextEl.textContent = question.question;
-    console.log('Question text set to:', question.question.substring(0, 50) + '...');
+    document.getElementById('question-text').textContent = question.question;
 
     // Limpa o container de opções
+    const optionsContainer = document.getElementById('options-container');
     optionsContainer.innerHTML = '';
 
     // Adiciona as opções
@@ -496,11 +470,8 @@ function displayQuestion(question) {
         optionsContainer.appendChild(button);
     });
 
-    console.log('Added', question.options.length, 'option buttons');
-
     // Mostra o container de questão
-    questionContainer.classList.remove('d-none');
-    console.log('Question container shown');
+    document.getElementById('question-container').classList.remove('d-none');
 }
 
 /**

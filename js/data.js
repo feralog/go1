@@ -60,8 +60,7 @@ function loadAllQuestions() {
             .then(data => {
                 questionsData[module.id] = data;
                 initializeQuestionProgress(module.id);
-                console.log(`Módulo ${module.id} carregado com sucesso:`, data.length, 'questões');
-                console.log('questionsData agora contém:', Object.keys(questionsData));
+                console.log(`Módulo ${module.id} carregado com sucesso`);
             })
             .catch(error => {
                 console.error(`Erro ao carregar o módulo ${module.id}:`, error);
@@ -69,10 +68,7 @@ function loadAllQuestions() {
             });
     });
 
-    return Promise.all(promises).then(() => {
-        console.log('Todos os módulos carregados. questionsData final:', questionsData);
-        console.log('Módulos disponíveis:', Object.keys(questionsData));
-    });
+    return Promise.all(promises);
 }
 
 /**
@@ -154,9 +150,6 @@ function getUsername() {
  * @returns {Array} Array de questões do módulo
  */
 function getModuleQuestions(module) {
-    console.log('Getting questions for module:', module);
-    console.log('Available modules in questionsData:', Object.keys(questionsData));
-    console.log('Questions for', module, ':', questionsData[module]?.length || 0);
     return questionsData[module] || [];
 }
 
