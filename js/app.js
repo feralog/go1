@@ -453,15 +453,12 @@ function displayQuestion(question) {
         button.dataset.option = index;
         button.dataset.index = index;
         button.textContent = option;
-        
+
         button.addEventListener('click', () => handleAnswer(index));
-        
+
         optionsContainer.appendChild(button);
     });
-    
-    // Esconde o container de explicação
-    document.getElementById('explanation-container').classList.add('d-none');
-    
+
     // Mostra o container de questão
     document.getElementById('question-container').classList.remove('d-none');
 }
