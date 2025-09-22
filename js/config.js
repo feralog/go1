@@ -8,7 +8,7 @@
 // Configuração do quiz
 const quizConfig = {
     // Título principal que aparece na tela de login. Ajuste conforme a sua disciplina.
-    title: "Quiz Médico",
+    title: "Quizzes",
 
     // Nome do localStorage para salvar os dados do usuário. Alterado para evitar conflitos com o template original.
     storageKey: "quizMedicoData",
