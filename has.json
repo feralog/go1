@@ -4,12 +4,12 @@
     "options": [
       "PAS maior que 120 mmHg e menor que 130 mmHg, com PAD menor que 80 mmHg.",
       "PAS maior que 130 mmHg e menor que 140 mmHg, com PAD maior que 80 mmHg e menor que 90 mmHg.",
-      "PAS maior ou igual a 140 mmHg ou PAD maior ou igual a 90 mmHg.",
+      "PAS maior ou igual a 160 mmHg ou PAD maior ou igual a 100 mmHg.",
       "PAS maior que 180 mmHg ou PAD maior que 120 mmHg, caracterizando uma crise.",
       "PAS menor que 120 mmHg e PAD menor que 80 mmHg."
     ],
     "correctIndex": 2,
-    "explanation": "A hipertensão arterial Estágio 2 é definida quando a Pressão Arterial Sistólica (PAS) é maior que 140 mmHg ou a Pressão Arterial Diastólica (PAD) é maior que 90 mmHg [1, 2]. PAS < 120 e PAD < 80 é a PA normal [1].",
+    "explanation": "A hipertensão arterial Estágio 2 é definida quando a Pressão Arterial Sistólica (PAS) é maior que 160 mmHg ou a Pressão Arterial Diastólica (PAD) é maior que 100 mmHg [1, 2]. PAS < 120 e PAD < 80 é a PA normal [1].",
     "type": "conteudista"
   },
   {
