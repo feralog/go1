@@ -61,7 +61,7 @@
       "Segmentos nervosos C5, C6, C7, C8 e T1, que fornecem a inervação principal para toda a região mamária e axilar adjacente."
     ],
     "correctIndex": 1,
-    "explanation": "A inervação da mama é dada pelos segmentos nervosos que vêm de C5, C6, C7, C8 e T1 [1].",
+    "explanation": "A inervação da mama é dada pelos segmentos nervosos que vêm de torácicas [1].",
     "type": "conteudista"
   },
   {
@@ -161,11 +161,11 @@
       "Nervo fibular comum, responsável pela inervação autônoma do mamilo e pela secreção de colostro durante a puberdade.",
       "Nervo vago (X par craniano), que fornece fibras parassimpáticas para a inervação glandular e ductal da mama.",
       "Nervos intercostais laterais e anteriores, cujos ramos cutâneos fornecem a principal sensibilidade da pele da mama.",
-      "Nervo frênico (C3-C5), crucial para a movimentação do diafragma e o controle da dor mamária profunda.",
-      "Nervo ciático (L4-S3), que garante a inervação somática do tecido glandular e dos vasos sanguíneos periféricos."
+      "Nervo frênico, crucial para a movimentação do diafragma e o controle da dor mamária profunda.",
+      "Nervo ciático, que garante a inervação somática do tecido glandular e dos vasos sanguíneos periféricos."
     ],
     "correctIndex": 2,
-    "explanation": "A inervação da mama é fornecida pelos nervos intercostais, derivados dos segmentos C5 a T1 [1], sendo os ramos laterais e anteriores dos intercostais cruciais para a sensibilidade.",
+    "explanation": "A inervação da mama é fornecida pelos nervos intercostais, derivados dos segmentos torácicos [1], sendo os ramos laterais e anteriores dos intercostais cruciais para a sensibilidade.",
     "type": "conteudista"
   },
   {
@@ -185,7 +185,7 @@
     "question": "A drenagem linfática da mama é organizada em três níveis (I, II, III). Qual é o conceito central que justifica a importância da remoção e análise desses linfonodos na abordagem cirúrgica do câncer de mama?",
     "options": [
       "Os linfonodos têm a função exclusiva de drenar o excesso de líquido intersticial e sua remoção melhora o prognóstico ao reduzir o edema local.",
-      "A remoção dos linfonodos é necessária para impedir a transmissão da inervação (C5-T1) para as células tumorais, inibindo o crescimento tumoral.",
+      "A remoção dos linfonodos é necessária para impedir a transmissão da inervação para as células tumorais, inibindo o crescimento tumoral.",
       "Os linfonodos axilares agem como o local de produção primária do estrogênio, e sua remoção é essencial para a inibição hormonal do tumor.",
       "O comprometimento desses linfonodos indica a extensão da disseminação da doença (metástase) e é um fator crucial no estadiamento e prognóstico (mortalidade).",
       "A cadeia linfática axilar é o único local de produção de hemoglobina, e sua remoção é um método de tratamento da anemia induzida pela doença."
@@ -201,10 +201,10 @@
       "Nervo toracodorsal, que inerva o músculo grande dorsal, sendo sua lesão associada à fraqueza na abdução do braço.",
       "Os ramos mediais da artéria torácica interna, o que leva à necrose do tecido glandular e à necessidade de reconstrução imediata.",
       "Nervos intercostais T4-T5, que inervam a pele da mama, resultando apenas em perda de sensibilidade superficial (hipoestesia).",
-      "O plexo braquial (C5-T1), localizado próximo aos linfonodos apicais, cuja lesão pode causar parestesia ou paresia significativa do membro superior."
+      "O plexo braquial, localizado próximo aos linfonodos apicais, cuja lesão pode causar parestesia ou paresia significativa do membro superior."
     ],
     "correctIndex": 4,
-    "explanation": "O plexo braquial, com seus segmentos C5 a T1, fornece a inervação principal para a mama e o braço adjacente [1]. Os linfonodos apicais (Nível III) estão próximos a essa região, tornando-a vulnerável à lesão nervosa, resultando em sintomas no membro superior.",
+    "explanation": "O plexo braquial fornece a inervação principal para a mama e o braço adjacente [1]. Os linfonodos apicais (Nível III) estão próximos a essa região, tornando-a vulnerável à lesão nervosa, resultando em sintomas no membro superior.",
     "type": "raciocínio"
   },
   {
