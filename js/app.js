@@ -164,8 +164,18 @@ function selectSpecialty(specialtyId) {
  * Manipula o clique no botão Quiz (mostra módulos diretamente)
  */
 function showModuleSelectionForQuiz() {
-    // Simplesmente mostra a lista de módulos rolando a página
-    document.getElementById('module-list').scrollIntoView({ behavior: 'smooth' });
+    // Mostra e popula a lista de módulos
+    const moduleList = document.getElementById('module-list');
+    moduleList.style.display = 'block';
+
+    // Popula a lista de módulos da especialidade
+    populateModuleList();
+
+    // Atualiza o progresso dos módulos
+    updateModuleProgress();
+
+    // Rola suavemente para a lista de módulos
+    moduleList.scrollIntoView({ behavior: 'smooth' });
 }
 
 /**
@@ -218,11 +228,12 @@ function showModuleSelectionScreen() {
         guiasBtn.style.display = 'none';
     }
 
-    // Popula a lista de módulos da especialidade
-    populateModuleList();
+    // Inicialmente esconde a lista de módulos
+    const moduleList = document.getElementById('module-list');
+    moduleList.style.display = 'none';
 
-    // Atualiza o progresso dos módulos
-    updateModuleProgress();
+    // Limpa a lista de módulos
+    moduleList.innerHTML = '';
 }
 
 /**
