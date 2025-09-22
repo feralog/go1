@@ -285,11 +285,13 @@ function updateModuleProgress() {
  */
 function startQuiz(module) {
     console.log('Starting quiz for module:', module);
+    alert('DEBUG: Starting quiz for module: ' + module);
     currentModule = module;
 
     // Obtém as questões do módulo
     currentQuestions = getModuleQuestions(module);
     console.log('Loaded questions:', currentQuestions.length);
+    alert('DEBUG: Loaded ' + currentQuestions.length + ' questions');
 
     if (currentQuestions.length === 0) {
         console.error('No questions found for module:', module);
@@ -455,13 +457,32 @@ function loadQuestion() {
  * @param {Object} question - Objeto da questão
  */
 function displayQuestion(question) {
-    // Exibe o texto da questão
-    document.getElementById('question-text').textContent = question.question;
-    
-    // Limpa o container de opções
+    console.log('displayQuestion called with:', question);
+
+    // Verifica se os elementos HTML existem
+    const questionTextEl = document.getElementById('question-text');
     const optionsContainer = document.getElementById('options-container');
+    const questionContainer = document.getElementById('question-container');
+
+    console.log('HTML elements found:', {
+        questionText: !!questionTextEl,
+        optionsContainer: !!optionsContainer,
+        questionContainer: !!questionContainer
+    });
+
+    if (!questionTextEl || !optionsContainer || !questionContainer) {
+        console.error('Required HTML elements not found!');
+        alert('Erro: Elementos HTML necessários não encontrados. Verifique se a página foi carregada corretamente.');
+        return;
+    }
+
+    // Exibe o texto da questão
+    questionTextEl.textContent = question.question;
+    console.log('Question text set to:', question.question.substring(0, 50) + '...');
+
+    // Limpa o container de opções
     optionsContainer.innerHTML = '';
-    
+
     // Adiciona as opções
     question.options.forEach((option, index) => {
         const button = document.createElement('button');
@@ -475,8 +496,11 @@ function displayQuestion(question) {
         optionsContainer.appendChild(button);
     });
 
+    console.log('Added', question.options.length, 'option buttons');
+
     // Mostra o container de questão
-    document.getElementById('question-container').classList.remove('d-none');
+    questionContainer.classList.remove('d-none');
+    console.log('Question container shown');
 }
 
 /**
