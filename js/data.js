@@ -21,13 +21,16 @@ let userData = {
  * Inicializa o objeto questionsData com os módulos configurados
  */
 function initializeQuestionsData() {
-    quizConfig.modules.forEach(module => {
-        questionsData[module.id] = [];
-        
-        // Inicializa o progresso para este módulo se não existir
-        if (!userData.progress[module.id]) {
-            userData.progress[module.id] = {};
-        }
+    // Inicializa para todos os módulos de todas as especialidades
+    Object.values(quizConfig.specialties).forEach(specialty => {
+        specialty.modules.forEach(module => {
+            questionsData[module.id] = [];
+
+            // Inicializa o progresso para este módulo se não existir
+            if (!userData.progress[module.id]) {
+                userData.progress[module.id] = {};
+            }
+        });
     });
 }
 
@@ -38,9 +41,14 @@ function initializeQuestionsData() {
 function loadAllQuestions() {
     // Inicializa o objeto de dados
     initializeQuestionsData();
-    
-    // Cria um array de promessas para carregar cada módulo
-    const promises = quizConfig.modules.map(module => {
+
+    // Cria um array de promessas para carregar cada módulo de todas as especialidades
+    const allModules = [];
+    Object.values(quizConfig.specialties).forEach(specialty => {
+        allModules.push(...specialty.modules);
+    });
+
+    const promises = allModules.map(module => {
         // CORREÇÃO: Remove a barra inicial para buscar arquivos na mesma pasta
         return fetch(`${module.file}.json`)
             .then(response => {
@@ -59,7 +67,7 @@ function loadAllQuestions() {
                 alert(`Erro ao carregar o módulo ${module.name}. Verifique se o arquivo ${module.file}.json existe.`);
             });
     });
-    
+
     return Promise.all(promises);
 }
 
@@ -180,18 +188,22 @@ function calculateModuleProgress(module) {
 }
 
 /**
- * Calcula o progresso geral de todos os módulos
+ * Calcula o progresso geral dos módulos da especialidade atual
  * @returns {number} Porcentagem de progresso geral (0-100)
  */
 function calculateOverallProgress() {
-    const modules = quizConfig.modules.map(module => module.id);
+    if (!currentSpecialty || !quizConfig.specialties[currentSpecialty]) {
+        return 0;
+    }
+
+    const modules = quizConfig.specialties[currentSpecialty].modules.map(module => module.id);
     let totalProgress = 0;
-    
+
     modules.forEach(module => {
         totalProgress += calculateModuleProgress(module);
     });
-    
-    return Math.round(totalProgress / modules.length);
+
+    return modules.length > 0 ? Math.round(totalProgress / modules.length) : 0;
 }
 
 /**
@@ -240,9 +252,11 @@ function clearUserData() {
         lastSession: null
     };
     
-    // Inicializa o progresso para cada módulo
-    quizConfig.modules.forEach(module => {
-        userData.progress[module.id] = {};
+    // Inicializa o progresso para cada módulo de todas as especialidades
+    Object.values(quizConfig.specialties).forEach(specialty => {
+        specialty.modules.forEach(module => {
+            userData.progress[module.id] = {};
+        });
     });
     
     localStorage.removeItem(quizConfig.storageKey);

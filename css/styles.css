@@ -386,6 +386,78 @@ body {
     background: linear-gradient(135deg, #28a745 0%, #20c997 100%) !important;
 }
 
+/* Estilos para seleção de especialidade */
+.specialty-btn {
+    padding: 20px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.specialty-btn:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    border-color: currentColor;
+}
+
+.specialty-btn i {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.specialty-btn strong {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.specialty-btn small {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Especialidades específicas */
+.btn-outline-primary.specialty-btn:hover {
+    background: linear-gradient(135deg, #6D0179 0%, #448DCB 100%);
+    color: white;
+    border-color: transparent;
+}
+
+.btn-outline-danger.specialty-btn:hover {
+    background: linear-gradient(135deg, #dc3545 0%, #fd7e14 100%);
+    color: white;
+    border-color: transparent;
+}
+
+/* Ajustes para o layout de especialidade */
+#specialty-actions .btn {
+    min-height: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#specialty-actions .btn i {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Layout responsivo para ações da especialidade */
+@media (max-width: 768px) {
+    #specialty-actions .d-md-flex {
+        flex-direction: column;
+    }
+
+    #specialty-actions .btn {
+        margin-bottom: 0.5rem;
+    }
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
     .card {
@@ -409,5 +481,17 @@ body {
 
     .markdown-content h2 {
         font-size: 1.3rem;
+    }
+
+    .specialty-btn {
+        padding: 15px;
+    }
+
+    .specialty-btn i {
+        font-size: 1.5rem;
+    }
+
+    .specialty-btn strong {
+        font-size: 1rem;
     }
 }

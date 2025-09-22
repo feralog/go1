@@ -9,6 +9,7 @@
 
 // Variáveis globais
 let currentUser = '';
+let currentSpecialty = '';
 let currentModule = '';
 let currentQuestions = [];
 let currentQuestionIndex = 0;
@@ -23,6 +24,7 @@ let currentFileName = '';
 // Elementos DOM
 const screens = {
     login: document.getElementById('login-screen'),
+    specialtySelection: document.getElementById('specialty-selection-screen'),
     moduleSelection: document.getElementById('module-selection-screen'),
     quiz: document.getElementById('quiz-screen'),
     results: document.getElementById('results-screen'),
@@ -53,8 +55,7 @@ async function init() {
         // Configura os event listeners
         setupEventListeners();
         
-        // Popula a lista de módulos
-        populateModuleList();
+        // Não popula a lista inicialmente - será feito após seleção da especialidade
         
     } catch (error) {
         console.error('Erro ao inicializar o aplicativo:', error);
@@ -63,28 +64,34 @@ async function init() {
 }
 
 /**
- * Popula a lista de módulos na tela de seleção
+ * Popula a lista de módulos na tela de seleção baseado na especialidade
  */
 function populateModuleList() {
     const moduleList = document.getElementById('module-list');
     moduleList.innerHTML = '';
-    
-    quizConfig.modules.forEach(module => {
+
+    if (!currentSpecialty || !quizConfig.specialties[currentSpecialty]) {
+        return;
+    }
+
+    const specialty = quizConfig.specialties[currentSpecialty];
+
+    specialty.modules.forEach(module => {
         const button = document.createElement('button');
         button.className = 'list-group-item list-group-item-action module-btn';
         button.dataset.module = module.id;
-        
+
         const progress = calculateModuleProgress(module.id);
-        
+
         button.innerHTML = `
             <div class="d-flex justify-content-between align-items-center">
                 <span>${module.name}</span>
                 <span class="badge bg-primary rounded-pill module-progress" data-module="${module.id}">${progress}%</span>
             </div>
         `;
-        
+
         button.addEventListener('click', () => startQuiz(module.id));
-        
+
         moduleList.appendChild(button);
     });
 }
@@ -93,15 +100,24 @@ function populateModuleList() {
  * Configura todos os event listeners
  */
 function setupEventListeners() {
-    // Main menu buttons
+    // Login screen
+    document.getElementById('enter-system-btn').addEventListener('click', showSpecialtySelection);
+
+    // Specialty selection
+    document.getElementById('go-specialty-btn').addEventListener('click', () => selectSpecialty('go'));
+    document.getElementById('cardio-specialty-btn').addEventListener('click', () => selectSpecialty('cardio'));
+    document.getElementById('specialty-back-btn').addEventListener('click', showLoginScreen);
+
+    // Main menu buttons (in module selection screen)
     document.getElementById('resumos-btn').addEventListener('click', showResumosSelection);
     document.getElementById('guias-btn').addEventListener('click', showGuiasSelection);
-    document.getElementById('start-quiz-btn').addEventListener('click', handleStartQuiz);
+    document.getElementById('start-quiz-btn').addEventListener('click', showModuleSelectionForQuiz);
 
     // Back buttons
-    document.getElementById('resumos-back-btn').addEventListener('click', showLoginScreen);
-    document.getElementById('guias-back-btn').addEventListener('click', showLoginScreen);
+    document.getElementById('resumos-back-btn').addEventListener('click', showModuleSelectionScreen);
+    document.getElementById('guias-back-btn').addEventListener('click', showModuleSelectionScreen);
     document.getElementById('file-back-btn').addEventListener('click', handleFileBack);
+    document.getElementById('back-to-specialty-btn').addEventListener('click', showSpecialtySelection);
 
     // File selection buttons
     document.querySelectorAll('#resumos-list .list-group-item').forEach(button => {
@@ -128,12 +144,28 @@ function setupEventListeners() {
 }
 
 /**
- * Manipula o início do quiz
+ * Mostra a tela de seleção de especialidade
  */
-function handleStartQuiz() {
+function showSpecialtySelection() {
+    hideAllScreens();
+    screens.specialtySelection.classList.remove('d-none');
+}
+
+/**
+ * Seleciona uma especialidade e vai para o menu da especialidade
+ */
+function selectSpecialty(specialtyId) {
+    currentSpecialty = specialtyId;
     currentUser = 'Usuário';
-    setUsername(currentUser);
     showModuleSelectionScreen();
+}
+
+/**
+ * Manipula o clique no botão Quiz (mostra módulos diretamente)
+ */
+function showModuleSelectionForQuiz() {
+    // Simplesmente mostra a lista de módulos rolando a página
+    document.getElementById('module-list').scrollIntoView({ behavior: 'smooth' });
 }
 
 /**
@@ -158,10 +190,37 @@ function showLoginScreen() {
 function showModuleSelectionScreen() {
     hideAllScreens();
     screens.moduleSelection.classList.remove('d-none');
-    
-    // Atualiza o nome do usuário
-    document.getElementById('user-display').textContent = currentUser;
-    
+
+    if (!currentSpecialty || !quizConfig.specialties[currentSpecialty]) {
+        showSpecialtySelection();
+        return;
+    }
+
+    const specialty = quizConfig.specialties[currentSpecialty];
+
+    // Atualiza o título e subtítulo da especialidade
+    document.getElementById('specialty-title').textContent = specialty.name;
+    document.getElementById('specialty-subtitle').textContent = `Escolha uma das opções abaixo`;
+
+    // Mostra/esconde botões baseado na especialidade
+    const resumosBtn = document.getElementById('resumos-btn');
+    const guiasBtn = document.getElementById('guias-btn');
+
+    if (specialty.hasResumos) {
+        resumosBtn.style.display = 'block';
+    } else {
+        resumosBtn.style.display = 'none';
+    }
+
+    if (specialty.hasGuias) {
+        guiasBtn.style.display = 'block';
+    } else {
+        guiasBtn.style.display = 'none';
+    }
+
+    // Popula a lista de módulos da especialidade
+    populateModuleList();
+
     // Atualiza o progresso dos módulos
     updateModuleProgress();
 }
@@ -240,13 +299,17 @@ function startQuiz(module) {
 function showQuizScreen() {
     hideAllScreens();
     screens.quiz.classList.remove('d-none');
-    
-    // Define o título do quiz
-    const moduleConfig = quizConfig.modules.find(m => m.id === currentModule);
+
+    // Define o título do quiz baseado na especialidade atual
+    let moduleConfig = null;
+    if (currentSpecialty && quizConfig.specialties[currentSpecialty]) {
+        moduleConfig = quizConfig.specialties[currentSpecialty].modules.find(m => m.id === currentModule);
+    }
+
     const title = moduleConfig ? moduleConfig.name : currentModule;
-    
+
     document.getElementById('quiz-title').textContent = title;
-    
+
     // Reinicia o contador de respostas
     document.getElementById('correct-count').textContent = `Corretas: 0`;
     document.getElementById('incorrect-count').textContent = `Incorretas: 0`;

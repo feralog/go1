@@ -26,14 +26,45 @@
                         <div class="card-body text-center">
                             <p class="mb-4 text-muted">Bem-vindo ao sistema de quiz educacional</p>
                             <div class="d-grid gap-3">
-                                <button id="resumos-btn" class="btn btn-info btn-lg">
-                                    <i class="fas fa-book me-2"></i>Resumos
+                                <button id="enter-system-btn" class="btn btn-primary btn-lg">
+                                    <i class="fas fa-arrow-right me-2"></i>Entrar no Sistema
                                 </button>
-                                <button id="guias-btn" class="btn btn-success btn-lg">
-                                    <i class="fas fa-map me-2"></i>Guias
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tela de Seleção de Especialidade -->
+        <div id="specialty-selection-screen" class="screen d-none">
+            <div class="row justify-content-center">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card shadow-lg mt-5">
+                        <div class="card-header bg-primary text-white text-center">
+                            <h2>Selecione a Especialidade</h2>
+                            <p class="mb-0">Escolha a área de estudo</p>
+                        </div>
+                        <div class="card-body text-center">
+                            <div class="d-grid gap-3">
+                                <button id="go-specialty-btn" class="btn btn-outline-primary btn-lg specialty-btn" data-specialty="go">
+                                    <i class="fas fa-venus me-2"></i>
+                                    <div>
+                                        <strong>Ginecologia e Obstetrícia</strong>
+                                        <br><small class="text-muted">Resumos, Guias e Quiz</small>
+                                    </div>
                                 </button>
-                                <button id="start-quiz-btn" class="btn btn-primary btn-lg">
-                                    <i class="fas fa-play me-2"></i>Quiz
+                                <button id="cardio-specialty-btn" class="btn btn-outline-danger btn-lg specialty-btn" data-specialty="cardio">
+                                    <i class="fas fa-heartbeat me-2"></i>
+                                    <div>
+                                        <strong>Cardiologia e Pneumologia</strong>
+                                        <br><small class="text-muted">Quiz</small>
+                                    </div>
+                                </button>
+                            </div>
+                            <div class="mt-4">
+                                <button id="specialty-back-btn" class="btn btn-secondary">
+                                    <i class="fas fa-arrow-left me-2"></i>Voltar
                                 </button>
                             </div>
                         </div>
@@ -49,14 +80,32 @@
                     <div class="card shadow-lg mt-5">
                         <div class="card-header bg-primary text-white">
                             <div class="d-flex justify-content-between align-items-center">
-                                <h2>Selecione o Módulo</h2>
                                 <div>
-                                    <span id="user-display" class="me-2"></span>
+                                    <h2 id="specialty-title">Selecione o Módulo</h2>
+                                    <small id="specialty-subtitle" class="text-light"></small>
+                                </div>
+                                <div>
+                                    <button id="back-to-specialty-btn" class="btn btn-sm btn-light me-2">Trocar Especialidade</button>
                                     <button id="logout-btn" class="btn btn-sm btn-light">Sair</button>
                                 </div>
                             </div>
                         </div>
                         <div class="card-body">
+                            <!-- Specialty-specific action buttons -->
+                            <div id="specialty-actions" class="mb-4">
+                                <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                                    <button id="resumos-btn" class="btn btn-info btn-lg flex-fill">
+                                        <i class="fas fa-book me-2"></i>Resumos
+                                    </button>
+                                    <button id="guias-btn" class="btn btn-success btn-lg flex-fill">
+                                        <i class="fas fa-map me-2"></i>Guias
+                                    </button>
+                                    <button id="start-quiz-btn" class="btn btn-primary btn-lg flex-fill">
+                                        <i class="fas fa-play me-2"></i>Quiz
+                                    </button>
+                                </div>
+                            </div>
+
                             <div class="list-group" id="module-list">
                                 <!-- Os módulos serão adicionados dinamicamente pelo JavaScript -->
                             </div>
