@@ -57,11 +57,11 @@
       "Níveis de HDL-c abaixo de 40 mg/dL em homens ou 50 mg/dL em mulheres, independentemente da concentração de LDL-c ou Triglicerídeos.",
       "Aumento isolado do LDL-c (maior ou igual a 160 mg/dL) com Triglicerídeos normais (abaixo de 150 mg/dL em jejum).",
       "Elevação exclusiva de Triglicerídeos (TG maior ou igual a 175 mg/dL sem jejum) com LDL-c ou Colesterol Total normais.",
-      "Aumento do Colesterol LDL (LDL-c ou não-HDL) associado à elevação dos níveis de Triglicerídeos (TG $\ge$ 150 mg/dL em jejum ou $\ge$ 175 mg/dL sem jejum).",
+      "Aumento do Colesterol LDL (LDL-c ou não-HDL) associado à elevação dos níveis de Triglicerídeos (TG $\\ge$ 150 mg/dL em jejum ou $\\ge$ 175 mg/dL sem jejum).",
       "Colesterol Total (CT) maior ou igual a 310 mg/dL em adultos, desde que todas as causas de dislipidemia secundária tenham sido previamente excluídas."
     ],
     "correctIndex": 3,
-    "explanation": "A Hiperlipidemia mista é definida pelo aumento do LDL-c (ou do não-HDL) e também pela elevação dos Triglicerídeos (TG $\ge$ 150 mg/dL em jejum ou $\ge$ 175 mg/dL sem jejum) [5].",
+    "explanation": "A Hiperlipidemia mista é definida pelo aumento do LDL-c (ou do não-HDL) e também pela elevação dos Triglicerídeos (TG $\\ge$ 150 mg/dL em jejum ou $\\ge$ 175 mg/dL sem jejum) [5].",
     "type": "conteudista"
   },
   {

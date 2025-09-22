@@ -30,12 +30,12 @@
     "options": [
       "Diminuição da frequência cardíaca e do relaxamento diastólico, o que melhora a perfusão coronária e previne o remodelamento ventricular.",
       "Aumento da reabsorção renal de sódio e água, o que diminui a pré-carga e reduz os sintomas de congestão periférica.",
-      "Aumento da frequência cardíaca (via receptores $\beta_1$) e vasoconstrição periférica (via receptores $\alpha_1$), o que aumenta a pós-carga, SVR e estimula a hipertrofia ventricular, piorando a IC.",
+      "Aumento da frequência cardíaca (via receptores $\\beta_1$) e vasoconstrição periférica (via receptores $\\alpha_1$), o que aumenta a pós-carga, SVR e estimula a hipertrofia ventricular, piorando a IC.",
       "Ativação das células justaglomerulares renais, o que leva à liberação de Peptídeos Natriuréticos (BNP/ANP) e vasodilatação.",
       "Redução da contratilidade dos miócitos remanescentes, o que leva à dilatação ventricular e ao subsequente aumento da fração de ejeção."
     ],
     "correctIndex": 2,
-    "explanation": "O baixo débito cardíaco ativa o SNS, que libera Norepinefrina e Adrenalina. A ação em receptores $\beta_1$ no coração aumenta a frequência cardíaca e a contratilidade dos miócitos remanescentes. A ação em $\alpha_1$ nos vasos aumenta a Resistência Vascular Sistêmica (SVR) e a pós-carga, o que induz hipertrofia e dilatação, piorando a IC [5-7].",
+    "explanation": "O baixo débito cardíaco ativa o SNS, que libera Norepinefrina e Adrenalina. A ação em receptores $\\beta_1$ no coração aumenta a frequência cardíaca e a contratilidade dos miócitos remanescentes. A ação em $\\alpha_1$ nos vasos aumenta a Resistência Vascular Sistêmica (SVR) e a pós-carga, o que induz hipertrofia e dilatação, piorando a IC [5-7].",
     "type": "conteudista"
   },
   {
@@ -108,7 +108,7 @@
     "options": [
       "Quente-Seco (A): Bem perfundido e sem congestão; tratamento é Acompanhamento Clínico.",
       "Quente-Congesto (B): Bem perfundido, mas congesto; tratamento é Diurético.",
-      "Frio-Congesto (C): Mal perfundido e congesto; tratamento é Dobutamina $\pm$ Diurético.",
+      "Frio-Congesto (C): Mal perfundido e congesto; tratamento é Dobutamina $\\pm$ Diurético.",
       "Frio-Seco (L): Mal perfundido e sem congestão; tratamento é Hidratação.",
       "Frio-Congesto (L): Mal perfundido e congesto; tratamento é Hidratação."
     ],
@@ -217,13 +217,13 @@
       "IC por Cardiomiopatia Dilatada; achado definitivo seria uma elevação do NT-proBNP acima de 4000 pg/mL e presença de ondas Q no ECG."
     ],
     "correctIndex": 2,
-    "explanation": "O paciente apresenta FEVE $\ge 50\%$ e Hipertrofia Ventricular Esquerda, o que é altamente sugestivo de ICFEp (Falência Diastólica), comumente causada por hipertensão [3, 4, 28]. O diagnóstico definitivo da IC Esquerda é confirmado por uma PCWP > 18 mmHg no Cateterismo de Swan-Ganz [21].",
+    "explanation": "O paciente apresenta FEVE $\\ge 50\\%$ e Hipertrofia Ventricular Esquerda, o que é altamente sugestivo de ICFEp (Falência Diastólica), comumente causada por hipertensão [3, 4, 28]. O diagnóstico definitivo da IC Esquerda é confirmado por uma PCWP > 18 mmHg no Cateterismo de Swan-Ganz [21].",
     "type": "raciocínio"
   },
   {
     "question": "Um paciente com IC Aguda chega apresentando dispneia ao tomar banho, PA 110/70 mmHg, FC 110 bpm, Tempo de Enchimento Capilar (TEC) de 1,5 segundos (quente), e crepitantes bilaterais (congesto). Ele descompensou após ingerir 3L de água/dia. Qual o perfil hemodinâmico e qual a intervenção terapêutica inicial mais apropriada?",
     "options": [
-      "Perfil C (Frio-Congesto); o tratamento deve ser Dobutamina $\pm$ Diurético, pois a perfusão está inadequada (frio).",
+      "Perfil C (Frio-Congesto); o tratamento deve ser Dobutamina $\\pm$ Diurético, pois a perfusão está inadequada (frio).",
       "Perfil B (Quente-Congesto); o tratamento deve ser Diurético (ex: Furosemida), pois a perfusão está adequada (quente) e a causa primária é a retenção de volume (ingesta excessiva).",
       "Perfil L (Frio-Seco); o tratamento deve ser Hidratação, devido à baixa pressão e perfusão inadequada.",
       "Perfil A (Quente-Seco); o tratamento deve ser apenas Acompanhamento Clínico e reavaliação da terapia crônica.",
@@ -238,12 +238,12 @@
     "options": [
       "Cardiodesfibrilador Implantável (CDI), indicado apenas se a FEVE for inferior a 25% e houver arritmia ventricular prévia.",
       "Sistema de Assistência Ventricular Esquerda (LVAD), reservado apenas como ponte para o transplante cardíaco em pacientes refratários.",
-      "Terapia de Ressincronização Cardíaca (CRT), indicada em pacientes com FEVE $\le 35\%$ e LBBB (ou QRS alargado), pois melhora a sincronia ventricular.",
+      "Terapia de Ressincronização Cardíaca (CRT), indicada em pacientes com FEVE $\\le 35\\%$ e LBBB (ou QRS alargado), pois melhora a sincronia ventricular.",
       "Bomba de Balão Intra-Aórtico (IABP), indicado apenas no manejo agudo do choque cardiogênico para melhorar a perfusão coronária diastólica.",
       "Implante de marca-passo biventricular, independentemente do LBBB ou FEVE, para otimizar a frequência cardíaca em bradicardia sinusal."
     ],
     "correctIndex": 2,
-    "explanation": "A Terapia de Ressincronização Cardíaca (CRT) é indicada em pacientes com LVEF $\le 35\%$ e Bloqueio de Ramo Esquerdo (LBBB), pois corrige a dessincronia ventricular, melhorando potencialmente a FEVE [31].",
+    "explanation": "A Terapia de Ressincronização Cardíaca (CRT) é indicada em pacientes com LVEF $\\le 35\\%$ e Bloqueio de Ramo Esquerdo (LBBB), pois corrige a dessincronia ventricular, melhorando potencialmente a FEVE [31].",
     "type": "raciocínio"
   },
   {
