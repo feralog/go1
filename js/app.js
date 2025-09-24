@@ -138,6 +138,7 @@ function setupEventListeners() {
     // Quiz
     document.getElementById('quit-quiz-btn').addEventListener('click', quitQuiz);
     document.getElementById('finish-quiz-btn').addEventListener('click', finishQuiz);
+    document.getElementById('next-question-btn').addEventListener('click', nextQuestion);
 
     // Review
     document.getElementById('retry-module-btn').addEventListener('click', () => startQuiz(currentModule));
@@ -383,6 +384,16 @@ function navigateToQuestion(questionIndex) {
 }
 
 /**
+ * Avança para a próxima questão sem exigir resposta
+ */
+function nextQuestion() {
+    // Verifica se não estamos na última questão
+    if (currentQuestionIndex < currentQuestions.length - 1) {
+        navigateToQuestion(currentQuestionIndex + 1);
+    }
+}
+
+/**
  * Mostra a tela do quiz
  */
 function showQuizScreen() {
@@ -427,12 +438,18 @@ function loadQuestion() {
     const progress = (answeredCount / currentQuestions.length) * 100;
     document.getElementById('quiz-progress').style.width = `${progress}%`;
 
-    // Mostra/esconde botão de finalizar
+    // Mostra/esconde botões de navegação baseado na posição da questão
     const finishContainer = document.getElementById('finish-quiz-container');
+    const nextQuestionContainer = document.getElementById('next-question-container');
+
     if (currentQuestionIndex === currentQuestions.length - 1) {
+        // Última questão: mostra botão finalizar, esconde próxima questão
         finishContainer.classList.remove('d-none');
+        nextQuestionContainer.classList.add('d-none');
     } else {
+        // Não é a última questão: esconde botão finalizar, mostra próxima questão
         finishContainer.classList.add('d-none');
+        nextQuestionContainer.classList.remove('d-none');
     }
 
     // Se a questão já foi respondida, pré-seleciona a resposta
