@@ -110,6 +110,7 @@ function setupEventListeners() {
     // Specialty selection
     document.getElementById('go-specialty-btn').addEventListener('click', () => selectSpecialty('go'));
     document.getElementById('cardio-specialty-btn').addEventListener('click', () => selectSpecialty('cardio'));
+    document.getElementById('tc-specialty-btn').addEventListener('click', () => selectSpecialty('tc'));
     document.getElementById('specialty-back-btn').addEventListener('click', showLoginScreen);
 
     // Main menu buttons (in module selection screen)
