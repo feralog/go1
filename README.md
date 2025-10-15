@@ -4,12 +4,26 @@ Este é um template de quiz que permite criar questionários para diferentes mat
 
 ## Estrutura do Projeto
 
-- `index.html` - Página principal do quiz
-- `css/styles.css` - Estilos do quiz
-- `js/config.js` - Configurações personalizáveis
-- `js/data.js` - Gerenciamento de dados e carregamento das questões
-- `js/app.js` - Lógica principal do aplicativo
-- `questoes_modulo1.json`, `questoes_modulo2.json` - Arquivos de exemplo com questões
+```
+├── index.html - Página principal do quiz
+├── css/
+│   └── styles.css - Estilos do quiz
+├── js/
+│   ├── config.js - Configurações personalizáveis
+│   ├── data.js - Gerenciamento de dados e carregamento das questões
+│   └── app.js - Lógica principal do aplicativo
+└── subjects/ - Pasta com todas as especialidades
+    ├── GO/
+    │   ├── GOQuestions/ - Arquivos JSON com questões de GO
+    │   ├── GOImages/ - Imagens das questões de GO
+    │   ├── GOGuias/ - Arquivos markdown com guias
+    │   └── GOResumos/ - Arquivos markdown com resumos
+    └── CardioPneumo/
+        ├── CardioPneumoQuestions/ - Arquivos JSON com questões
+        ├── CardioPneumoImages/ - Imagens das questões
+        ├── CardioPneumoGuias/ - Arquivos markdown com guias
+        └── CardioPneumoResumos/ - Arquivos markdown com resumos
+```
 
 ## Como Personalizar
 
@@ -28,6 +42,7 @@ Edite o arquivo `js/config.js` para personalizar:
 
 Crie arquivos JSON seguindo o formato dos exemplos:
 
+#### Questão sem imagem (padrão):
 ```json
 [
   {
@@ -47,27 +62,81 @@ Crie arquivos JSON seguindo o formato dos exemplos:
 ]
 ```
 
+#### Questão com imagem (opcional):
+```json
+[
+  {
+    "question": "Analise o ECG abaixo. Qual o diagnóstico?",
+    "image": "subjects/CardioPneumo/CardioPneumoImages/ekg1.jpg",
+    "options": [
+      "Fibrilação atrial",
+      "Flutter atrial",
+      "Taquicardia sinusal",
+      "Bloqueio AV de 2º grau"
+    ],
+    "correctIndex": 0,
+    "explanation": "O ECG mostra ondas f irregulares características de fibrilação atrial.",
+    "type": "raciocínio"
+  },
+  ...
+]
+```
+
 Onde:
 - `question`: Texto da pergunta
+- `image`: **(OPCIONAL)** Caminho relativo para a imagem da questão. Se omitido, a questão será exibida sem imagem.
 - `options`: Array com as alternativas
 - `correctIndex`: Índice da alternativa correta (começando em 0)
 - `explanation`: Explicação da resposta
 - `type`: Tipo da questão ("conteudista" ou "raciocínio")
 
-### 3. Adicionando Novos Módulos
+**Nota importante sobre imagens:**
+- O campo `image` é completamente opcional - não é necessário incluí-lo se a questão não tiver imagem
+- Imagens devem estar na pasta `subjects/[Especialidade]/[Especialidade]Images/`
+- Formatos suportados: JPG, PNG, GIF
+- As imagens são hospedadas no próprio GitHub Pages
 
-1. Crie um novo arquivo JSON com suas questões (ex: `questoes_novo_modulo.json`)
-2. Adicione o módulo na configuração em `js/config.js`:
+### 3. Adicionando Imagens às Questões
+
+Para adicionar imagens às questões (ex: ECGs, radiografias, gráficos):
+
+1. Coloque a imagem na pasta da especialidade:
+   - GO: `subjects/GO/GOImages/`
+   - CardioPneumo: `subjects/CardioPneumo/CardioPneumoImages/`
+
+2. No arquivo JSON, adicione o campo `image` com o caminho relativo:
+   ```json
+   {
+     "question": "Analise a imagem. Qual o diagnóstico?",
+     "image": "subjects/CardioPneumo/CardioPneumoImages/nome_da_imagem.jpg",
+     "options": ["...", "...", "...", "..."],
+     "correctIndex": 0,
+     "explanation": "...",
+     "type": "raciocínio"
+   }
+   ```
+
+3. **Importante:** O campo `image` é opcional. Se omitido, a questão funcionará normalmente sem imagem.
+
+### 4. Adicionando Novos Módulos
+
+1. Crie um novo arquivo JSON com suas questões na pasta apropriada (ex: `subjects/GO/GOQuestions/novo_modulo.json`)
+2. Adicione o módulo na configuração em `js/config.js` dentro da especialidade correspondente:
 
 ```javascript
-modules: [
-    // Módulos existentes...
-    {
-        id: "novo_modulo",
-        name: "Nome do Novo Módulo",
-        file: "questoes_novo_modulo"
+specialties: {
+    go: {
+        // ... configurações existentes
+        modules: [
+            // Módulos existentes...
+            {
+                id: "novo_modulo",
+                name: "Nome do Novo Módulo",
+                file: "subjects/GO/GOQuestions/novo_modulo"
+            }
+        ]
     }
-]
+}
 ```
 
 ## Hospedagem no GitHub Pages

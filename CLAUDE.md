@@ -8,12 +8,26 @@ This is a web-based quiz template application designed for educational purposes.
 
 ## File Structure
 
-- `index.html` - Main application page with all screens (login, module selection, quiz, results)
-- `css/styles.css` - Custom styling for the quiz application
-- `js/config.js` - Quiz configuration including title, modules, and storage key
-- `js/data.js` - Data management layer for questions and user progress
-- `js/app.js` - Main application logic and UI controls
-- `*.json` - Question files containing quiz data for different modules
+```
+├── index.html - Main application page with all screens
+├── css/
+│   └── styles.css - Custom styling for the quiz application
+├── js/
+│   ├── config.js - Quiz configuration including title, modules, and storage key
+│   ├── data.js - Data management layer for questions and user progress
+│   └── app.js - Main application logic and UI controls
+└── subjects/ - All specialties organized by subject
+    ├── GO/
+    │   ├── GOQuestions/ - JSON question files for GO
+    │   ├── GOImages/ - Images for GO questions (ECGs, diagrams, etc.)
+    │   ├── GOGuias/ - Markdown guide files
+    │   └── GOResumos/ - Markdown summary files
+    └── CardioPneumo/
+        ├── CardioPneumoQuestions/ - JSON question files
+        ├── CardioPneumoImages/ - Images for questions
+        ├── CardioPneumoGuias/ - Markdown guide files
+        └── CardioPneumoResumos/ - Markdown summary files
+```
 
 ## Architecture
 
@@ -37,6 +51,8 @@ The application uses a centralized configuration in `js/config.js`:
 
 ### Question Format
 Each JSON file contains an array of question objects:
+
+**Standard question (without image):**
 ```json
 {
   "question": "Question text",
@@ -47,12 +63,45 @@ Each JSON file contains an array of question objects:
 }
 ```
 
+**Question with image (optional):**
+```json
+{
+  "question": "Analyze the ECG. What is the diagnosis?",
+  "image": "subjects/CardioPneumo/CardioPneumoImages/ekg1.jpg",
+  "options": ["Option 1", "Option 2", "..."],
+  "correctIndex": 0,
+  "explanation": "Explanation text",
+  "type": "raciocínio"
+}
+```
+
+**Note:** The `image` field is completely optional. Questions without images work exactly as before.
+
 ## Development Workflow
 
 ### Adding New Modules
-1. Create a new JSON file with questions following the format above
-2. Add module configuration to `quizConfig.modules` in `js/config.js`
+1. Create a new JSON file with questions in the appropriate folder (e.g., `subjects/GO/GOQuestions/new_module.json`)
+2. Add module configuration to the specialty in `js/config.js`:
+   ```javascript
+   specialties: {
+       go: {
+           modules: [
+               {
+                   id: "new_module",
+                   name: "New Module Name",
+                   file: "subjects/GO/GOQuestions/new_module"
+               }
+           ]
+       }
+   }
+   ```
 3. The new module will automatically appear in the module selection screen
+
+### Adding Images to Questions
+1. Place images in the specialty's Images folder (e.g., `subjects/CardioPneumo/CardioPneumoImages/`)
+2. Reference the image in the JSON question using the `image` field (optional)
+3. Supported formats: JPG, PNG, GIF
+4. Images are hosted on GitHub Pages alongside the application
 
 ### Customizing for Different Subjects
 1. Update `quizConfig.title` in `js/config.js`
@@ -72,6 +121,9 @@ Each JSON file contains an array of question objects:
 - **Responsive Design**: Works on desktop and mobile devices
 - **Performance Analysis**: Provides feedback based on quiz scores
 - **Multi-Module Support**: Easily extensible to support additional quiz modules
+- **Multi-Specialty Support**: Organize questions by medical specialties (GO, CardioPneumo, etc.)
+- **Image Support**: Optional image display for questions (ECGs, radiographs, diagrams, etc.)
+- **Content Organization**: Separate folders for Questions, Images, Guides, and Summaries per specialty
 
 ## Repository Information
 - **GitHub Repository**: https://github.com/feralog/go1.git
@@ -90,7 +142,9 @@ All quiz JSON files have been processed to randomize answer order while maintain
 
 ## Common Tasks
 - **Change quiz subject**: Edit `quizConfig.title` in `js/config.js`
-- **Add questions**: Create new JSON file and add to `quizConfig.modules`
+- **Add questions**: Create new JSON file in appropriate `subjects/[Specialty]/[Specialty]Questions/` folder and add to `quizConfig.specialties` in `js/config.js`
+- **Add images to questions**: Place images in `subjects/[Specialty]/[Specialty]Images/` and reference them in JSON with the `image` field (optional)
+- **Add new specialty**: Create new folder structure under `subjects/` and add specialty configuration to `quizConfig.specialties`
 - **Reset user data**: Use browser developer tools to clear localStorage or call `clearUserData()` function
 - **Deploy**: Upload all files to web server - no build process required
 - **Randomize answers**: Use the `randomize_simple.js` script if new questions are added

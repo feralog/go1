@@ -470,6 +470,18 @@ function displayQuestion(question) {
     // Exibe o texto da questão
     document.getElementById('question-text').textContent = question.question;
 
+    // Exibe a imagem se existir
+    const imageContainer = document.getElementById('question-image-container');
+    const imageElement = document.getElementById('question-image');
+
+    if (question.image) {
+        imageElement.src = question.image;
+        imageContainer.classList.remove('d-none');
+    } else {
+        imageContainer.classList.add('d-none');
+        imageElement.src = '';
+    }
+
     // Limpa o container de opções
     const optionsContainer = document.getElementById('options-container');
     optionsContainer.innerHTML = '';

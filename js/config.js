@@ -24,32 +24,32 @@ const quizConfig = {
                 {
                     id: "exame_ginecologico",
                     name: "Exame Ginecológico",
-                    file: "exame_ginecologico"
+                    file: "subjects/GO/GOQuestions/exame_ginecologico"
                 },
                 {
                     id: "ciclo_menstrual",
                     name: "Ciclo Menstrual",
-                    file: "ciclo_menstrual"
+                    file: "subjects/GO/GOQuestions/ciclo_menstrual"
                 },
                 {
                     id: "desenvolvimento_puberal",
                     name: "Desenvolvimento Puberal",
-                    file: "desenvolvimento_puberal"
+                    file: "subjects/GO/GOQuestions/desenvolvimento_puberal"
                 },
                 {
                     id: "embriologia",
                     name: "Embriologia",
-                    file: "embrio"
+                    file: "subjects/GO/GOQuestions/embrio"
                 },
                 {
                     id: "embriologia_avancada",
                     name: "Embriologia Avançada",
-                    file: "embrio2"
+                    file: "subjects/GO/GOQuestions/embrio2"
                 },
                 {
                     id: "anatomia",
                     name: "Anatomia",
-                    file: "anatomia"
+                    file: "subjects/GO/GOQuestions/anatomia"
                 }
             ]
         },
@@ -62,47 +62,75 @@ const quizConfig = {
                 {
                     id: "has",
                     name: "Hipertensão Arterial Sistêmica",
-                    file: "has"
+                    file: "subjects/CardioPneumo/CardioPneumoQuestions/has"
                 },
                 {
                     id: "dislipidemias",
                     name: "Dislipidemias",
-                    file: "dislipidemias"
+                    file: "subjects/CardioPneumo/CardioPneumoQuestions/dislipidemias"
                 },
                 {
                     id: "sca",
                     name: "Síndrome Coronariana Aguda",
-                    file: "SCA"
+                    file: "subjects/CardioPneumo/CardioPneumoQuestions/SCA"
                 },
                 {
                     id: "ic",
                     name: "Insuficiência Cardíaca",
-                    file: "IC"
+                    file: "subjects/CardioPneumo/CardioPneumoQuestions/IC"
                 },
                 {
                     id: "propedeutica",
                     name: "Propedêutica",
-                    file: "propedeutica"
+                    file: "subjects/CardioPneumo/CardioPneumoQuestions/propedeutica"
                 },
                 {
                     id: "bronquite",
                     name: "Bronquite",
-                    file: "bronquite"
+                    file: "subjects/CardioPneumo/CardioPneumoQuestions/bronquite"
                 },
                 {
                     id: "enfisema",
                     name: "Enfisema",
-                    file: "enfisema"
+                    file: "subjects/CardioPneumo/CardioPneumoQuestions/enfisema"
                 },
                 {
                     id: "diagnostico_dpoc",
                     name: "Diagnóstico DPOC",
-                    file: "diagnostico_dpoc"
+                    file: "subjects/CardioPneumo/CardioPneumoQuestions/diagnostico_dpoc"
                 },
                 {
                     id: "tratamento_dpoc",
                     name: "Tratamento DPOC",
-                    file: "tratamento_dpoc"
+                    file: "subjects/CardioPneumo/CardioPneumoQuestions/tratamento_dpoc"
+                }
+            ]
+        },
+        tc: {
+            id: "tc",
+            name: "Técnicas Cirúrgicas",
+            hasResumos: true,
+            hasGuias: true,
+            modules: [
+                {
+                    id: "cicatrizacao",
+                    name: "Cicatrização",
+                    file: "subjects/TecnicasCirurgicas/TCQuestions/questoes_cicatrizacao"
+                },
+                {
+                    id: "cicatrizacao_patologica",
+                    name: "Cicatrização Patológica",
+                    file: "subjects/TecnicasCirurgicas/TCQuestions/questoes_cicatrizacao_patologica"
+                },
+                {
+                    id: "coagulacao",
+                    name: "Coagulação",
+                    file: "subjects/TecnicasCirurgicas/TCQuestions/questoes_coagulacao"
+                },
+                {
+                    id: "preoperatorio",
+                    name: "Pré-operatório",
+                    file: "subjects/TecnicasCirurgicas/TCQuestions/questoes_preoperatorio"
                 }
             ]
         }
