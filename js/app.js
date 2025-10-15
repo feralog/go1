@@ -124,15 +124,6 @@ function setupEventListeners() {
     document.getElementById('file-back-btn').addEventListener('click', handleFileBack);
     document.getElementById('back-to-specialty-btn').addEventListener('click', showSpecialtySelection);
 
-    // File selection buttons
-    document.querySelectorAll('#resumos-list .list-group-item').forEach(button => {
-        button.addEventListener('click', () => loadFile('resumos', button.dataset.file));
-    });
-
-    document.querySelectorAll('#guias-list .list-group-item').forEach(button => {
-        button.addEventListener('click', () => loadFile('guias', button.dataset.file));
-    });
-
     // Module selection
     document.getElementById('logout-btn').addEventListener('click', handleLogout);
 
@@ -678,11 +669,96 @@ function generateQuestionReview() {
 }
 
 /**
+ * Mapeamento de arquivos de resumos e guias por especialidade
+ */
+const specialtyFiles = {
+    go: {
+        resumos: [
+            { file: '1exame.md', title: 'Exame Ginecológico', icon: 'file-medical' },
+            { file: '2ciclomenstrual.md', title: 'Ciclo Menstrual', icon: 'calendar-alt' },
+            { file: '3embrio.md', title: 'Embriologia', icon: 'baby' },
+            { file: '4desenvolvimentopuberal.md', title: 'Desenvolvimento Puberal', icon: 'user-graduate' }
+        ],
+        guias: [
+            { file: '1exame.md', title: 'Exame Ginecológico', icon: 'file-medical' },
+            { file: '2ciclomenstrual.md', title: 'Ciclo Menstrual', icon: 'calendar-alt' },
+            { file: '3embrio.md', title: 'Embriologia', icon: 'baby' },
+            { file: '4desenvolvimento_puberal.md', title: 'Desenvolvimento Puberal', icon: 'user-graduate' }
+        ]
+    },
+    cardio: {
+        resumos: [],
+        guias: []
+    },
+    tc: {
+        resumos: [],
+        guias: []
+    }
+};
+
+/**
+ * Popula a lista de resumos baseado na especialidade
+ */
+function populateResumosList() {
+    const resumosList = document.getElementById('resumos-list');
+    resumosList.innerHTML = '';
+
+    if (!currentSpecialty || !specialtyFiles[currentSpecialty]) {
+        resumosList.innerHTML = '<div class="alert alert-info">Nenhum resumo disponível para esta especialidade.</div>';
+        return;
+    }
+
+    const files = specialtyFiles[currentSpecialty].resumos;
+
+    if (files.length === 0) {
+        resumosList.innerHTML = '<div class="alert alert-info">Nenhum resumo disponível para esta especialidade.</div>';
+        return;
+    }
+
+    files.forEach(fileInfo => {
+        const button = document.createElement('button');
+        button.className = 'list-group-item list-group-item-action';
+        button.innerHTML = `<i class="fas fa-${fileInfo.icon} me-2"></i>${fileInfo.title}`;
+        button.addEventListener('click', () => loadFile('resumos', fileInfo.file));
+        resumosList.appendChild(button);
+    });
+}
+
+/**
+ * Popula a lista de guias baseado na especialidade
+ */
+function populateGuiasList() {
+    const guiasList = document.getElementById('guias-list');
+    guiasList.innerHTML = '';
+
+    if (!currentSpecialty || !specialtyFiles[currentSpecialty]) {
+        guiasList.innerHTML = '<div class="alert alert-info">Nenhum guia disponível para esta especialidade.</div>';
+        return;
+    }
+
+    const files = specialtyFiles[currentSpecialty].guias;
+
+    if (files.length === 0) {
+        guiasList.innerHTML = '<div class="alert alert-info">Nenhum guia disponível para esta especialidade.</div>';
+        return;
+    }
+
+    files.forEach(fileInfo => {
+        const button = document.createElement('button');
+        button.className = 'list-group-item list-group-item-action';
+        button.innerHTML = `<i class="fas fa-${fileInfo.icon} me-2"></i>${fileInfo.title}`;
+        button.addEventListener('click', () => loadFile('guias', fileInfo.file));
+        guiasList.appendChild(button);
+    });
+}
+
+/**
  * Mostra a tela de seleção de resumos
  */
 function showResumosSelection() {
     hideAllScreens();
     screens.resumosSelection.classList.remove('d-none');
+    populateResumosList();
 }
 
 /**
@@ -691,6 +767,7 @@ function showResumosSelection() {
 function showGuiasSelection() {
     hideAllScreens();
     screens.guiasSelection.classList.remove('d-none');
+    populateGuiasList();
 }
 
 /**
@@ -703,9 +780,30 @@ async function loadFile(type, filename) {
         currentFileType = type;
         currentFileName = filename;
 
-        // Busca o arquivo
-        const folderName = type === 'resumos' ? 'Resumos' : 'Guias';
-        const response = await fetch(`GO conteudo/${folderName}/${filename}`);
+        // Mapeamento de caminhos por especialidade
+        const specialtyPaths = {
+            go: {
+                resumos: 'subjects/GO/GOResumos',
+                guias: 'subjects/GO/GOGuias'
+            },
+            cardio: {
+                resumos: 'subjects/CardioPneumo/CardioPneumoResumos',
+                guias: 'subjects/CardioPneumo/CardioPneumoGuias'
+            },
+            tc: {
+                resumos: 'subjects/TecnicasCirurgicas/TCResumos',
+                guias: 'subjects/TecnicasCirurgicas/TCGuias'
+            }
+        };
+
+        // Obtém o caminho correto baseado na especialidade
+        const basePath = specialtyPaths[currentSpecialty]?.[type];
+
+        if (!basePath) {
+            throw new Error('Especialidade ou tipo de arquivo inválido');
+        }
+
+        const response = await fetch(`${basePath}/${filename}`);
 
         if (!response.ok) {
             throw new Error(`Erro ao carregar arquivo: ${response.status}`);
