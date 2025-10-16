@@ -5,7 +5,10 @@
       "Bash(mkdir:*)",
       "Bash(git remote:*)",
       "Bash(mv:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nAdd Técnicas Cirúrgicas specialty and reorganize project structure\n\n- Reorganize all quiz content into subjects/ folder structure:\n  - GO questions, guides, and summaries moved to subjects/GO/\n  - CardioPneumo questions moved to subjects/CardioPneumo/\n  - New Técnicas Cirúrgicas specialty added with 4 modules:\n    * Cicatrização (20 questions)\n    * Cicatrização Patológica\n    * Coagulação\n    * Pré-operatório (20 questions)\n- Update config.js with new file paths and TC specialty configuration\n- Create complete folder structure for TC (TCQuestions, TCGuias, TCResumos, TCImages)\n- Update CLAUDE.md documentation to reflect new organization\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git push:*)",
+      "Bash(git commit:*)"
     ],
     "deny": [],
     "ask": []
