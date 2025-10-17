@@ -80,14 +80,14 @@
   {
     "question": "De acordo com as recomendações da American Society of Anesthesiologists (ASA) para o jejum pré-operatório, quais são os tempos mínimos para a ingestão de sólidos e líquidos claros em adultos?",
     "options": [
-      "8 horas para sólidos e 4 horas para líquidos claros.",
-      "4 horas para sólidos e 1 hora para líquidos claros.",
-      "12 horas para sólidos e 8 horas para líquidos claros.",
-      "6 horas para sólidos e 2 horas para líquidos claros.",
-      "2 horas para sólidos e 0 horas para líquidos claros."
+      "8 horas para alimentos sólidos e 4 horas para líquidos não-claros",
+      "4 horas para líquidos não-claros e 6 horas para lanches leves.",
+      "12 horas para alimentos sólidos e 8 horas para líquidos claros.",
+      "2 horas para líquidos claros, 4 horas para líquidos não-claros, 6 horas para lanches leves e 8 horas para alimentos sólidos.",
+      "2 horas para líquidos claros e 4 horas para todos os alimentos sólidos."
     ],
     "correctIndex": 3,
-    "explanation": "A ASA recomenda que adultos suspendam a ingestão de sólidos por pelo menos seis horas e de líquidos claros por duas horas antes da cirurgia. Para um lanche leve, o tempo é de seis horas, e para líquidos não claros (como café), quatro horas.",
+    "explanation": "A ASA recomenda a regra 6-2 para jejum pré-operatório: 2 horas para líquidos claros, 4 horas para líquidos não-claros (como café com leite), 6 horas para lanches leves, e 8 horas para alimentos sólidos. O objetivo principal é prevenir broncoaspiração. A suplementação com fórmulas líquidas ricas em carboidrato 2 horas antes pode reduzir risco de desidratação, hipoglicemia, hipotensão e náuseas/vômitos pós-operatórios.",
     "type": "conteudista"
   },
   {
