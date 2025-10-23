@@ -10,6 +10,7 @@
 // Variáveis globais
 let currentUser = '';
 let currentSpecialty = '';
+let currentSubcategory = '';
 let currentModule = '';
 let currentQuestions = [];
 let currentQuestionIndex = 0;
@@ -29,6 +30,7 @@ let questionStates = {}; // Armazena estados das questões {questionIndex: 'answ
 const screens = {
     login: document.getElementById('login-screen'),
     specialtySelection: document.getElementById('specialty-selection-screen'),
+    subcategorySelection: document.getElementById('subcategory-selection-screen'),
     moduleSelection: document.getElementById('module-selection-screen'),
     quiz: document.getElementById('quiz-screen'),
     review: document.getElementById('review-screen'),
@@ -79,8 +81,18 @@ function populateModuleList() {
     }
 
     const specialty = quizConfig.specialties[currentSpecialty];
+    let modules;
 
-    specialty.modules.forEach(module => {
+    // Get modules from subcategory if applicable, otherwise from specialty
+    if (specialty.hasSubcategories && currentSubcategory && specialty.subcategories[currentSubcategory]) {
+        modules = specialty.subcategories[currentSubcategory].modules;
+    } else if (specialty.modules) {
+        modules = specialty.modules;
+    } else {
+        return;
+    }
+
+    modules.forEach(module => {
         const button = document.createElement('button');
         button.className = 'list-group-item list-group-item-action module-btn';
         button.dataset.module = module.id;
@@ -123,6 +135,7 @@ function setupEventListeners() {
     document.getElementById('guias-back-btn').addEventListener('click', showModuleSelectionScreen);
     document.getElementById('file-back-btn').addEventListener('click', handleFileBack);
     document.getElementById('back-to-specialty-btn').addEventListener('click', showSpecialtySelection);
+    document.getElementById('subcategory-back-btn').addEventListener('click', showSpecialtySelection);
 
     // Module selection
     document.getElementById('logout-btn').addEventListener('click', handleLogout);
@@ -154,6 +167,59 @@ function showSpecialtySelection() {
 function selectSpecialty(specialtyId) {
     currentSpecialty = specialtyId;
     currentUser = 'Usuário';
+
+    const specialty = quizConfig.specialties[specialtyId];
+
+    // Check if specialty has subcategories
+    if (specialty && specialty.hasSubcategories) {
+        showSubcategorySelection();
+    } else {
+        currentSubcategory = '';
+        showModuleSelectionScreen();
+    }
+}
+
+/**
+ * Mostra a tela de seleção de subcategoria
+ */
+function showSubcategorySelection() {
+    hideAllScreens();
+    screens.subcategorySelection.classList.remove('d-none');
+
+    const specialty = quizConfig.specialties[currentSpecialty];
+    if (!specialty || !specialty.hasSubcategories) {
+        showModuleSelectionScreen();
+        return;
+    }
+
+    // Atualiza o título
+    document.getElementById('subcategory-specialty-title').textContent = specialty.name;
+
+    // Popula os botões de subcategoria
+    const container = document.getElementById('subcategory-buttons-container');
+    container.innerHTML = '';
+
+    Object.values(specialty.subcategories).forEach(subcategory => {
+        const button = document.createElement('button');
+        button.className = 'specialty-card btn-outline-primary';
+        button.dataset.subcategory = subcategory.id;
+        button.innerHTML = `
+            <i class="fas fa-book-medical"></i>
+            <div class="specialty-card-content">
+                <strong>${subcategory.name}</strong>
+                <small class="text-muted">Quiz</small>
+            </div>
+        `;
+        button.addEventListener('click', () => selectSubcategory(subcategory.id));
+        container.appendChild(button);
+    });
+}
+
+/**
+ * Seleciona uma subcategoria e vai para a seleção de módulos
+ */
+function selectSubcategory(subcategoryId) {
+    currentSubcategory = subcategoryId;
     showModuleSelectionScreen();
 }
 
@@ -205,9 +271,23 @@ function showModuleSelectionScreen() {
 
     const specialty = quizConfig.specialties[currentSpecialty];
 
-    // Atualiza o título e subtítulo da especialidade
-    document.getElementById('specialty-title').textContent = specialty.name;
+    // Atualiza o título da especialidade/subcategoria
+    let titleText = specialty.name;
+    if (specialty.hasSubcategories && currentSubcategory && specialty.subcategories[currentSubcategory]) {
+        titleText += ` - ${specialty.subcategories[currentSubcategory].name}`;
+    }
+    document.getElementById('specialty-title').textContent = titleText;
     document.getElementById('specialty-subtitle').textContent = `Escolha uma das opções abaixo`;
+
+    // Update back to specialty button to handle subcategories
+    const backToSpecialtyBtn = document.getElementById('back-to-specialty-btn');
+    if (specialty.hasSubcategories && currentSubcategory) {
+        backToSpecialtyBtn.textContent = 'Trocar Categoria';
+        backToSpecialtyBtn.onclick = showSubcategorySelection;
+    } else {
+        backToSpecialtyBtn.textContent = 'Trocar Especialidade';
+        backToSpecialtyBtn.onclick = showSpecialtySelection;
+    }
 
     // Mostra/esconde botões baseado na especialidade
     const resumosBtn = document.getElementById('resumos-btn');
