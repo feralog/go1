@@ -154,6 +154,11 @@ const quizConfig = {
                             id: "sdnefritica",
                             name: "Síndrome Nefrítica",
                             file: "subjects/CardioPneumo/CardioPneumoQuestions/sdnefritica"
+                        },
+                        {
+                            id: "valvulopatias",
+                            name: "Valvulopatias",
+                            file: "subjects/CardioPneumo/CardioPneumoQuestions/valvulopatias"
                         }
                     ]
                 }
