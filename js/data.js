@@ -222,14 +222,25 @@ function calculateOverallProgress() {
         return 0;
     }
 
-    const modules = quizConfig.specialties[currentSpecialty].modules.map(module => module.id);
+    const specialty = quizConfig.specialties[currentSpecialty];
+    let moduleIds = [];
+
+    // Get module IDs based on specialty structure
+    if (specialty.hasSubcategories && currentSubcategory && specialty.subcategories[currentSubcategory]) {
+        // Get modules from current subcategory
+        moduleIds = specialty.subcategories[currentSubcategory].modules.map(module => module.id);
+    } else if (specialty.modules) {
+        // Get modules directly from specialty
+        moduleIds = specialty.modules.map(module => module.id);
+    }
+
     let totalProgress = 0;
 
-    modules.forEach(module => {
+    moduleIds.forEach(module => {
         totalProgress += calculateModuleProgress(module);
     });
 
-    return modules.length > 0 ? Math.round(totalProgress / modules.length) : 0;
+    return moduleIds.length > 0 ? Math.round(totalProgress / moduleIds.length) : 0;
 }
 
 /**

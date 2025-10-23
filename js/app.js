@@ -475,7 +475,14 @@ function showQuizScreen() {
     // Define o título do quiz baseado na especialidade atual
     let moduleConfig = null;
     if (currentSpecialty && quizConfig.specialties[currentSpecialty]) {
-        moduleConfig = quizConfig.specialties[currentSpecialty].modules.find(m => m.id === currentModule);
+        const specialty = quizConfig.specialties[currentSpecialty];
+
+        // Check if specialty has subcategories
+        if (specialty.hasSubcategories && currentSubcategory && specialty.subcategories[currentSubcategory]) {
+            moduleConfig = specialty.subcategories[currentSubcategory].modules.find(m => m.id === currentModule);
+        } else if (specialty.modules) {
+            moduleConfig = specialty.modules.find(m => m.id === currentModule);
+        }
     }
 
     const title = moduleConfig ? moduleConfig.name : currentModule;
