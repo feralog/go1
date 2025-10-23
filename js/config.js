@@ -58,58 +58,71 @@ const quizConfig = {
             name: "Cardiologia e Pneumologia",
             hasResumos: false,
             hasGuias: false,
-            modules: [
-                {
-                    id: "has",
-                    name: "Hipertensão Arterial Sistêmica",
-                    file: "subjects/CardioPneumo/CardioPneumoQuestions/has"
+            hasSubcategories: true,
+            subcategories: {
+                avc1: {
+                    id: "avc1",
+                    name: "AVC 1",
+                    modules: [
+                        {
+                            id: "has",
+                            name: "Hipertensão Arterial Sistêmica",
+                            file: "subjects/CardioPneumo/CardioPneumoQuestions/has"
+                        },
+                        {
+                            id: "dislipidemias",
+                            name: "Dislipidemias",
+                            file: "subjects/CardioPneumo/CardioPneumoQuestions/dislipidemias"
+                        },
+                        {
+                            id: "sca",
+                            name: "Síndrome Coronariana Aguda",
+                            file: "subjects/CardioPneumo/CardioPneumoQuestions/SCA"
+                        },
+                        {
+                            id: "ic",
+                            name: "Insuficiência Cardíaca",
+                            file: "subjects/CardioPneumo/CardioPneumoQuestions/IC"
+                        },
+                        {
+                            id: "propedeutica",
+                            name: "Propedêutica",
+                            file: "subjects/CardioPneumo/CardioPneumoQuestions/propedeutica"
+                        },
+                        {
+                            id: "bronquite",
+                            name: "Bronquite",
+                            file: "subjects/CardioPneumo/CardioPneumoQuestions/bronquite"
+                        },
+                        {
+                            id: "enfisema",
+                            name: "Enfisema",
+                            file: "subjects/CardioPneumo/CardioPneumoQuestions/enfisema"
+                        },
+                        {
+                            id: "diagnostico_dpoc",
+                            name: "Diagnóstico DPOC",
+                            file: "subjects/CardioPneumo/CardioPneumoQuestions/diagnostico_dpoc"
+                        },
+                        {
+                            id: "tratamento_dpoc",
+                            name: "Tratamento DPOC",
+                            file: "subjects/CardioPneumo/CardioPneumoQuestions/tratamento_dpoc"
+                        }
+                    ]
                 },
-                {
-                    id: "dislipidemias",
-                    name: "Dislipidemias",
-                    file: "subjects/CardioPneumo/CardioPneumoQuestions/dislipidemias"
-                },
-                {
-                    id: "sca",
-                    name: "Síndrome Coronariana Aguda",
-                    file: "subjects/CardioPneumo/CardioPneumoQuestions/SCA"
-                },
-                {
-                    id: "ic",
-                    name: "Insuficiência Cardíaca",
-                    file: "subjects/CardioPneumo/CardioPneumoQuestions/IC"
-                },
-                {
-                    id: "propedeutica",
-                    name: "Propedêutica",
-                    file: "subjects/CardioPneumo/CardioPneumoQuestions/propedeutica"
-                },
-                {
-                    id: "bronquite",
-                    name: "Bronquite",
-                    file: "subjects/CardioPneumo/CardioPneumoQuestions/bronquite"
-                },
-                {
-                    id: "enfisema",
-                    name: "Enfisema",
-                    file: "subjects/CardioPneumo/CardioPneumoQuestions/enfisema"
-                },
-                {
-                    id: "diagnostico_dpoc",
-                    name: "Diagnóstico DPOC",
-                    file: "subjects/CardioPneumo/CardioPneumoQuestions/diagnostico_dpoc"
-                },
-                {
-                    id: "tratamento_dpoc",
-                    name: "Tratamento DPOC",
-                    file: "subjects/CardioPneumo/CardioPneumoQuestions/tratamento_dpoc"
-                },
-                {
-                    id: "ecg",
-                    name: "ECG",
-                    file: "subjects/CardioPneumo/CardioPneumoQuestions/ECG"
+                avc2: {
+                    id: "avc2",
+                    name: "AVC 2",
+                    modules: [
+                        {
+                            id: "ecg",
+                            name: "ECG",
+                            file: "subjects/CardioPneumo/CardioPneumoQuestions/ECG"
+                        }
+                    ]
                 }
-            ]
+            }
         },
         tc: {
             id: "tc",
