@@ -23,7 +23,22 @@ let userData = {
 function initializeQuestionsData() {
     // Inicializa para todos os módulos de todas as especialidades
     Object.values(quizConfig.specialties).forEach(specialty => {
-        specialty.modules.forEach(module => {
+        let modules = [];
+
+        // Check if specialty has subcategories
+        if (specialty.hasSubcategories && specialty.subcategories) {
+            // Get modules from all subcategories
+            Object.values(specialty.subcategories).forEach(subcategory => {
+                if (subcategory.modules) {
+                    modules.push(...subcategory.modules);
+                }
+            });
+        } else if (specialty.modules) {
+            // Get modules directly from specialty
+            modules = specialty.modules;
+        }
+
+        modules.forEach(module => {
             questionsData[module.id] = [];
 
             // Inicializa o progresso para este módulo se não existir
@@ -45,7 +60,18 @@ function loadAllQuestions() {
     // Cria um array de promessas para carregar cada módulo de todas as especialidades
     const allModules = [];
     Object.values(quizConfig.specialties).forEach(specialty => {
-        allModules.push(...specialty.modules);
+        // Check if specialty has subcategories
+        if (specialty.hasSubcategories && specialty.subcategories) {
+            // Get modules from all subcategories
+            Object.values(specialty.subcategories).forEach(subcategory => {
+                if (subcategory.modules) {
+                    allModules.push(...subcategory.modules);
+                }
+            });
+        } else if (specialty.modules) {
+            // Get modules directly from specialty
+            allModules.push(...specialty.modules);
+        }
     });
 
     const promises = allModules.map(module => {
@@ -251,14 +277,29 @@ function clearUserData() {
         progress: {},
         lastSession: null
     };
-    
+
     // Inicializa o progresso para cada módulo de todas as especialidades
     Object.values(quizConfig.specialties).forEach(specialty => {
-        specialty.modules.forEach(module => {
+        let modules = [];
+
+        // Check if specialty has subcategories
+        if (specialty.hasSubcategories && specialty.subcategories) {
+            // Get modules from all subcategories
+            Object.values(specialty.subcategories).forEach(subcategory => {
+                if (subcategory.modules) {
+                    modules.push(...subcategory.modules);
+                }
+            });
+        } else if (specialty.modules) {
+            // Get modules directly from specialty
+            modules = specialty.modules;
+        }
+
+        modules.forEach(module => {
             userData.progress[module.id] = {};
         });
     });
-    
+
     localStorage.removeItem(quizConfig.storageKey);
 }
 
