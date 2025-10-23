@@ -119,6 +119,41 @@ const quizConfig = {
                             id: "ecg",
                             name: "ECG",
                             file: "subjects/CardioPneumo/CardioPneumoQuestions/ECG"
+                        },
+                        {
+                            id: "asma",
+                            name: "Asma",
+                            file: "subjects/CardioPneumo/CardioPneumoQuestions/asma"
+                        },
+                        {
+                            id: "dengue",
+                            name: "Dengue",
+                            file: "subjects/CardioPneumo/CardioPneumoQuestions/dengue"
+                        },
+                        {
+                            id: "hipertireoidismo",
+                            name: "Hipertireoidismo",
+                            file: "subjects/CardioPneumo/CardioPneumoQuestions/hipertireoidismo"
+                        },
+                        {
+                            id: "lrarenal",
+                            name: "Lesão Renal Aguda",
+                            file: "subjects/CardioPneumo/CardioPneumoQuestions/lrarenal"
+                        },
+                        {
+                            id: "miocardiopatias",
+                            name: "Miocardiopatias",
+                            file: "subjects/CardioPneumo/CardioPneumoQuestions/miocardiopatias"
+                        },
+                        {
+                            id: "pneumonias",
+                            name: "Pneumonias",
+                            file: "subjects/CardioPneumo/CardioPneumoQuestions/pneumonias"
+                        },
+                        {
+                            id: "sdnefritica",
+                            name: "Síndrome Nefrítica",
+                            file: "subjects/CardioPneumo/CardioPneumoQuestions/sdnefritica"
                         }
                     ]
                 }
