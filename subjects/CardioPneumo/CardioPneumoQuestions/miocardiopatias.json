@@ -1,0 +1,197 @@
+[
+  {
+    "question": "O que caracteriza o conceito de 'Heart Team' na abordagem das valvopatias e qual sua importância na decisão terapêutica?",
+    "options": [
+      "Equipe cirúrgica especializada que define técnica operatória e escolha da prótese valvar mais adequada",
+      "Discussão multidisciplinar entre cardiologista, cirurgião e intervencionista para definir estratégia terapêutica individualizada",
+      "Grupo de enfermagem especializada em cuidados pós-operatórios de cirurgia cardíaca e reabilitação cardiovascular",
+      "Comitê administrativo que avalia viabilidade financeira e autoriza realização de procedimentos cardiológicos complexos",
+      "Equipe de emergência cardiológica disponível 24h para atendimento de complicações agudas valvares"
+    ],
+    "correctIndex": 1,
+    "explanation": "O HEART TEAM é uma discussão MULTIDISCIPLINAR (cardiologista clínico + cirurgião cardíaco + cardiologista intervencionista + anestesista) para definir a melhor estratégia terapêutica INDIVIDUALIZADA para cada paciente. Considera: gravidade da valvopatia, sintomas, comorbidades, risco cirúrgico, anatomia valvar, preferências do paciente. Melhora resultados e qualidade das decisões terapêuticas.",
+    "type": "conteudista"
+  },
+  {
+    "question": "Qual o papel do tratamento clínico (medicamentoso) nas valvopatias em relação ao tratamento intervencionista quando este está indicado?",
+    "options": [
+      "Substitui o tratamento intervencionista quando há melhora sintomática significativa com medicações otimizadas",
+      "Não substitui o intervencionista quando indicado; serve como ponte ou alívio sintomático temporário",
+      "É sempre preferível ao intervencionista devido ao menor risco de complicações e melhor qualidade de vida",
+      "Deve ser iniciado apenas após falha documentada ou contraindicação formal ao tratamento intervencionista",
+      "Apresenta resultados equivalentes ao intervencionista em longo prazo para valvopatias importantes sintomáticas"
+    ],
+    "correctIndex": 1,
+    "explanation": "IMPORTANTE: o tratamento clínico NÃO SUBSTITUI o tratamento INTERVENCIONISTA quando este está indicado. Pode servir como PONTE até cirurgia (filas demoradas), ALÍVIO SINTOMÁTICO ou tratamento de comorbidades, MAS a MELHORA DOS SINTOMAS NÃO CANCELA o procedimento definitivo. Nas valvopatias funcionais (IM/IT secundárias), o tratamento clínico tem papel mais relevante pois a doença é do miocárdio.",
+    "type": "conteudista"
+  },
+  {
+    "question": "Nas valvopatias funcionais (como insuficiência mitral ou tricúspide secundárias), qual é o foco principal do tratamento e por quê?",
+    "options": [
+      "Intervenção valvar precoce com reparo ou troca para prevenir progressão da regurgitação",
+      "Tratamento clínico otimizado para insuficiência cardíaca, pois a doença primária é do miocárdio",
+      "Anticoagulação plena para prevenir eventos tromboembólicos associados à estase sanguínea atrial",
+      "Cardioversão elétrica e controle de ritmo para restaurar função atrial e melhorar coaptação valvar",
+      "Restrição hídrica rigorosa com diuréticos de alça em altas doses para reduzir sobrecarga volêmica"
+    ],
+    "correctIndex": 1,
+    "explanation": "Nas valvopatias FUNCIONAIS (IM/IT secundárias a miocardiopatia), a DOENÇA É DO MIOCÁRDIO (não há lesão estrutural primária da válvula). O tratamento deve FOCAR na OTIMIZAÇÃO da terapia para IC (IECA/BRA, betabloqueador, espironolactona, SGLT2i, diurético). A regurgitação pode MELHORAR com remodelamento reverso do VE. Intervir apenas na válvula não resolve o problema de base.",
+    "type": "conteudista"
+  },
+  {
+    "question": "Quais são os principais tipos de próteses valvares utilizados nas intervenções cirúrgicas e suas características gerais?",
+    "options": [
+      "Biopróteses com durabilidade limitada sem anticoagulação crônica e mecânicas com durabilidade indefinida requerendo anticoagulação",
+      "Próteses autólogas derivadas de tecido do próprio paciente e heterólogas de doador humano compatível",
+      "Próteses absorvíveis que degradam progressivamente e permanentes que mantêm estrutura por tempo indefinido",
+      "Próteses de primeira geração obsoletas e de nova geração com nanotecnologia e biocompatibilidade otimizada",
+      "Próteses valvares completas e anéis de anuloplastia para remodelamento e suporte do anel valvar"
+    ],
+    "correctIndex": 0,
+    "explanation": "Os principais tipos são: BIOPRÓTESES (tecido biológico - porcino ou bovino; durabilidade LIMITADA ~10-15 anos; NÃO requer anticoagulação crônica) e MECÂNICAS (metal/carbono; durabilidade INDEFINIDA; REQUER anticoagulação com varfarina para INR 2-3). Escolha considera: idade, risco hemorrágico, desejo de gravidez, adesão à anticoagulação. Geralmente: bioprótese >65 anos, mecânica <50-60 anos.",
+    "type": "conteudista"
+  },
+  {
+    "question": "Segundo o estadiamento clínico (A-D), em qual estágio a valvopatia importante sintomática está classificada e qual a indicação terapêutica?",
+    "options": [
+      "Estágio A com valvopatia importante sintomática requerendo intervenção imediata conforme indicações classe I",
+      "Estágio B com valvopatia importante sintomática permitindo acompanhamento clínico se fração de ejeção preservada",
+      "Estágio C com valvopatia importante sintomática necessitando otimização clínica prévia antes de considerar intervenção",
+      "Estágio D com valvopatia importante sintomática sendo candidata à intervenção cirúrgica ou percutânea",
+      "Estágio E com valvopatia importante sintomática pós-procedimento necessitando reintervenção urgente"
+    ],
+    "correctIndex": 3,
+    "explanation": "ESTÁGIO D = valvopatia IMPORTANTE SINTOMÁTICA. É CANDIDATO À INTERVENÇÃO (cirurgia convencional, reparo valvar ou procedimento percutâneo - ex: TAVI para EA). A presença de sintomas relacionados à valvopatia importante constitui indicação classe I para procedimento (exceto contraindicações). O Heart Team define a melhor modalidade de intervenção baseado em risco cirúrgico e anatomia.",
+    "type": "conteudista"
+  },
+  {
+    "question": "Paciente de 78 anos com estenose aórtica importante sintomática (dispneia NYHA III), FE 50%. STS score 8% (alto risco cirúrgico). Como o Heart Team deve abordar esse caso?",
+    "options": [
+      "Recusar intervenção devido ao alto risco cirúrgico e manter apenas tratamento clínico paliativo",
+      "Avaliar TAVI como alternativa menos invasiva para paciente de alto risco cirúrgico",
+      "Indicar cirurgia convencional obrigatoriamente pois é o único tratamento definitivo para EA importante",
+      "Aguardar melhora do risco com reabilitação cardíaca e otimização clínica antes de procedimento",
+      "Realizar valvoplastia aórtica por balão como tratamento definitivo devido ao alto risco"
+    ],
+    "correctIndex": 1,
+    "explanation": "EA importante sintomática + ALTO RISCO cirúrgico (STS >8%) = CANDIDATO A TAVI (implante percutâneo de válvula aórtica transcateter). O Heart Team deve avaliar: anatomia aórtica e valvar (TC), acesso vascular, comorbidades, fragilidade, expectativa de vida. TAVI demonstrou resultados superiores ou não-inferiores à cirurgia em pacientes de alto e intermediário risco. Valvoplastia por balão tem resultado transitório (paliativo).",
+    "type": "raciocínio"
+  },
+  {
+    "question": "Homem de 55 anos com insuficiência mitral importante por prolapso (Barlow), assintomático, FE 62%, DSVE 38mm. Ecocardiograma mostra anatomia favorável para reparo. Qual a conduta do Heart Team?",
+    "options": [
+      "IM importante assintomática requer apenas seguimento semestral sem indicação cirúrgica em pacientes assintomáticos",
+      "IM primária importante com anatomia favorável para reparo permite considerar cirurgia precoce pela baixa morbimortalidade",
+      "IM importante deve iniciar tratamento clínico com IECA e betabloqueador para reavaliar função em 1 ano",
+      "IM por prolapso tem indicação de reparo somente se FE <60% ou sintomas limitantes classe III-IV",
+      "IM importante assintomática deve aguardar desenvolvimento de critérios complicadores para então indicar intervenção valvar"
+    ],
+    "correctIndex": 1,
+    "explanation": "IM PRIMÁRIA (degenerativa/Barlow) importante, ASSINTOMÁTICO, anatomia FAVORÁVEL ao REPARO: considerar CIRURGIA PRECOCE (classe IIa). Vantagens: morbimortalidade cirúrgica baixa (~1-2%), resultados duráveis, preservação de FE (cirurgia ANTES da disfunção de VE). Aguardar desenvolvimento de disfunção pode ser tarde demais (remodelamento irreversível). Heart Team pondera risco-benefício individual. Diferente da IM FUNCIONAL (tratar IC otimizada primeiro).",
+    "type": "raciocínio"
+  },
+  {
+    "question": "Mulher de 42 anos com insuficiência mitral importante secundária a miocardiopatia dilatada, FE 28%, NYHA II, em uso de carvedilol, enalapril e furosemida. Qual a melhor abordagem inicial?",
+    "options": [
+      "Cirurgia de troca valvar mitral imediata para interromper progressão da disfunção ventricular",
+      "Otimização do tratamento da IC com espironolactona e SGLT2i antes de considerar intervenção valvar",
+      "MitraClip percutâneo de urgência para reduzir regurgitação e melhorar classe funcional rapidamente",
+      "Transplante cardíaco prioritário pela grave disfunção ventricular e regurgitação mitral severa",
+      "Cardioversão elétrica e amiodarona para restaurar ritmo sinusal e melhorar função ventricular"
+    ],
+    "correctIndex": 1,
+    "explanation": "IM FUNCIONAL (secundária a miocardiopatia) em paciente com IC e FE reduzida: OTIMIZAR tratamento clínico PRIMEIRO. Adicionar: espironolactona (se K+ e função renal OK) + SGLT2i (dapagliflozina/empagliflozina - classe I para ICFEr). Avaliar resposta em 3-6 meses: se remodelamento reverso, IM pode melhorar. Intervenção valvar (MitraClip ou cirurgia) fica reservada para pacientes que permanecem sintomáticos APESAR de tratamento otimizado.",
+    "type": "raciocínio"
+  },
+  {
+    "question": "Qual é a diferença fisiopatológica entre hipertrofia ventricular concêntrica e excêntrica?",
+    "options": [
+      "Hipertrofia concêntrica resulta de sobrecarga pressórica, excêntrica de sobrecarga volêmica crônica",
+      "Hipertrofia concêntrica resulta de aumento simultâneo de massa e volume, excêntrica de massa isolada",
+      "Hipertrofia concêntrica é típica de sobrecarga volêmica, excêntrica de sobrecarga pressórica crônica",
+      "Hipertrofia excêntrica apresenta paredes espessas e cavidade normal, concêntrica cavidade dilatada",
+      "Ambas as formas de hipertrofia ocorrem exclusivamente na miocardiopatia dilatada"
+    ],
+    "correctIndex": 0,
+    "explanation": "A hipertrofia CONCÊNTRICA ocorre em resposta à SOBRECARGA PRESSÓRICA (como na estenose aórtica), onde há espessamento das paredes com cavidade mantida ou reduzida. A hipertrofia EXCÊNTRICA ocorre em SOBRECARGA VOLÊMICA (como nas insuficiências valvares), onde há dilatação da cavidade associada a aumento de massa. Essas adaptações refletem mecanismos compensatórios ao aumento de carga.",
+    "type": "conteudista"
+  },
+  {
+    "question": "Paciente com cardiomiopatia dilatada apresenta fração de ejeção (FE) de 30%. Qual o impacto clínico esperado dessa alteração na função ventricular?",
+    "options": [
+      "Indica função sistólica normal com preservação adequada do débito cardíaco e capacidade funcional",
+      "Reflete disfunção sistólica significativa com sintomas de insuficiência cardíaca e mau prognóstico",
+      "Sugere disfunção diastólica isolada sem comprometimento da função sistólica ou sintomas relevantes",
+      "Representa adaptação fisiológica reversível ao esforço sem necessidade de tratamento medicamentoso específico",
+      "Indica prioridade imediata para transplante cardíaco por falência ventricular irreversível e refratária"
+    ],
+    "correctIndex": 1,
+    "explanation": "FE de 30% indica DISFUNÇÃO SISTÓLICA SIGNIFICATIVA do ventrículo esquerdo, correlacionando-se com sintomas de insuficiência cardíaca, baixa capacidade funcional e pior prognóstico. Essa redução da força contrátil ventricular requer manejo clínico específico e estratificação de risco para possíveis intervenções.",
+    "type": "conteudista"
+  },
+  {
+    "question": "Qual perfil fenotípico caracteriza a cardiomiopatia arritmogênica do ventrículo direito (ARVC) e qual sua principal complicação clínica?",
+    "options": [
+      "Hipertrofia simétrica biventricular progressiva com hipertensão pulmonar secundária e insuficiência tricúspide",
+      "Dilatação e substituição fibrogordurosa do VD com risco de arritmias ventriculares e morte súbita",
+      "Rigidez ventricular progressiva com fibrose difusa e disfunção diastólica restritiva grave",
+      "Dilatação do ventrículo esquerdo isolada sem comprometimento do VD com disfunção sistólica leve",
+      "Espessamento valvar atrioventricular bilateral por infiltração amiloide com estenose valvar secundária"
+    ],
+    "correctIndex": 1,
+    "explanation": "A ARVC apresenta dilatação e substituição fibrogordurosa predominante do ventrículo direito, levando a disfunção sistólica, arritmias ventriculares graves e risco aumentado de morte súbita, especialmente em jovens e atletas. A avaliação inclui histórico familiar, ECG, ecocardiografia e ressonância magnética.",
+    "type": "conteudista"
+  },
+  {
+    "question": "Quais são os achados clínicos típicos de pacientes com cardiomiopatia restritiva?",
+    "options": [
+      "Dispneia progressiva, palpitações frequentes, edema de membros inferiores e congestão pulmonar",
+      "Angina precordial típica aos esforços, síncope recorrente e hipertensão arterial severa refratária",
+      "Dor torácica pleurítica em fisgada, hemoptise volumosa e febre alta persistente",
+      "Palpitações isoladas em repouso sem outros sintomas ou sinais de descompensação em jovens",
+      "Epigastralgia recorrente pós-prandial, perda ponderal progressiva e fadiga crônica inespecífica"
+    ],
+    "correctIndex": 0,
+    "explanation": "A cardiomiopatia restritiva caracteriza-se clinicamente por DISPNEIA PROGRESSIVA, PALPITAÇÕES devido a arritmias, EDEMA DE MEMBROS INFERIORES e sinais de congestão pulmonar resultantes da disfunção diastólica ventricular e aumento das pressões de enchimento.",
+    "type": "conteudista"
+  },
+  {
+    "question": "Paciente relata palpitações frequentes e história familiar de morte súbita. Qual abordagem diagnóstica integrada deve ser adotada para investigação de possível miocardiopatia hereditária?",
+    "options": [
+      "Realização apenas de ECG de repouso e Holter 24h para diagnóstico inicial definitivo",
+      "Avaliação clínica detalhada, ECG, ecocardiograma, ressonância magnética, teste genético e triagem familiar",
+      "Solicitação imediata de biópsia endomiocárdica para confirmação diagnóstica histopatológica definitiva",
+      "Início empírico de betabloqueador em dose plena sem necessidade de investigação complementar adicional",
+      "Avaliação baseada exclusivamente em dosagem de troponina e peptídeo natriurético para estratificação"
+    ],
+    "correctIndex": 1,
+    "explanation": "A investigação de miocardiopatia hereditária requer abordagem integrada: anamnese detalhada (incluindo história familiar), ECG, ecocardiograma para morfologia e função, ressonância magnética para caracterização tecidual, teste genético para identificação de mutações patogênicas e triagem familiar para detecção precoce e manejo adequado.",
+    "type": "raciocínio"
+  },
+  {
+    "question": "Como a apresentação clínica e fenótipo morfológico ajudam na diferenciação entre cardiomiopatia hipertrófica e amiloidose cardíaca?",
+    "options": [
+      "Ambas apresentam hipertrofia ventricular simétrica e baixa voltagem ao ECG sem diferenciação morfológica",
+      "CMH apresenta hipertrofia assimétrica por mutação sarcomérica; amiloidose espessamento simétrico com baixa voltagem paradoxal",
+      "CMH apresenta disfunção diastólica com baixa voltagem; amiloidose dilatação e alta voltagem no ECG",
+      "Ambas condições apresentam FE preservada e sinais clínicos idênticos sem diferenciação por imagem",
+      "Amiloidose apresenta hipertrofia assimétrica aguda; CMH infiltração tardia e sintomas restritivos progressivos"
+    ],
+    "correctIndex": 1,
+    "explanation": "A CMH é caracterizada por hipertrofia assimétrica do VE relacionada a mutações sarcoméricas e apresenta aumento da voltagem no ECG. A amiloidose, doença infiltrativa, apresenta espessamento simétrico da parede ventricular, disfunção diastólica, mas paradoxalmente baixa voltagem no ECG. A diferenciação morfofuncional e clínica é essencial para manejo específico.",
+    "type": "raciocínio"
+  },
+  {
+    "question": "Paciente com insuficiência cardíaca apresenta intolerância a IECA e betabloqueadores, além de bradicardia e púrpura periorbitária. Qual hipótese deve ser considerada e qual exame complementar é útil para confirmação?",
+    "options": [
+      "Cardiomiopatia hipertrófica com obstrução; ecocardiograma com Doppler para avaliar gradiente intraventricular dinâmico",
+      "Amiloidose cardíaca; ressonância magnética e cintilografia com pirofosfato para caracterização e confirmação diagnóstica",
+      "Cardiomiopatia dilatada isquêmica; angiografia coronariana invasiva para identificação de obstruções coronarianas significativas",
+      "Doença de Fabry; biópsia endomiocárdica para avaliação histológica e confirmação diagnóstica definitiva",
+      "Cardiomiopatia restritiva por fibrose; teste genético para identificação de mutações associadas à doença"
+    ],
+    "correctIndex": 1,
+    "explanation": "Quadro clínico típico de AMILOIDOSE CARDÍACA: manifestações sistêmicas (púrpura periorbitária), sintomas de IC, intolerância a IECA/betabloqueadores, bradicardia e sinais ecocardiográficos. A RMC e a cintilografia com pirofosfato são exames valiosos para diagnóstico e diferenciação do tipo de amiloidose.",
+    "type": "raciocínio"
+  }
+]
