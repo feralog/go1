@@ -103,6 +103,11 @@ const quizConfig = {
                     id: "tratamento_dpoc",
                     name: "Tratamento DPOC",
                     file: "subjects/CardioPneumo/CardioPneumoQuestions/tratamento_dpoc"
+                },
+                {
+                    id: "ecg",
+                    name: "ECG",
+                    file: "subjects/CardioPneumo/CardioPneumoQuestions/ECG"
                 }
             ]
         },
