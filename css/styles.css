@@ -576,15 +576,6 @@ body {
     padding: 15px 20px;
 }
 
-.question-nav-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    max-width: 100%;
-}
-
 .question-nav-btn {
     width: 40px;
     height: 40px;
@@ -893,10 +884,17 @@ body {
 }
 
 .question-nav-scroll {
+    overflow: hidden;
+    flex: 1;
+    max-width: 100%;
+    min-width: 240px; /* Mínimo para 5 botões */
+}
+
+.question-nav-wrapper {
     display: flex;
     gap: 8px;
-    overflow: hidden;
-    max-width: 440px; /* 10 buttons * 40px + gaps */
+    flex-wrap: nowrap;
+    align-items: center;
 }
 
 /* Responsividade */
@@ -909,9 +907,6 @@ body {
         min-height: 250px;
     }
 
-    .question-nav-scroll {
-        max-width: 300px; /* Menos botões visíveis em mobile */
-    }
     .card {
         margin: 10px;
     }
