@@ -32,6 +32,7 @@ let questionStates = {}; // Armazena estados das questões {questionIndex: 'answ
 
 // Variáveis para navegação com scroll
 let navScrollOffset = 0; // Offset atual do scroll de navegação
+let visibleButtonsCount = 10; // Quantidade de botões visíveis (calculado dinamicamente)
 
 // Elementos DOM
 const screens = {
@@ -445,11 +446,37 @@ function startQuiz(module) {
 }
 
 /**
+ * Calcula quantos botões de navegação cabem na tela
+ */
+function calculateVisibleButtons() {
+    const container = document.querySelector('.question-nav-scroll');
+    if (!container) return 10;
+
+    const containerWidth = container.offsetWidth;
+    const buttonWidth = 40; // largura do botão
+    const gap = 8; // espaço entre botões
+
+    // Calcula quantos botões cabem
+    const count = Math.floor((containerWidth + gap) / (buttonWidth + gap));
+
+    // Mínimo de 5, máximo de 15
+    return Math.max(5, Math.min(15, count));
+}
+
+/**
  * Gera a barra de navegação das questões
  */
 function generateQuestionNavigation() {
     const navWrapper = document.querySelector('.question-nav-wrapper');
     navWrapper.innerHTML = '';
+
+    // Remove event listeners antigos (se existirem)
+    const leftArrow = document.getElementById('nav-arrow-left');
+    const rightArrow = document.getElementById('nav-arrow-right');
+    const newLeftArrow = leftArrow.cloneNode(true);
+    const newRightArrow = rightArrow.cloneNode(true);
+    leftArrow.parentNode.replaceChild(newLeftArrow, leftArrow);
+    rightArrow.parentNode.replaceChild(newRightArrow, rightArrow);
 
     for (let i = 0; i < currentQuestions.length; i++) {
         const btn = document.createElement('button');
@@ -466,15 +493,28 @@ function generateQuestionNavigation() {
     document.getElementById('nav-arrow-left').addEventListener('click', scrollNavLeft);
     document.getElementById('nav-arrow-right').addEventListener('click', scrollNavRight);
 
+    // Calcula quantos botões cabem na tela
+    visibleButtonsCount = calculateVisibleButtons();
+
+    // Inicializa o scroll
+    updateNavigationScroll();
     updateNavigationStates();
-    updateScrollArrows();
 }
+
+// Recalcula visibilidade quando a janela é redimensionada
+window.addEventListener('resize', () => {
+    if (currentQuestions.length > 0) {
+        visibleButtonsCount = calculateVisibleButtons();
+        updateNavigationScroll();
+    }
+});
 
 /**
  * Scroll da navegação para a esquerda
  */
 function scrollNavLeft() {
-    navScrollOffset = Math.max(0, navScrollOffset - 7);
+    const scrollAmount = Math.max(1, Math.floor(visibleButtonsCount * 0.7)); // 70% dos botões visíveis
+    navScrollOffset = Math.max(0, navScrollOffset - scrollAmount);
     updateNavigationScroll();
 }
 
@@ -482,8 +522,9 @@ function scrollNavLeft() {
  * Scroll da navegação para a direita
  */
 function scrollNavRight() {
-    const maxOffset = Math.max(0, currentQuestions.length - 10);
-    navScrollOffset = Math.min(maxOffset, navScrollOffset + 7);
+    const scrollAmount = Math.max(1, Math.floor(visibleButtonsCount * 0.7)); // 70% dos botões visíveis
+    const maxOffset = Math.max(0, currentQuestions.length - visibleButtonsCount);
+    navScrollOffset = Math.min(maxOffset, navScrollOffset + scrollAmount);
     updateNavigationScroll();
 }
 
@@ -494,7 +535,7 @@ function updateNavigationScroll() {
     const navButtons = document.querySelectorAll('.question-nav-btn');
 
     navButtons.forEach((btn, index) => {
-        if (index >= navScrollOffset && index < navScrollOffset + 10) {
+        if (index >= navScrollOffset && index < navScrollOffset + visibleButtonsCount) {
             btn.style.display = 'flex';
         } else {
             btn.style.display = 'none';
@@ -511,8 +552,10 @@ function updateScrollArrows() {
     const leftArrow = document.getElementById('nav-arrow-left');
     const rightArrow = document.getElementById('nav-arrow-right');
 
+    if (!leftArrow || !rightArrow) return;
+
     leftArrow.disabled = navScrollOffset === 0;
-    rightArrow.disabled = navScrollOffset >= currentQuestions.length - 10;
+    rightArrow.disabled = navScrollOffset >= currentQuestions.length - visibleButtonsCount;
 }
 
 /**
