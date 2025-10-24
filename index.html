@@ -152,6 +152,41 @@
             </div>
         </div>
 
+        <!-- Tela de Seleção de Modo -->
+        <div id="mode-selection-screen" class="screen d-none">
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6">
+                    <div class="card shadow-lg mt-5">
+                        <div class="card-header bg-primary text-white">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h2 id="mode-module-title">Selecione o Modo</h2>
+                                <button id="mode-back-btn" class="btn btn-sm btn-light">Voltar</button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="text-center text-muted mb-4">Escolha como deseja estudar este módulo:</p>
+
+                            <div class="mode-selection-container">
+                                <button id="quiz-mode-btn" class="mode-card">
+                                    <i class="fas fa-trophy mode-icon"></i>
+                                    <h4>Modo Quiz</h4>
+                                    <p class="mode-description">Responda todas as questões e receba os resultados ao final do quiz</p>
+                                    <span class="badge bg-primary">Padrão</span>
+                                </button>
+
+                                <button id="mentor-mode-btn" class="mode-card">
+                                    <i class="fas fa-chalkboard-teacher mode-icon"></i>
+                                    <h4>Modo Mentor</h4>
+                                    <p class="mode-description">Confirme cada resposta e veja o resultado imediatamente durante o quiz</p>
+                                    <span class="badge bg-success">Aprendizado</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Tela do Quiz -->
         <div id="quiz-screen" class="screen d-none">
             <div class="row justify-content-center">
@@ -169,8 +204,18 @@
 
                         <!-- Question Navigation Bar -->
                         <div id="question-navigation" class="question-nav-container">
-                            <div class="question-nav-wrapper">
-                                <!-- Navigation buttons will be generated dynamically -->
+                            <div class="question-nav-scroll-container">
+                                <button id="nav-arrow-left" class="question-nav-arrow" disabled>
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <div class="question-nav-scroll">
+                                    <div class="question-nav-wrapper">
+                                        <!-- Navigation buttons will be generated dynamically -->
+                                    </div>
+                                </div>
+                                <button id="nav-arrow-right" class="question-nav-arrow">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
                             </div>
                         </div>
 
@@ -191,6 +236,19 @@
                                     <img id="question-image" src="" alt="Imagem da questão" class="img-fluid question-image">
                                 </div>
                                 <div id="options-container" class="mb-4"></div>
+
+                                <!-- Confirm Answer Button (Mentor Mode only) -->
+                                <div id="confirm-answer-container" class="d-none text-center mb-4">
+                                    <button id="confirm-answer-btn" class="btn btn-primary btn-lg">
+                                        <i class="fas fa-check me-2"></i>Confirmar Resposta
+                                    </button>
+                                </div>
+
+                                <!-- Explanation Container (Mentor Mode only) -->
+                                <div id="mentor-explanation-container" class="d-none mentor-explanation">
+                                    <h6><i class="fas fa-lightbulb me-2"></i>Explicação</h6>
+                                    <p id="mentor-explanation-text"></p>
+                                </div>
                             </div>
 
                             <!-- Next Question Button (shown on all questions except last) -->
@@ -210,11 +268,6 @@
                                         <i class="fas fa-flag-checkered me-2"></i>Finalizar Quiz
                                     </button>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="card-footer">
-                            <div class="progress">
-                                <div id="quiz-progress" class="progress-bar" role="progressbar" style="width: 0%"></div>
                             </div>
                         </div>
                     </div>

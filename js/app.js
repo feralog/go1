@@ -22,9 +22,16 @@ let quizSeconds = 0;
 let currentFileType = '';
 let currentFileName = '';
 
+// Variáveis de modo
+let currentMode = 'quiz'; // 'quiz' ou 'mentor'
+let questionConfirmed = {}; // Armazena se cada questão foi confirmada no modo mentor
+
 // Novas variáveis para navegação livre
 let userAnswers = {}; // Armazena as respostas do usuário {questionIndex: selectedIndex}
 let questionStates = {}; // Armazena estados das questões {questionIndex: 'answered'|'current'|'unanswered'}
+
+// Variáveis para navegação com scroll
+let navScrollOffset = 0; // Offset atual do scroll de navegação
 
 // Elementos DOM
 const screens = {
@@ -32,6 +39,7 @@ const screens = {
     specialtySelection: document.getElementById('specialty-selection-screen'),
     subcategorySelection: document.getElementById('subcategory-selection-screen'),
     moduleSelection: document.getElementById('module-selection-screen'),
+    modeSelection: document.getElementById('mode-selection-screen'),
     quiz: document.getElementById('quiz-screen'),
     review: document.getElementById('review-screen'),
     resumosSelection: document.getElementById('resumos-selection-screen'),
@@ -97,16 +105,13 @@ function populateModuleList() {
         button.className = 'list-group-item list-group-item-action module-btn';
         button.dataset.module = module.id;
 
-        const progress = calculateModuleProgress(module.id);
-
         button.innerHTML = `
             <div class="d-flex justify-content-between align-items-center">
                 <span>${module.name}</span>
-                <span class="badge bg-primary rounded-pill module-progress" data-module="${module.id}">${progress}%</span>
             </div>
         `;
 
-        button.addEventListener('click', () => startQuiz(module.id));
+        button.addEventListener('click', () => showModeSelection(module.id));
 
         moduleList.appendChild(button);
     });
@@ -130,6 +135,11 @@ function setupEventListeners() {
     document.getElementById('guias-btn').addEventListener('click', showGuiasSelection);
     document.getElementById('start-quiz-btn').addEventListener('click', showModuleSelectionForQuiz);
 
+    // Mode selection
+    document.getElementById('quiz-mode-btn').addEventListener('click', () => selectMode('quiz'));
+    document.getElementById('mentor-mode-btn').addEventListener('click', () => selectMode('mentor'));
+    document.getElementById('mode-back-btn').addEventListener('click', showModuleSelectionScreen);
+
     // Back buttons
     document.getElementById('resumos-back-btn').addEventListener('click', showModuleSelectionScreen);
     document.getElementById('guias-back-btn').addEventListener('click', showModuleSelectionScreen);
@@ -144,6 +154,7 @@ function setupEventListeners() {
     document.getElementById('quit-quiz-btn').addEventListener('click', quitQuiz);
     document.getElementById('finish-quiz-btn').addEventListener('click', finishQuiz);
     document.getElementById('next-question-btn').addEventListener('click', nextQuestion);
+    document.getElementById('confirm-answer-btn').addEventListener('click', confirmAnswer);
 
     // Review
     document.getElementById('retry-module-btn').addEventListener('click', () => startQuiz(currentModule));
@@ -239,6 +250,40 @@ function showModuleSelectionForQuiz() {
 
     // Rola suavemente para a lista de módulos
     moduleList.scrollIntoView({ behavior: 'smooth' });
+}
+
+/**
+ * Mostra a tela de seleção de modo
+ * @param {string} moduleId - ID do módulo selecionado
+ */
+function showModeSelection(moduleId) {
+    currentModule = moduleId;
+    hideAllScreens();
+    screens.modeSelection.classList.remove('d-none');
+
+    // Atualiza o título com o nome do módulo
+    let moduleConfig = null;
+    if (currentSpecialty && quizConfig.specialties[currentSpecialty]) {
+        const specialty = quizConfig.specialties[currentSpecialty];
+
+        if (specialty.hasSubcategories && currentSubcategory && specialty.subcategories[currentSubcategory]) {
+            moduleConfig = specialty.subcategories[currentSubcategory].modules.find(m => m.id === moduleId);
+        } else if (specialty.modules) {
+            moduleConfig = specialty.modules.find(m => m.id === moduleId);
+        }
+    }
+
+    const title = moduleConfig ? moduleConfig.name : moduleId;
+    document.getElementById('mode-module-title').textContent = title;
+}
+
+/**
+ * Seleciona o modo e inicia o quiz
+ * @param {string} mode - 'quiz' ou 'mentor'
+ */
+function selectMode(mode) {
+    currentMode = mode;
+    startQuiz(currentModule);
 }
 
 /**
@@ -376,10 +421,13 @@ function startQuiz(module) {
     // Reinicia os dados de navegação livre
     userAnswers = {};
     questionStates = {};
+    questionConfirmed = {};
+    navScrollOffset = 0;
 
     // Inicializa estados das questões
     for (let i = 0; i < currentQuestions.length; i++) {
         questionStates[i] = 'unanswered';
+        questionConfirmed[i] = false;
     }
     questionStates[0] = 'current';
 
@@ -414,7 +462,57 @@ function generateQuestionNavigation() {
         navWrapper.appendChild(btn);
     }
 
+    // Adiciona event listeners para as setas de navegação
+    document.getElementById('nav-arrow-left').addEventListener('click', scrollNavLeft);
+    document.getElementById('nav-arrow-right').addEventListener('click', scrollNavRight);
+
     updateNavigationStates();
+    updateScrollArrows();
+}
+
+/**
+ * Scroll da navegação para a esquerda
+ */
+function scrollNavLeft() {
+    navScrollOffset = Math.max(0, navScrollOffset - 7);
+    updateNavigationScroll();
+}
+
+/**
+ * Scroll da navegação para a direita
+ */
+function scrollNavRight() {
+    const maxOffset = Math.max(0, currentQuestions.length - 10);
+    navScrollOffset = Math.min(maxOffset, navScrollOffset + 7);
+    updateNavigationScroll();
+}
+
+/**
+ * Atualiza o scroll da navegação
+ */
+function updateNavigationScroll() {
+    const navButtons = document.querySelectorAll('.question-nav-btn');
+
+    navButtons.forEach((btn, index) => {
+        if (index >= navScrollOffset && index < navScrollOffset + 10) {
+            btn.style.display = 'flex';
+        } else {
+            btn.style.display = 'none';
+        }
+    });
+
+    updateScrollArrows();
+}
+
+/**
+ * Atualiza o estado das setas de scroll
+ */
+function updateScrollArrows() {
+    const leftArrow = document.getElementById('nav-arrow-left');
+    const rightArrow = document.getElementById('nav-arrow-right');
+
+    leftArrow.disabled = navScrollOffset === 0;
+    rightArrow.disabled = navScrollOffset >= currentQuestions.length - 10;
 }
 
 /**
@@ -512,23 +610,60 @@ function loadQuestion() {
     // Atualiza o tipo da questão
     document.getElementById('question-type').textContent = question.type === 'conteudista' ? 'Conteudista' : 'Raciocínio';
 
-    // Atualiza a barra de progresso baseada nas questões respondidas
+    // Atualiza contador de respostas
     const answeredCount = Object.keys(userAnswers).length;
-    const progress = (answeredCount / currentQuestions.length) * 100;
-    document.getElementById('quiz-progress').style.width = `${progress}%`;
+    document.getElementById('answered-count').textContent = `Respondidas: ${answeredCount}/${currentQuestions.length}`;
 
-    // Mostra/esconde botões de navegação baseado na posição da questão
+    // Controles específicos de modo
+    const confirmContainer = document.getElementById('confirm-answer-container');
+    const explanationContainer = document.getElementById('mentor-explanation-container');
     const finishContainer = document.getElementById('finish-quiz-container');
     const nextQuestionContainer = document.getElementById('next-question-container');
 
-    if (currentQuestionIndex === currentQuestions.length - 1) {
-        // Última questão: mostra botão finalizar, esconde próxima questão
-        finishContainer.classList.remove('d-none');
-        nextQuestionContainer.classList.add('d-none');
+    if (currentMode === 'mentor') {
+        // Modo Mentor
+        if (questionConfirmed[currentQuestionIndex]) {
+            // Questão já confirmada - mostra explicação e oculta botão confirmar
+            confirmContainer.classList.add('d-none');
+            explanationContainer.classList.remove('d-none');
+            document.getElementById('mentor-explanation-text').textContent = question.explanation;
+
+            // Mostra botão de navegação apropriado
+            if (currentQuestionIndex === currentQuestions.length - 1) {
+                finishContainer.classList.remove('d-none');
+                nextQuestionContainer.classList.add('d-none');
+            } else {
+                finishContainer.classList.add('d-none');
+                nextQuestionContainer.classList.remove('d-none');
+            }
+
+            // Reaplica cores nas opções
+            applyMentorColors();
+        } else {
+            // Questão não confirmada - mostra botão confirmar e oculta explicação
+            explanationContainer.classList.add('d-none');
+            finishContainer.classList.add('d-none');
+            nextQuestionContainer.classList.add('d-none');
+
+            // Mostra botão confirmar apenas se usuário selecionou uma resposta
+            if (userAnswers[currentQuestionIndex] !== undefined) {
+                confirmContainer.classList.remove('d-none');
+            } else {
+                confirmContainer.classList.add('d-none');
+            }
+        }
     } else {
-        // Não é a última questão: esconde botão finalizar, mostra próxima questão
-        finishContainer.classList.add('d-none');
-        nextQuestionContainer.classList.remove('d-none');
+        // Modo Quiz - comportamento padrão
+        confirmContainer.classList.add('d-none');
+        explanationContainer.classList.add('d-none');
+
+        if (currentQuestionIndex === currentQuestions.length - 1) {
+            finishContainer.classList.remove('d-none');
+            nextQuestionContainer.classList.add('d-none');
+        } else {
+            finishContainer.classList.add('d-none');
+            nextQuestionContainer.classList.remove('d-none');
+        }
     }
 
     // Se a questão já foi respondida, pré-seleciona a resposta
@@ -587,6 +722,11 @@ function displayQuestion(question) {
  * @param {number} selectedIndex - Índice da opção selecionada
  */
 function handleAnswer(selectedIndex) {
+    // No modo mentor, não permite mudar resposta após confirmar
+    if (currentMode === 'mentor' && questionConfirmed[currentQuestionIndex]) {
+        return;
+    }
+
     // Remove seleção anterior
     const optionButtons = document.querySelectorAll('.option-btn');
     optionButtons.forEach(btn => btn.classList.remove('selected'));
@@ -597,16 +737,86 @@ function handleAnswer(selectedIndex) {
     // Armazena a resposta do usuário
     userAnswers[currentQuestionIndex] = selectedIndex;
 
-    // Atualiza estado da questão
+    // Atualiza estado da questão (apenas no modo quiz)
+    if (currentMode === 'quiz') {
+        questionStates[currentQuestionIndex] = 'answered';
+        updateNavigationStates();
+    }
+
+    // No modo mentor, mostra o botão confirmar
+    if (currentMode === 'mentor' && !questionConfirmed[currentQuestionIndex]) {
+        document.getElementById('confirm-answer-container').classList.remove('d-none');
+    }
+
+    // Atualiza contador de respostas
+    const answeredCount = Object.keys(userAnswers).length;
+    document.getElementById('answered-count').textContent = `Respondidas: ${answeredCount}/${currentQuestions.length}`;
+}
+
+/**
+ * Confirma a resposta no modo mentor
+ */
+function confirmAnswer() {
+    if (userAnswers[currentQuestionIndex] === undefined) {
+        alert('Por favor, selecione uma resposta antes de confirmar.');
+        return;
+    }
+
+    const question = currentQuestions[currentQuestionIndex];
+    const userAnswer = userAnswers[currentQuestionIndex];
+    const isCorrect = userAnswer === question.correctIndex;
+
+    // Marca a questão como confirmada
+    questionConfirmed[currentQuestionIndex] = true;
     questionStates[currentQuestionIndex] = 'answered';
 
-    // Atualiza navegação visual
-    updateNavigationStates();
+    // Aplica cores nas opções
+    applyMentorColors();
 
-    // Atualiza progresso na barra
-    const answeredCount = Object.keys(userAnswers).length;
-    const progress = (answeredCount / currentQuestions.length) * 100;
-    document.getElementById('quiz-progress').style.width = `${progress}%`;
+    // Esconde botão confirmar e mostra explicação
+    document.getElementById('confirm-answer-container').classList.add('d-none');
+    document.getElementById('mentor-explanation-container').classList.remove('d-none');
+    document.getElementById('mentor-explanation-text').textContent = question.explanation;
+
+    // Mostra botão de navegação apropriado
+    const finishContainer = document.getElementById('finish-quiz-container');
+    const nextQuestionContainer = document.getElementById('next-question-container');
+
+    if (currentQuestionIndex === currentQuestions.length - 1) {
+        finishContainer.classList.remove('d-none');
+        nextQuestionContainer.classList.add('d-none');
+    } else {
+        finishContainer.classList.add('d-none');
+        nextQuestionContainer.classList.remove('d-none');
+    }
+
+    // Atualiza navegação
+    updateNavigationStates();
+}
+
+/**
+ * Aplica cores corretas/incorretas no modo mentor
+ */
+function applyMentorColors() {
+    const question = currentQuestions[currentQuestionIndex];
+    const userAnswer = userAnswers[currentQuestionIndex];
+    const optionButtons = document.querySelectorAll('.option-btn');
+
+    optionButtons.forEach((btn, index) => {
+        // Remove classes anteriores
+        btn.classList.remove('selected', 'mentor-correct', 'mentor-incorrect', 'mentor-disabled');
+
+        if (index === question.correctIndex) {
+            // Resposta correta em verde
+            btn.classList.add('mentor-correct');
+        } else if (index === userAnswer) {
+            // Resposta do usuário (incorreta) em vermelho
+            btn.classList.add('mentor-incorrect');
+        } else {
+            // Outras opções desabilitadas
+            btn.classList.add('mentor-disabled');
+        }
+    });
 }
 
 /**
@@ -720,6 +930,12 @@ function generateQuestionReview() {
 
             <div class="question-content">
                 <p class="fw-bold mb-3">${question.question}</p>
+
+                ${question.image ? `
+                    <div class="text-center mb-3">
+                        <img src="${question.image}" alt="Imagem da questão ${index + 1}" class="img-fluid question-image" style="max-height: 400px; border-radius: 8px;">
+                    </div>
+                ` : ''}
 
                 <div class="review-options">
                     ${question.options.map((option, optIndex) => {
