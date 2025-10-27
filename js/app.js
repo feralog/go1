@@ -106,9 +106,12 @@ function populateModuleList() {
         button.className = 'list-group-item list-group-item-action module-btn';
         button.dataset.module = module.id;
 
+        const progress = calculateModuleProgress(module.id);
+
         button.innerHTML = `
             <div class="d-flex justify-content-between align-items-center">
                 <span>${module.name}</span>
+                <span class="badge bg-primary rounded-pill module-progress" data-module="${module.id}">${progress}%</span>
             </div>
         `;
 
@@ -140,6 +143,10 @@ function setupEventListeners() {
     document.getElementById('quiz-mode-btn').addEventListener('click', () => selectMode('quiz'));
     document.getElementById('mentor-mode-btn').addEventListener('click', () => selectMode('mentor'));
     document.getElementById('mode-back-btn').addEventListener('click', showModuleSelectionScreen);
+    document.getElementById('reset-module-progress-btn').addEventListener('click', handleResetModuleProgress);
+
+    // Reset buttons
+    document.getElementById('reset-all-progress-btn').addEventListener('click', handleResetAllProgress);
 
     // Back buttons
     document.getElementById('resumos-back-btn').addEventListener('click', showModuleSelectionScreen);
@@ -284,7 +291,79 @@ function showModeSelection(moduleId) {
  */
 function selectMode(mode) {
     currentMode = mode;
-    startQuiz(currentModule);
+
+    // Verifica se existe progresso salvo para este módulo
+    const lastSession = getLastSession(currentModule);
+
+    if (lastSession && lastSession.mode === mode && lastSession.questionIndex > 0) {
+        // Existe progresso - perguntar se quer continuar
+        const totalQuestions = getModuleQuestions(currentModule).length;
+        const message = `Você parou na questão ${lastSession.questionIndex + 1}/${totalQuestions} neste módulo (${mode === 'quiz' ? 'Modo Quiz' : 'Modo Mentor'}).\n\nDeseja continuar de onde parou?`;
+
+        if (confirm(message)) {
+            // Continuar de onde parou
+            startQuizFromQuestion(currentModule, lastSession.questionIndex);
+        } else {
+            // Começar do zero
+            clearLastSession();
+            startQuiz(currentModule);
+        }
+    } else {
+        // Sem progresso salvo - iniciar normalmente
+        startQuiz(currentModule);
+    }
+}
+
+/**
+ * Manipula o reset de todo o progresso
+ */
+function handleResetAllProgress() {
+    const confirmMessage = 'Tem certeza que deseja REINICIAR TODO O PROGRESSO?\n\n⚠️ Você perderá:\n• Todas as estatísticas de todos os módulos\n• Progresso de todas as especialidades\n• Posição salva em todos os quizzes\n\nEsta ação NÃO PODE SER DESFEITA!';
+
+    if (confirm(confirmMessage)) {
+        const doubleConfirm = confirm('ÚLTIMA CONFIRMAÇÃO: Deseja realmente apagar TODO o progresso?');
+
+        if (doubleConfirm) {
+            clearUserData();
+            alert('✅ Todo o progresso foi resetado com sucesso!');
+            // Recarrega a tela
+            populateModuleList();
+            updateModuleProgress();
+        }
+    }
+}
+
+/**
+ * Manipula o reset do progresso do módulo atual
+ */
+function handleResetModuleProgress() {
+    if (!currentModule) return;
+
+    // Busca o nome do módulo
+    let moduleName = currentModule;
+    if (currentSpecialty && quizConfig.specialties[currentSpecialty]) {
+        const specialty = quizConfig.specialties[currentSpecialty];
+        let moduleConfig;
+
+        if (specialty.hasSubcategories && currentSubcategory && specialty.subcategories[currentSubcategory]) {
+            moduleConfig = specialty.subcategories[currentSubcategory].modules.find(m => m.id === currentModule);
+        } else if (specialty.modules) {
+            moduleConfig = specialty.modules.find(m => m.id === currentModule);
+        }
+
+        if (moduleConfig) {
+            moduleName = moduleConfig.name;
+        }
+    }
+
+    const confirmMessage = `Tem certeza que deseja reiniciar o progresso de "${moduleName}"?\n\n⚠️ Você perderá:\n• Todas as estatísticas deste módulo\n• Posição salva neste quiz\n\nEsta ação NÃO PODE SER DESFEITA!`;
+
+    if (confirm(confirmMessage)) {
+        clearModuleProgress(currentModule);
+        alert(`✅ Progresso de "${moduleName}" foi resetado!`);
+        // Volta para seleção de módulos
+        showModuleSelectionScreen();
+    }
 }
 
 /**
@@ -396,6 +475,58 @@ function updateModuleProgress() {
     } else {
         progressBar.className = 'progress-bar bg-primary';
     }
+}
+
+/**
+ * Inicia o quiz de uma questão específica
+ * @param {string} module - ID do módulo
+ * @param {number} questionIndex - Índice da questão para começar
+ */
+function startQuizFromQuestion(module, questionIndex) {
+    currentModule = module;
+
+    // Obtém as questões do módulo
+    currentQuestions = getModuleQuestions(module);
+
+    if (currentQuestions.length === 0) {
+        console.error('No questions found for module:', module);
+        alert('Erro: Nenhuma questão encontrada para este módulo.');
+        return;
+    }
+
+    // Define o índice inicial
+    currentQuestionIndex = questionIndex;
+    correctAnswers = 0;
+    incorrectAnswers = 0;
+
+    // Reinicia os dados de navegação livre
+    userAnswers = {};
+    questionStates = {};
+    questionConfirmed = {};
+    navScrollOffset = 0;
+
+    // Inicializa estados das questões
+    for (let i = 0; i < currentQuestions.length; i++) {
+        questionStates[i] = 'unanswered';
+        questionConfirmed[i] = false;
+    }
+    questionStates[questionIndex] = 'current';
+
+    // Mostra a tela do quiz
+    showQuizScreen();
+
+    // Inicia o timer
+    startTimer();
+
+    // Gera a navegação de questões
+    generateQuestionNavigation();
+
+    // Ajusta o scroll para mostrar a questão atual
+    navScrollOffset = Math.max(0, questionIndex - Math.floor(visibleButtonsCount / 2));
+    updateNavigationScroll();
+
+    // Carrega a questão
+    loadQuestion();
 }
 
 /**
@@ -588,6 +719,9 @@ function navigateToQuestion(questionIndex) {
     questionStates[currentQuestionIndex] = userAnswers[currentQuestionIndex] !== undefined ? 'answered' : 'unanswered';
     questionStates[questionIndex] = 'current';
     currentQuestionIndex = questionIndex;
+
+    // Salva a posição atual
+    saveLastSession(currentSpecialty, currentSubcategory, currentModule, questionIndex, currentMode);
 
     // Carrega a questão
     loadQuestion();

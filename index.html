@@ -106,12 +106,17 @@
                     <div class="card shadow-lg mt-5">
                         <div class="card-header bg-primary text-white">
                             <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex align-items-center gap-2">
+                                    <button id="reset-all-progress-btn" class="btn btn-sm btn-danger px-2 py-1" style="font-size: 0.75rem;" title="Reiniciar todo o progresso">
+                                        <i class="fas fa-redo me-1"></i>Reiniciar Progresso Total
+                                    </button>
+                                </div>
                                 <div>
-                                    <h2 id="specialty-title">Selecione o Módulo</h2>
+                                    <h2 id="specialty-title" class="mb-0">Selecione o Módulo</h2>
                                     <small id="specialty-subtitle" class="text-light"></small>
                                 </div>
-                                <div class="d-flex flex-nowrap">
-                                    <button id="back-to-specialty-btn" class="btn btn-sm btn-light me-1 px-2 py-1" style="font-size: 0.8rem; white-space: nowrap;">Trocar Especialidade</button>
+                                <div class="d-flex flex-nowrap gap-1">
+                                    <button id="back-to-specialty-btn" class="btn btn-sm btn-light px-2 py-1" style="font-size: 0.8rem; white-space: nowrap;">Trocar Especialidade</button>
                                     <button id="logout-btn" class="btn btn-sm btn-light px-2 py-1" style="font-size: 0.8rem;">Sair</button>
                                 </div>
                             </div>
@@ -159,8 +164,11 @@
                     <div class="card shadow-lg mt-5">
                         <div class="card-header bg-primary text-white">
                             <div class="d-flex justify-content-between align-items-center">
-                                <h2 id="mode-module-title">Selecione o Modo</h2>
-                                <button id="mode-back-btn" class="btn btn-sm btn-light">Voltar</button>
+                                <button id="reset-module-progress-btn" class="btn btn-sm btn-warning px-2 py-1" style="font-size: 0.75rem;" title="Reiniciar progresso deste módulo">
+                                    <i class="fas fa-redo me-1"></i>Reiniciar Módulo
+                                </button>
+                                <h2 id="mode-module-title" class="mb-0">Selecione o Modo</h2>
+                                <button id="mode-back-btn" class="btn btn-sm btn-light px-2 py-1" style="font-size: 0.8rem;">Voltar</button>
                             </div>
                         </div>
                         <div class="card-body">
