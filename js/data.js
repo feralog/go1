@@ -1,21 +1,17 @@
 /**
  * data.js - Gerenciamento de dados e carregamento das questões
- *
+ * 
  * Este arquivo é responsável por:
  * - Carregar os dados das questões de cada módulo
  * - Gerenciar o armazenamento local dos dados do usuário
  * - Fornecer funções para acessar e manipular os dados
  */
 
-// Versão da aplicação - incrementar ao fazer mudanças estruturais
-const APP_VERSION = '2.0';
-
 // Objeto para armazenar as questões de todos os módulos
 const questionsData = {};
 
 // Objeto para armazenar os dados do usuário
 let userData = {
-    version: APP_VERSION,
     username: '',
     progress: {},
     lastSession: null
@@ -106,36 +102,13 @@ function loadAllQuestions() {
  * @param {string} module - ID do módulo
  */
 function initializeQuestionProgress(module) {
-    const currentQuestionsCount = questionsData[module].length;
-
-    // Verifica se o módulo precisa ser resetado (mudança no número de questões)
-    if (userData.progress[module] && userData.progress[module].questionsCount !== currentQuestionsCount) {
-        console.log(`Módulo ${module} foi atualizado (${userData.progress[module].questionsCount} → ${currentQuestionsCount} questões). Resetando progresso.`);
-        userData.progress[module] = {
-            questionsCount: currentQuestionsCount,
-            questions: {}
-        };
-    }
-
-    // Inicializa estrutura se não existir
-    if (!userData.progress[module]) {
-        userData.progress[module] = {
-            questionsCount: currentQuestionsCount,
-            questions: {}
-        };
-    }
-
     // Para cada questão no módulo, verifica se já existe progresso
     questionsData[module].forEach((question, index) => {
         const questionId = `${module}_${index}`;
-
+        
         // Se não existir progresso para esta questão, inicializa
-        if (!userData.progress[module].questions) {
-            userData.progress[module].questions = {};
-        }
-
-        if (!userData.progress[module].questions[questionId]) {
-            userData.progress[module].questions[questionId] = {
+        if (!userData.progress[module][questionId]) {
+            userData.progress[module][questionId] = {
                 seen: 0,
                 correct: 0,
                 incorrect: 0,
@@ -162,29 +135,21 @@ function saveUserData() {
  */
 function loadUserData() {
     const savedData = localStorage.getItem(quizConfig.storageKey);
-
+    
     if (savedData) {
         try {
             const parsedData = JSON.parse(savedData);
-
-            // Verifica versão da aplicação
-            if (!parsedData.version || parsedData.version !== APP_VERSION) {
-                console.log(`Versão incompatível (${parsedData.version} → ${APP_VERSION}). Resetando dados.`);
-                return false;
-            }
-
+            
             // Verifica se os dados têm a estrutura esperada
-            if (parsedData.progress) {
+            if (parsedData.username && parsedData.progress) {
                 userData = parsedData;
-                // Garante que a versão está atualizada
-                userData.version = APP_VERSION;
                 return true;
             }
         } catch (error) {
             console.error('Erro ao carregar dados do usuário:', error);
         }
     }
-
+    
     return false;
 }
 
@@ -220,8 +185,7 @@ function getModuleQuestions(module) {
  * @returns {Object} Objeto com o progresso do módulo
  */
 function getModuleProgress(module) {
-    if (!userData.progress[module]) return {};
-    return userData.progress[module].questions || {};
+    return userData.progress[module] || {};
 }
 
 /**
@@ -288,41 +252,29 @@ function calculateOverallProgress() {
 function updateQuestionProgress(module, questionIndex, isCorrect) {
     const questionId = `${module}_${questionIndex}`;
     const now = new Date();
-
-    // Garante que a estrutura existe
-    if (!userData.progress[module]) {
-        userData.progress[module] = {
-            questionsCount: questionsData[module].length,
-            questions: {}
-        };
-    }
-
-    if (!userData.progress[module].questions) {
-        userData.progress[module].questions = {};
-    }
-
+    
     // Se não existir progresso para esta questão, inicializa
-    if (!userData.progress[module].questions[questionId]) {
-        userData.progress[module].questions[questionId] = {
+    if (!userData.progress[module][questionId]) {
+        userData.progress[module][questionId] = {
             seen: 0,
             correct: 0,
             incorrect: 0,
             lastSeen: null
         };
     }
-
+    
     // Atualiza o progresso
-    const questionProgress = userData.progress[module].questions[questionId];
+    const questionProgress = userData.progress[module][questionId];
     questionProgress.seen++;
-
+    
     if (isCorrect) {
         questionProgress.correct++;
     } else {
         questionProgress.incorrect++;
     }
-
+    
     questionProgress.lastSeen = now.toISOString();
-
+    
     // Salva os dados atualizados
     saveUserData();
 }
@@ -332,7 +284,6 @@ function updateQuestionProgress(module, questionIndex, isCorrect) {
  */
 function clearUserData() {
     userData = {
-        version: APP_VERSION,
         username: '',
         progress: {},
         lastSession: null
@@ -356,76 +307,11 @@ function clearUserData() {
         }
 
         modules.forEach(module => {
-            userData.progress[module.id] = {
-                questionsCount: 0,
-                questions: {}
-            };
+            userData.progress[module.id] = {};
         });
     });
 
     localStorage.removeItem(quizConfig.storageKey);
-}
-
-/**
- * Limpa o progresso de um módulo específico
- * @param {string} moduleId - ID do módulo
- */
-function clearModuleProgress(moduleId) {
-    if (userData.progress[moduleId]) {
-        const questionsCount = questionsData[moduleId] ? questionsData[moduleId].length : 0;
-        userData.progress[moduleId] = {
-            questionsCount: questionsCount,
-            questions: {}
-        };
-
-        // Limpa também a última sessão se for deste módulo
-        if (userData.lastSession && userData.lastSession.module === moduleId) {
-            userData.lastSession = null;
-        }
-
-        saveUserData();
-        console.log(`Progresso do módulo ${moduleId} foi resetado.`);
-    }
-}
-
-/**
- * Salva a posição atual do quiz
- * @param {string} specialty - ID da especialidade
- * @param {string} subcategory - ID da subcategoria (pode ser vazio)
- * @param {string} module - ID do módulo
- * @param {number} questionIndex - Índice da questão atual
- * @param {string} mode - Modo do quiz ('quiz' ou 'mentor')
- */
-function saveLastSession(specialty, subcategory, module, questionIndex, mode) {
-    userData.lastSession = {
-        specialty: specialty,
-        subcategory: subcategory,
-        module: module,
-        questionIndex: questionIndex,
-        mode: mode,
-        timestamp: new Date().toISOString()
-    };
-    saveUserData();
-}
-
-/**
- * Obtém a última sessão salva para um módulo específico
- * @param {string} moduleId - ID do módulo
- * @returns {Object|null} Dados da última sessão ou null
- */
-function getLastSession(moduleId) {
-    if (userData.lastSession && userData.lastSession.module === moduleId) {
-        return userData.lastSession;
-    }
-    return null;
-}
-
-/**
- * Limpa a última sessão
- */
-function clearLastSession() {
-    userData.lastSession = null;
-    saveUserData();
 }
 
 // Configura o salvamento automático a cada 10 segundos
