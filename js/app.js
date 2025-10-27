@@ -527,6 +527,9 @@ function startQuizFromQuestion(module, questionIndex) {
 
     // Carrega a questão
     loadQuestion();
+
+    // Salva a posição inicial
+    saveLastSession(currentSpecialty, currentSubcategory, currentModule, questionIndex, currentMode);
 }
 
 /**
@@ -574,6 +577,9 @@ function startQuiz(module) {
 
     // Carrega a primeira questão
     loadQuestion();
+
+    // Salva a posição inicial (questão 0)
+    saveLastSession(currentSpecialty, currentSubcategory, currentModule, 0, currentMode);
 }
 
 /**
@@ -736,6 +742,8 @@ function navigateToQuestion(questionIndex) {
 function nextQuestion() {
     // Verifica se não estamos na última questão
     if (currentQuestionIndex < currentQuestions.length - 1) {
+        // Salva a posição antes de navegar
+        saveLastSession(currentSpecialty, currentSubcategory, currentModule, currentQuestionIndex + 1, currentMode);
         navigateToQuestion(currentQuestionIndex + 1);
     }
 }
@@ -969,6 +977,9 @@ function confirmAnswer() {
 
     // Atualiza navegação
     updateNavigationStates();
+
+    // Salva a posição atual
+    saveLastSession(currentSpecialty, currentSubcategory, currentModule, currentQuestionIndex, currentMode);
 }
 
 /**
