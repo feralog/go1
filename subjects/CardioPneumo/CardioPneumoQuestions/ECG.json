@@ -1,5 +1,74 @@
 [
   {
+  "question": "Observe o eletrocardiograma abaixo. Corresponde à descrição apropriada desse eletrocardiograma:",
+  "image": "subjects/CardioPneumo/CardioPneumoImages/ekg7.jpg",
+  "options": [
+    "Ritmo sinusal, frequência cardíaca de 71 bpm, eixo do QRS a + 60º, com infarto agudo do miocárdio de parede anterior.",
+    "Ritmo sinusal, frequência cardíaca de 80 bpm, eixo do QRS a 0º, com bloqueio de ramo direito.",
+    "Ritmo irregular, frequência cardíaca de aproximadamente 100 bpm, eixo do QRS a + 60º, com taquicardia ventricular.",
+    "Ritmo sinusal, frequência cardíaca de 71 bpm, eixo do QRS a + 60º, correspondendo a um eletrocardiograma dentro dos padrões de normalidade.",
+    "Ritmo sinusal, frequência cardíaca de 80 bpm, eixo do QRS a 0º, com bloqueio de ramo esquerdo."
+  ],
+  "correctIndex": 0,
+  "explanation": "O traçado apresenta ritmo sinusal, frequência cardíaca de aproximadamente 71 bpm e eixo do QRS em torno de +60º. As derivações V1 a V4 mostram elevação do segmento ST, achado típico de infarto agudo do miocárdio de parede anterior.",
+  "type": "raciocínio"
+},
+{
+  "question": "Durante a análise do eletrocardiograma de um homem de 45 anos, foi identificado o seguinte padrão: onda QRS positiva em D1 e negativa em aVF. Qual é a interpretação mais provável do eixo elétrico do coração neste caso?",
+  "options": [
+    "Eixo indeterminado.",
+    "Eixo normal.",
+    "Desvio do eixo para a esquerda.",
+    "Desvio do eixo para a direita.",
+    "Desvio do eixo para a direita superior."
+  ],
+  "correctIndex": 2,
+  "explanation": "O padrão de QRS positivo em D1 e negativo em aVF indica desvio do eixo elétrico para a esquerda. Se D2 também for negativo, o desvio é confirmado. Essa alteração sugere condições como hipertrofia ventricular esquerda, hemibloqueio anterior esquerdo ou infarto inferior.",
+  "type": "conteudista"
+},
+{
+  "question": "Homem de 32 anos, assintomático: Calcule o eixo QRS no plano frontal com base na análise do eletrocardiograma fornecido.",
+  "image": "subjects/CardioPneumo/CardioPneumoImages/ekg8.jpg",
+  "options": [
+    "Eixo QRS a +60º, com QRS isodifásico em aVL e polarização positiva em D2.",
+    "Eixo QRS a 0º, com QRS positivo em todas as derivações periféricas.",
+    "Eixo QRS indeterminado, com ondas negativas em D1 e aVF.",
+    "Eixo QRS a +120º, caracterizando desvio do eixo para a direita.",
+    "Eixo QRS negativo em D2 e positivo em aVF, sugerindo bloqueio de ramo."
+  ],
+  "correctIndex": 0,
+  "explanation": "A maior amplitude do QRS está em D2, cujo eixo é +60º. O QRS em aVL está isodifásico (igual positivo e negativo), que corresponde ao ângulo reto do eixo com essa derivação (-30º). Assim, o eixo do QRS está em +60º no plano frontal.",
+  "type": "raciocínio"
+},
+{
+  "question": "Os dois pacientes a seguir são assintomáticos, com sistema cardiovascular normal:\nPaciente A: Homem de 66 anos, 1,64 m e 92 kg.\nPaciente B: Homem de 29 anos, 1,81 m e 71 kg.\nAbaixo, ECG 1 e ECG 2. Com base no eixo QRS frontal, qual ECG corresponde a qual paciente?",
+  "image": "subjects/CardioPneumo/CardioPneumoImages/ekg9.jpg",
+  "options": [
+    "ECG 1 é do paciente B (QRS em +90º, eixo verticalizado); ECG 2 é do paciente A (QRS em 0º, eixo horizontalizado).",
+    "ECG 1 é do paciente A (QRS em 0º, eixo horizontalizado); ECG 2 é do paciente B (QRS em +90º, eixo verticalizado).",
+    "Ambos os ECGs mostram eixo QRS indeterminado e não podem ser diferenciados.",
+    "ECG 1 tem desvio do eixo para a esquerda (paciente A); ECG 2 tem desvio do eixo para a direita (paciente B).",
+    "ECG 1 e ECG 2 apresentam o mesmo eixo QRS, não havendo diferença entre pacientes de diferentes biotipos."
+  ],
+  "correctIndex": 0,
+  "explanation": "O ECG 1 é do paciente B: homem jovem, longilíneo, com eixo QRS em +90º (verticalizado), padrão comum nessa faixa etária e biotipo. ECG 2 é do paciente A: homem mais velho, brevelíneo, eixo QRS em 0º (horizontalizado), esperado nesse perfil corporal. O traçado confirma a relação entre biotipo e orientação do eixo cardíaco.",
+  "type": "raciocínio"
+},
+{
+  "question": "O ECG abaixo, de um homem de 56 anos, assintomático e esportista, é considerado normal. Indique quais das alternativas justifica a normalidade do exame, considerando os seguintes parâmetros: ritmo, frequência cardíaca, intervalo PR, complexo QRS, eixo QRS, progressão da onda R, segmento ST, ondas T e intervalo QT.",
+  "image": "subjects/CardioPneumo/CardioPneumoImages/ekg11.jpg",
+  "options": [
+    "Ritmo sinusal (ondas P positivas em D1 e D2, negativas em aVR), frequência cardíaca de 60 bpm, intervalo PR fixo em 0,16s, QRS de 0,08s, eixo QRS em +60º, progressão normal da onda R de V1 a V5, segmento ST com leve supradesnível (<1mm), ondas T positivas exceto em aVR, intervalo QT <50% do RR.",
+    "Ritmo atrial com FC de 110 bpm, PR de 0,22s, QRS de 0,14s, eixo QRS indeterminado, ausência de progressão da onda R, segmento ST infradesnivelado, ondas T invertidas em todas as derivações, QT prolongado.",
+    "Ritmo sinusal, FC de 45 bpm, PR de 0,12s, QRS de 0,10s, eixo QRS de -30º, ausência de progressão da R, ST supradesnivelado em todas derivações, ondas T negativas em D1 e aVL, QT normal.",
+    "Ritmo nodal, FC de 150 bpm, PR de 0,18s, QRS de 0,12s, eixo QRS em +120º, ausência de R em V5/V6, ST isoelétrico, ondas T negativas em aVF, QT prolongado.",
+    "Ritmo sinusal, FC de 90 bpm, PR de 0,20s, QRS de 0,11s, eixo QRS em +90º, progressão de R até V3, ST infradesnivelado de 1,5mm em D2, T negativas em V4-V6, QT de 0,55s."
+  ],
+  "correctIndex": 0,
+  "explanation": "O ECG apresenta padrão absolutamente normal: ritmo sinusal, FC 60 bpm, PR 0,16s, QRS 0,08s, eixo +60º, progressão de R adequada, segmento ST fisiológico, ondas T positivas (exceto aVR) e intervalo QT inferior a 50% do RR. Essas características confirmam o diagnóstico de ECG normal em adulto assintomático e esportista.",
+  "type": "conteudista"
+},
+  {
     "question": "O eletrocardiograma, também chamado de ECG, é o registro gráfico dos fenômenos elétricos do músculo cardíaco ou do coração. Com base no tema, é CORRETO afirmar:",
     "options": [
       "O complexo QRS representa a despolarização e a condução do impulso nos ventrículos.",
@@ -141,4 +210,5 @@
     "explanation": "A frequência cardíaca estimada pelo traçado apresentado é de aproximadamente 170 bpm, compatível com um ritmo irregular e taquicárdico, sugerindo provável taquiarritmia supraventricular. Em ritmos irregulares, calcula-se a FC contando-se o número de complexos QRS em 30 quadrados grandes (que equivalem a 6 segundos) e multiplicando esse número por 10 para obter a FC por minuto. No caso, temos 17 complexos QRS em 30 quadrados grandes, então 17 x 10 = 170 bpm[5][6][7].",
     "type": "raciocínio"
   }
+
 ]
