@@ -67,47 +67,47 @@ const quizConfig = {
                         {
                             id: "has",
                             name: "Hipertensão Arterial Sistêmica",
-                            file: "subjects/CardioPneumo/CardioPneumoQuestions/has"
+                            file: "subjects/CardioPneumo/CardioPneumoQuestions/AVC 1/has"
                         },
                         {
                             id: "dislipidemias",
                             name: "Dislipidemias",
-                            file: "subjects/CardioPneumo/CardioPneumoQuestions/dislipidemias"
+                            file: "subjects/CardioPneumo/CardioPneumoQuestions/AVC 1/dislipidemias"
                         },
                         {
                             id: "sca",
                             name: "Síndrome Coronariana Aguda",
-                            file: "subjects/CardioPneumo/CardioPneumoQuestions/SCA"
+                            file: "subjects/CardioPneumo/CardioPneumoQuestions/AVC 1/SCA"
                         },
                         {
                             id: "ic",
                             name: "Insuficiência Cardíaca",
-                            file: "subjects/CardioPneumo/CardioPneumoQuestions/IC"
+                            file: "subjects/CardioPneumo/CardioPneumoQuestions/AVC 1/IC"
                         },
                         {
                             id: "propedeutica",
                             name: "Propedêutica",
-                            file: "subjects/CardioPneumo/CardioPneumoQuestions/propedeutica"
+                            file: "subjects/CardioPneumo/CardioPneumoQuestions/AVC 1/propedeutica"
                         },
                         {
                             id: "bronquite",
                             name: "Bronquite",
-                            file: "subjects/CardioPneumo/CardioPneumoQuestions/bronquite"
+                            file: "subjects/CardioPneumo/CardioPneumoQuestions/AVC 1/bronquite"
                         },
                         {
                             id: "enfisema",
                             name: "Enfisema",
-                            file: "subjects/CardioPneumo/CardioPneumoQuestions/enfisema"
+                            file: "subjects/CardioPneumo/CardioPneumoQuestions/AVC 1/enfisema"
                         },
                         {
                             id: "diagnostico_dpoc",
                             name: "Diagnóstico DPOC",
-                            file: "subjects/CardioPneumo/CardioPneumoQuestions/diagnostico_dpoc"
+                            file: "subjects/CardioPneumo/CardioPneumoQuestions/AVC 1/diagnostico_dpoc"
                         },
                         {
                             id: "tratamento_dpoc",
                             name: "Tratamento DPOC",
-                            file: "subjects/CardioPneumo/CardioPneumoQuestions/tratamento_dpoc"
+                            file: "subjects/CardioPneumo/CardioPneumoQuestions/AVC 1/tratamento_dpoc"
                         }
                     ]
                 },
@@ -118,47 +118,122 @@ const quizConfig = {
                         {
                             id: "ecg",
                             name: "ECG",
-                            file: "subjects/CardioPneumo/CardioPneumoQuestions/ECG"
+                            file: "subjects/CardioPneumo/CardioPneumoQuestions/AVC 2/ECG"
                         },
                         {
                             id: "asma",
                             name: "Asma",
-                            file: "subjects/CardioPneumo/CardioPneumoQuestions/asma"
+                            file: "subjects/CardioPneumo/CardioPneumoQuestions/AVC 2/asma"
                         },
                         {
                             id: "dengue",
                             name: "Dengue",
-                            file: "subjects/CardioPneumo/CardioPneumoQuestions/dengue"
+                            file: "subjects/CardioPneumo/CardioPneumoQuestions/AVC 2/dengue"
                         },
                         {
                             id: "hipertireoidismo",
                             name: "Hipertireoidismo",
-                            file: "subjects/CardioPneumo/CardioPneumoQuestions/hipertireoidismo"
+                            file: "subjects/CardioPneumo/CardioPneumoQuestions/AVC 2/hipertireoidismo"
                         },
                         {
                             id: "lrarenal",
                             name: "Lesão Renal Aguda",
-                            file: "subjects/CardioPneumo/CardioPneumoQuestions/lrarenal"
+                            file: "subjects/CardioPneumo/CardioPneumoQuestions/AVC 2/lrarenal"
                         },
                         {
                             id: "miocardiopatias",
                             name: "Miocardiopatias",
-                            file: "subjects/CardioPneumo/CardioPneumoQuestions/miocardiopatias"
+                            file: "subjects/CardioPneumo/CardioPneumoQuestions/AVC 2/miocardiopatias"
                         },
                         {
                             id: "pneumonias",
                             name: "Pneumonias",
-                            file: "subjects/CardioPneumo/CardioPneumoQuestions/pneumonias"
+                            file: "subjects/CardioPneumo/CardioPneumoQuestions/AVC 2/pneumonias"
                         },
                         {
                             id: "sdnefritica",
                             name: "Síndrome Nefrítica",
-                            file: "subjects/CardioPneumo/CardioPneumoQuestions/sdnefritica"
+                            file: "subjects/CardioPneumo/CardioPneumoQuestions/AVC 2/sdnefritica"
                         },
                         {
                             id: "valvulopatias",
                             name: "Valvulopatias",
-                            file: "subjects/CardioPneumo/CardioPneumoQuestions/valvulopatias"
+                            file: "subjects/CardioPneumo/CardioPneumoQuestions/AVC 2/valvulopatias"
+                        }
+                    ]
+                }
+            }
+        },
+        clinica: {
+            id: "clinica",
+            name: "Clínica Cirúrgica",
+            hasResumos: true,
+            hasGuias: true,
+            hasSubcategories: true,
+            subcategories: {
+                avc1: {
+                    id: "avc1",
+                    name: "AVC 1",
+                    modules: [
+                        {
+                            id: "pneumotorax",
+                            name: "Pneumotórax",
+                            file: "subjects/ClinicaCirurgica/ClinicaCirurgicaQuestions/AVC 1/1pneumotorax"
+                        },
+                        {
+                            id: "disturbioscoagulacao",
+                            name: "Distúrbios da Coagulação",
+                            file: "subjects/ClinicaCirurgica/ClinicaCirurgicaQuestions/AVC 1/2disturbioscoagulacao"
+                        },
+                        {
+                            id: "pediabetico",
+                            name: "Pé Diabético",
+                            file: "subjects/ClinicaCirurgica/ClinicaCirurgicaQuestions/AVC 1/3pediabetico"
+                        },
+                        {
+                            id: "ureterolitiase",
+                            name: "Ureterolitíase e Pielonefrite",
+                            file: "subjects/ClinicaCirurgica/ClinicaCirurgicaQuestions/AVC 1/4ureterolitiaseepielonefrite"
+                        },
+                        {
+                            id: "noduloscervicais",
+                            name: "Nódulos Cervicais",
+                            file: "subjects/ClinicaCirurgica/ClinicaCirurgicaQuestions/AVC 1/5noduloscervicais"
+                        },
+                        {
+                            id: "insuficienciavenosa",
+                            name: "Insuficiência Venosa",
+                            file: "subjects/ClinicaCirurgica/ClinicaCirurgicaQuestions/AVC 1/6insuficienciavenosa"
+                        },
+                        {
+                            id: "acessos_vasculares",
+                            name: "Acessos Vasculares",
+                            file: "subjects/ClinicaCirurgica/ClinicaCirurgicaQuestions/AVC 1/7questoes_acessos_vasculares"
+                        },
+                        {
+                            id: "tvp",
+                            name: "TVP - Trombose Venosa Profunda",
+                            file: "subjects/ClinicaCirurgica/ClinicaCirurgicaQuestions/AVC 1/8tvp"
+                        },
+                        {
+                            id: "derramepleural",
+                            name: "Derrame Pleural",
+                            file: "subjects/ClinicaCirurgica/ClinicaCirurgicaQuestions/AVC 1/9derramepleural"
+                        },
+                        {
+                            id: "edemas",
+                            name: "Edemas",
+                            file: "subjects/ClinicaCirurgica/ClinicaCirurgicaQuestions/AVC 1/10edemas"
+                        },
+                        {
+                            id: "celulite",
+                            name: "Celulite e Erisipela",
+                            file: "subjects/ClinicaCirurgica/ClinicaCirurgicaQuestions/AVC 1/11celuliteeerisipela"
+                        },
+                        {
+                            id: "emboliapulmonar",
+                            name: "Embolia Pulmonar",
+                            file: "subjects/ClinicaCirurgica/ClinicaCirurgicaQuestions/AVC 1/12emboliapulmonar"
                         }
                     ]
                 }
