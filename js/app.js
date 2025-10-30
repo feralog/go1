@@ -129,6 +129,7 @@ function setupEventListeners() {
     document.getElementById('go-specialty-btn').addEventListener('click', () => selectSpecialty('go'));
     document.getElementById('cardio-specialty-btn').addEventListener('click', () => selectSpecialty('cardio'));
     document.getElementById('tc-specialty-btn').addEventListener('click', () => selectSpecialty('tc'));
+    document.getElementById('clinica-specialty-btn').addEventListener('click', () => selectSpecialty('clinica'));
     document.getElementById('specialty-back-btn').addEventListener('click', showLoginScreen);
 
     // Main menu buttons (in module selection screen)
@@ -1039,6 +1040,10 @@ const specialtyFiles = {
     tc: {
         resumos: [],
         guias: []
+    },
+    clinica: {
+        resumos: [],
+        guias: []
     }
 };
 
@@ -1139,6 +1144,10 @@ async function loadFile(type, filename) {
             tc: {
                 resumos: 'subjects/TecnicasCirurgicas/TCResumos',
                 guias: 'subjects/TecnicasCirurgicas/TCGuias'
+            },
+            clinica: {
+                resumos: 'subjects/ClinicaCirurgica/ClinicaCirurgicaResumos',
+                guias: 'subjects/ClinicaCirurgica/ClinicaCirurgicaGuias'
             }
         };
 
