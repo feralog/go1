@@ -531,8 +531,9 @@ function scrollNavRight() {
 
 /**
  * Atualiza o scroll da navegação
+ * @param {boolean} animate - Se deve animar o scroll
  */
-function updateNavigationScroll() {
+function updateNavigationScroll(animate = false) {
     const navButtons = document.querySelectorAll('.question-nav-btn');
 
     navButtons.forEach((btn, index) => {
@@ -544,6 +545,62 @@ function updateNavigationScroll() {
     });
 
     updateScrollArrows();
+}
+
+/**
+ * Rola automaticamente a barra de navegação para acompanhar a questão atual
+ * @param {number} questionIndex - Índice da questão atual
+ */
+function autoScrollToQuestion(questionIndex) {
+    let targetOffset;
+
+    // Calcula o offset máximo possível (para não deixar espaço vazio no final)
+    const maxOffset = Math.max(0, currentQuestions.length - visibleButtonsCount);
+
+    // Se a questão atual está no início (antes de encher a barra), mostra desde o início
+    if (questionIndex < visibleButtonsCount) {
+        targetOffset = 0;
+    }
+    // Se a questão atual está no meio, coloca ela como primeira visível
+    else if (questionIndex < maxOffset) {
+        targetOffset = questionIndex;
+    }
+    // Se está perto do fim, fixa no final
+    else {
+        targetOffset = maxOffset;
+    }
+
+    // Se já está no offset correto, não faz nada
+    if (navScrollOffset === targetOffset) {
+        return;
+    }
+
+    // Anima o scroll suavemente
+    const startOffset = navScrollOffset;
+    const distance = targetOffset - startOffset;
+    const duration = 300; // 300ms de animação
+    const startTime = performance.now();
+
+    function animateScroll(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+
+        // Easing function (ease-out)
+        const easeProgress = 1 - Math.pow(1 - progress, 3);
+
+        // Calcula o offset atual
+        navScrollOffset = Math.round(startOffset + (distance * easeProgress));
+
+        // Atualiza a visualização
+        updateNavigationScroll();
+
+        // Continua a animação se não terminou
+        if (progress < 1) {
+            requestAnimationFrame(animateScroll);
+        }
+    }
+
+    requestAnimationFrame(animateScroll);
 }
 
 /**
@@ -592,6 +649,9 @@ function navigateToQuestion(questionIndex) {
 
     // Carrega a questão
     loadQuestion();
+
+    // Rola a barra de navegação para acompanhar a questão atual
+    autoScrollToQuestion(questionIndex);
 
     // Atualiza navegação
     updateNavigationStates();
