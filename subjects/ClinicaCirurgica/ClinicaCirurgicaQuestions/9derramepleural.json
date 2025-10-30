@@ -1,0 +1,119 @@
+[
+  {
+    "question": "Qual é a definição correta de derrame pleural?",
+    "options": [
+      "Acúmulo anormal de líquido entre a pleura visceral (que recobre o pulmão) e a pleura parietal (que recobre a parede torácica)",
+      "Inflamação da pleura visceral causando necrose e exsudato purulento no espaço pleural",
+      "Dilatação dos vasos linfáticos da pleura provocando edema da parede torácica",
+      "Acúmulo de ar e líquido contaminado simultaneamente no espaço pleural",
+      "Descolamento da pleura parietal da parede torácica com formação de calo ósseo"
+    ],
+    "correctIndex": 0,
+    "explanation": "O derrame pleural é caracterizado pelo acúmulo anormal de líquido no espaço entre a pleura visceral e a parietal. Esta cavidade normalmente contém de 5 a 15 ml de líquido seroso que lubrifica o deslizamento pleural durante os movimentos respiratórios, mas alterações na produção ou absorção levam ao derrame patológico.",
+    "type": "conteudista"
+  },
+  {
+    "question": "Qual é o mecanismo fisiopatológico comum aos derrames pleurais classificados como transudatos?",
+    "options": [
+      "Desequilíbrio hidrostático ou oncótico, como na insuficiência cardíaca e síndrome nefrótica",
+      "Aumento da permeabilidade capilar devido a processos inflamatórios como pneumonia",
+      "Obstrução do sistema linfático provocada por neoplasias ou infecções",
+      "Entrada de líquido de cavidades adjacentes por ruptura de membranas, como no hidrotórax hepático",
+      "Resposta imune autoimune com ativação do complemento na pleura visceral"
+    ],
+    "correctIndex": 0,
+    "explanation": "Os derrames pleurais do tipo transudato resultam de desequilíbrios hidrostáticos ou oncóticos, exemplificados pela insuficiência cardíaca, cirrose hepática e síndrome nefrótica, que aumentam a pressão hidrostática ou diminuem a pressão oncótica, respectivamente, levando ao extravasamento de líquido claro e pobre em proteínas para o espaço pleural.",
+    "type": "conteudista"
+  },
+  {
+    "question": "Quais dos seguintes valores laboratoriais indicam que o derrame é um exsudato segundo os Critérios de Light?",
+    "options": [
+      "Relação proteína líquido pleural/sérica >0,5, relação LDH líquido pleural/sérico >0,6, ou LDH no líquido pleural >2/3 do limite superior no soro",
+      "Proteína total do líquido pleural abaixo de 2,5 g/dL e LDH no líquido pleural inferior a 200 UI/L",
+      "pH do líquido pleural acima de 7,4 com glicose normal acima de 80 mg/dL",
+      "Ausência de leucócitos no líquido pleural e nível baixo de adenosina deaminase (ADA)",
+      "Presença exclusiva de células mesoteliais no exame citológico do líquido pleural"
+    ],
+    "correctIndex": 0,
+    "explanation": "Os Critérios de Light estabelecem que o derrame é classificado como exsudato se pelo menos UM dos seguintes critérios for observado: relação proteína líquido/soro superior a 0,5, relação LDH líquido/soro superior a 0,6, ou LDH no líquido pleural maior que 2/3 do limite superior do valor sérico. A presença desses critérios indica aumento da permeabilidade capilar ou inflamação pleural.",
+    "type": "conteudista"
+  },
+  {
+    "question": "Quais são as principais causas de derrame pleural no Brasil?",
+    "options": [
+      "Insuficiência cardíaca, pneumonia (derrame parapneumônico), neoplasias, tuberculose pleural",
+      "Asbestose, embolia pulmonar isolada, infecção por vírus influenza, doença pulmonar intersticial idiopática",
+      "Trauma torácico, carcinoma de tireoide, fibrilação atrial, hepatopatia alcoólica crônica",
+      "Doença renal crônica, hipertensão pulmonar, pneumonia atípica por micoplasma, dermatomiosite",
+      "Síndrome nefrótica, embolia pulmonar crônica, sarcoidose, bronquiectasias"
+    ],
+    "correctIndex": 0,
+    "explanation": "No Brasil, as causas mais frequentes de derrame pleural são insuficiência cardíaca (semelhante a países desenvolvidos), seguida de derrame parapneumônico, neoplasias (primárias ou metastáticas) e especialmente tuberculose pleural, que é uma das formas extrapulmonares mais comuns da tuberculose na região.",
+    "type": "conteudista"
+  },
+  {
+    "question": "Qual exame é mais sensível para detectar volumes pequenos de derrame pleural, como 5 a 50 ml?",
+    "options": [
+      "Ultrassonografia torácica, que identifica líquido pleural livre e loculado com alta sensibilidade",
+      "Radiografia de tórax em posição ortostática, que é padrão para volumes acima de 200 ml",
+      "Radiografia de tórax em decúbito lateral, que detecta volumes acima de 300 ml",
+      "Tomografia computadorizada de tórax sem contraste, ideal para avaliação de massa pleural",
+      "Resonância magnética torácica para avaliação detalhada da pleura visceral"
+    ],
+    "correctIndex": 0,
+    "explanation": "A ultrassonografia de tórax é muito sensível para a detecção de pequenos volumes de líquido pleural, entre 5 e 50 ml, sendo capaz de diferenciar entre líquido livre e loculado, além de orientar com segurança a realização da toracocentese.",
+    "type": "conteudista"
+  },
+  {
+    "question": "Em um paciente com derrame pleural causado por pneumonia, qual característica do líquido pleural é esperada na toracocentese?",
+    "options": [
+      "Exsudato, com proteína e LDH elevados, pH diminuído (<7,3) e glicose baixa (<60 mg/dL) devido à inflamação pleural",
+      "Transudato, com proteína baixa (<2,5 g/dL), pH normal e glicose normal, por insuficiência cardíaca associada",
+      "Exsudato, com aumento de amilase devido à contaminação pancreática",
+      "Transudato, devido à hipoalbuminemia da síndrome nefrótica",
+      "Exsudato, com citologia positiva para células malignas e alta adenosina deaminase"
+    ],
+    "correctIndex": 0,
+    "explanation": "Derrame pleural decorrente de pneumonia é tipicamente exsudativo, apresentando níveis elevados de proteínas e LDH, com redução do pH (<7,3) e da glicose (<60 mg/dL) devido à alta atividade metabólica dos leucócitos e bactérias no espaço pleural, caracterizando derrame parapneumônico complicando-se frequentemente em empiema.",
+    "type": "conteudista"
+  },
+  {
+    "question": "Qual é a indicação principal da toracocentese terapêutica em pacientes com derrame pleural?",
+    "options": [
+      "Alívio da dispneia em derrames volumosos ou exsudatos sintomáticos, especialmente quando causam desconforto respiratório",
+      "Diagnóstico inicial em derrames pequenos assintomáticos que podem estar associados a doenças sistêmicas",
+      "Redução do risco de embolia pulmonar associada ao derrame pleural",
+      "Avaliação citológica para pesquisa de malignidade antes do início de quimioterapia",
+      "Detecção de coagulopatias ocultas pela análise do líquido pleural"
+    ],
+    "correctIndex": 0,
+    "explanation": "Toracocentese terapêutica é indicada principalmente para o alívio dos sintomas causados por derrames pleurais volumosos, especialmente em casos de exsudato sintomático, quando há dispneia importante e desconforto respiratório. A toracocentese diagnóstica, porém, é indicada para investigação etiológica em derrames desconhecidos ou suspeitos.",
+    "type": "conteudista"
+  },
+  {
+    "question": "Em derrames pleurais neoplásicos recorrentes em pacientes sem possibilidade de cura, qual procedimento é indicado para controle sintomático prolongado?",
+    "options": [
+      "Pleurodese química com talco para promover aderência pleural e prevenir recorrência do derrame",
+      "Drenagem repetida por toracocentese sempre que houver sintomas respiratórios",
+      "Drenagem pleural contínua por cateter intrapleural externo por semanas",
+      "Cirurgia torácica para ressecção pleural e pulmão comprometido",
+      "Antibioticoterapia associada para prevenir infecção secundária da cavidade pleural"
+    ],
+    "correctIndex": 0,
+    "explanation": "Em pacientes com derrames pleurais malignos recorrentes e sem perspectiva curativa, a pleurodese química, usualmente realizada com talco, é recomendada para promover a aderência entre as pleuras visceral e parietal, reduzindo a recorrência do derrame e melhorando a qualidade de vida do paciente.",
+    "type": "conteudista"
+  },
+  {
+    "question": "Paciente com derrame pleural exsudativo, pH do líquido pleural 6,9, glicose 30 mg/dL e leucócitos neutrofílicos predomintantes. Qual é a conduta terapêutica mais apropriada?",
+    "options": [
+      "Drenagem pleural imediata para remoção do líquido infeccioso e antibioticoterapia dirigida",
+      "Apenas tratamento com antibióticos por via oral e observação clínica rigorosa",
+      "Toracocentese diagnóstica repetida a cada 48 horas para monitorar evolução",
+      "Pleurodese química para evitar recorrência do derrame após resolução inicial",
+      "Cirurgia torácica eletiva para ressecção da pleura afetada"
+    ],
+    "correctIndex": 0,
+    "explanation": "Derrame pleural com pH abaixo de 7,2, glicose baixa e predomínio de neutrófilos sugere derrame infeccioso complicado, como empiema, que requer drenagem pleural imediata para remover o exsudato purulento, associada a antibioticoterapia eficaz para controle da infecção.",
+    "type": "raciocínio"
+  }
+]
