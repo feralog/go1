@@ -1,0 +1,86 @@
+Guia de Estudo: Trabalho de Parto e Parto
+
+Este guia foi elaborado para aprofundar e avaliar a compreensão dos conceitos fundamentais relacionados ao trabalho de parto e ao parto, com base no material de origem.
+
+Questionário de Resposta Curta
+
+Responda às seguintes perguntas de forma concisa, utilizando de 2 a 3 frases para cada resposta.
+
+1. O que define o "parto" e quais são as suas principais vias de obtenção, de acordo com o material?
+2. Descreva a fase latente do trabalho de parto, conforme os estudos de Emanuel Friedman.
+3. Quais são as principais características da fase ativa do trabalho de parto, segundo Friedman, e qual a recomendação associada a ela?
+4. Compare os estudos de Emanuel Friedman e Jun Zhang em termos de metodologia e população estudada.
+5. Quais foram as principais conclusões de Jun Zhang que revisaram a curva de trabalho de parto de Friedman?
+6. O que é a dequitação e quais são os dois mecanismos de descolamento da placenta descritos?
+7. Cite os quatro fatores que intervêm no trabalho de parto.
+8. Explique o conceito de "Tríplice Gradiente Descendente" na dinâmica uterina.
+9. Defina "Atitude", "Situação", "Apresentação" e "Posição" no contexto da estática fetal.
+10. O que é "Estação" fetal e qual o seu ponto de referência anatômico na pelve materna?
+
+
+--------------------------------------------------------------------------------
+
+
+Gabarito
+
+1. O parto é o processo fisiológico para a obtenção de um feto com mais de 500g ou 22 semanas, vivo ou morto. As vias de obtenção são as naturais (espontâneo) e as operatórias, que incluem o uso de fórceps ou vácuo.
+2. A fase latente é a fase mais longa do trabalho de parto, na qual o colo do útero afina e dilata até 3-4 cm. As contrações são fracas, irregulares e leves a moderadas, permitindo que a mulher permaneça confortável em casa.
+3. A fase ativa é caracterizada por uma dilatação rápida e constante do colo uterino (em média 1 cm por hora), com contrações mais fortes, longas e frequentes. A entrada nesta fase é o sinal de que o trabalho de parto está avançando rapidamente, sendo o momento de ir ao hospital.
+4. O estudo de Friedman foi retrospectivo, de centro único, e analisou 500 nulíparas nas décadas de 1950 e 60. O estudo de Jun Zhang foi multicêntrico e retrospectivo, analisando dados de 62.415 mulheres de paridade variada em 19 hospitais nos EUA, entre 2002 e 2008.
+5. Jun Zhang concluiu que a transição da fase latente para a ativa é mais gradual, com a velocidade da dilatação sendo mais lenta entre 4 e 6 cm do que a descrita por Friedman. A aceleração da dilatação só ocorre de forma mais acentuada após os 6 cm.
+6. Dequitação é o terceiro período do trabalho de parto, que começa após o nascimento e termina com a expulsão da placenta e membranas. Os dois mecanismos são o de Baudelocque-Schultze (descolamento central, face fetal primeiro) e o de Baudelocque-Duncan (descolamento pela borda, face materna primeiro).
+7. Os quatro fatores que intervêm no trabalho de parto são: o canal pélvico (trajeto), a dinâmica uterina, o feto e a prensa abdominal.
+8. O Tríplice Gradiente Descendente é o fenômeno pelo qual a onda contrátil uterina se origina no fundo do útero, tem maior intensidade e duração na parte superior e diminui em direção ao colo. Isso garante que o feto seja empurrado eficientemente para o canal de parto.
+9. Atitude é a relação das partes fetais entre si; Situação é a relação entre o maior eixo fetal e o uterino; Apresentação é a relação entre o polo fetal e o estreito superior da pelve; e Posição é a relação do dorso fetal com o abdome materno.
+10. Estação é a relação do ponto mais avançado da apresentação fetal com um plano na altura das espinhas ciáticas da mãe. O plano 0 de De Lee, que corresponde ao nível das espinhas ciáticas, é o ponto de referência.
+
+
+--------------------------------------------------------------------------------
+
+
+Questões para Dissertação
+
+1. Analise a importância dos quatro fatores que intervêm no trabalho de parto (canal pélvico, dinâmica uterina, feto e prensa abdominal), explicando como cada um contribui para o processo e como podem interagir entre si.
+2. Descreva detalhadamente os diferentes tipos de bacia (Ginecoide, Antropoide, Androide, Platipeloide), comparando suas características anatômicas e discutindo o prognóstico de cada uma para o parto vaginal, conforme a tabela fornecida.
+3. Explique o conceito de estática fetal, detalhando os diferentes tipos de apresentação (cefálica, pélvica, córmica) e as variedades de apresentação cefálica de acordo com o grau de deflexão da cabeça fetal.
+4. Discuta a evolução do entendimento sobre a progressão do trabalho de parto, contrastando a curva sigmoide de Emanuel Friedman com os achados mais recentes de Jun Zhang. Quais são as implicações práticas dessas diferenças para o manejo do trabalho de parto?
+5. Descreva os sete movimentos cardinais do feto durante o mecanismo de parto em uma apresentação cefálica de vértice, explicando a função de cada movimento na passagem pelo canal pélvico.
+
+
+--------------------------------------------------------------------------------
+
+
+Glossário de Termos Essenciais
+
+Termo	Definição
+Apresentação Córmica	Apresentação em que o feto está em situação transversa (deitado de lado), não permitindo o parto vaginal.
+Apresentação Cefálica	Apresentação em que o polo fetal em contato com a pelve é a cabeça. Corresponde a 95% dos partos.
+Apresentação Pélvica	Apresentação em que o polo fetal em contato com a pelve são as nádegas ou os pés. Ocorre em menos de 4% dos partos a termo.
+Assinclitismo	Ocorre quando a sutura sagital da cabeça fetal não está equidistante do púbis e do sacro materno. Pode ser anterior (sutura mais próxima do sacro) ou posterior (sutura mais próxima do púbis).
+Atitude Fetal	Relação das diversas partes do feto entre si. Geralmente é de flexão generalizada, formando o "ovoide fetal".
+Bacia Androide	Tipo de pelve com formato triangular ou de coração, presente em 20% das mulheres. Apresenta dificuldades crescentes para o parto com a progressão.
+Bacia Antropoide	Tipo de pelve com formato elíptico e alongado no sentido anteroposterior, presente em 25% das mulheres. O estreito superior pode trazer mais dificuldades.
+Bacia Ginecoide	Tipo de pelve com formato arredondado, considerada a mais favorável para o parto. É a mais comum, ocorrendo em 50% das mulheres.
+Bacia Platipeloide	Tipo de pelve ovalada e achatada no sentido anteroposterior, presente em 5% das mulheres. Causa maior dificuldade na insinuação do feto.
+Contranutação	Movimento da pelve em que o promontório se afasta da sínfise púbica e o cóccix se aproxima, diminuindo o diâmetro do estreito inferior.
+Curva de Friedman	Gráfico sigmoide que descreve a relação entre a dilatação cervical e o tempo de trabalho de parto, dividido em fase latente e fase ativa.
+Curva de Zhang	Modelo de progressão do trabalho de parto que propõe uma transição mais gradual da fase latente para a ativa, com aceleração da dilatação ocorrendo mais tardiamente (após 6 cm).
+Dequitação	Terceiro estágio do trabalho de parto, que se inicia após o nascimento do bebê e termina com a expulsão da placenta e membranas.
+Dilatação	Abertura do colo do útero, que progride durante o trabalho de parto até atingir 10 cm, permitindo a passagem do feto.
+Dinâmica Uterina	Refere-se às contrações uterinas que impulsionam o trabalho de parto, caracterizadas pelo Tríplice Gradiente Descendente.
+Estação Fetal	Medida da descida da apresentação fetal em relação a um plano que passa pelas espinhas ciáticas da pelve materna (plano 0).
+Estática Fetal	Estudo das relações do feto com o útero e a bacia materna. Inclui atitude, situação, apresentação e posição.
+Fase Ativa	Estágio do trabalho de parto com dilatação rápida e progressiva do colo uterino (a partir de 3-4 cm, segundo Friedman, ou 6 cm, segundo Zhang), com contrações fortes e regulares.
+Fase Latente	Primeiro e mais longo estágio do trabalho de parto, caracterizado por contrações irregulares e uma dilatação lenta e gradual do colo do útero até 3-4 cm.
+Manobras de Leopold	Conjunto de quatro manobras de palpação abdominal para determinar a situação, posição, apresentação e insinuação fetal.
+Mecanismo de Parto	Sequência de movimentos que o feto realiza para atravessar o canal de parto. Inclui acomodação, flexão, descida, rotação interna, extensão, rotação externa e desprendimento.
+Nutação	Movimento da pelve que aumenta o diâmetro do estreito inferior ao aproximar o promontório do púbis e afastar o cóccix. É favorável para a passagem fetal.
+Parto	Processo fisiológico para a obtenção de um feto com mais de 500g ou 22 semanas de gestação.
+Período Expulsivo	Segundo estágio do trabalho de parto, que começa com a dilatação completa (10 cm) e termina com o nascimento do bebê.
+Posição Fetal	Relação do dorso fetal com os lados direito e esquerdo do abdome materno.
+Prensa Abdominal	Aumento da pressão intra-abdominal pela contração da musculatura abdominal e torácica, que auxilia na expulsão do feto durante o período expulsivo.
+Sinclitismo	Ocorre quando a sutura sagital da cabeça fetal está equidistante do púbis e do sacro materno, indicando um encaixe ideal.
+Situação Fetal	Relação entre o maior eixo do feto (cabeça-nádegas) e o maior eixo do útero. Pode ser longitudinal, transversal (córmica) ou oblíqua.
+Trabalho de Parto	Processo de preparação do corpo para o nascimento, consistindo em contrações uterinas regulares e fortes que causam o apagamento e a dilatação do colo do útero.
+Tríplice Gradiente Descendente	Padrão da contração uterina onde a onda se origina no fundo, tem maior intensidade e duração na parte superior e diminui em direção ao colo, impulsionando o feto.
+Variedade de Posição	Relação entre o ponto de referência da apresentação fetal (ex: occipital na apresentação de vértice) e os pontos de referência da pelve materna (anterior, posterior, etc.).

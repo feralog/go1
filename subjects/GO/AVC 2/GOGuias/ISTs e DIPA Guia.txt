@@ -1,0 +1,65 @@
+
+Guia de Estudos: ISTs e DIPA
+
+Questionário
+
+Responda às seguintes perguntas com base no material fornecido. Cada resposta deve ter de 2 a 3 frases.
+
+1. Quais são os critérios diagnósticos para a Doença Inflamatória Pélvica Aguda (DIPA) segundo a Febrasgo?
+2. Descreva as características clínicas da úlcera da sífilis primária, também conhecida como cancro duro.
+3. Qual é o tratamento de primeira linha para uma infecção não complicada por gonorreia e clamídia, e por que a terapia combinada é frequentemente indicada?
+4. Diferencie as manifestações da infecção primária e da infecção recorrente por Herpes Simples.
+5. Qual é o agente etiológico do Cancro Mole e qual achado clínico é considerado patognomônico para a doença?
+6. Explique o que é a Síndrome de Fitz-Hugh-Curtis e a quais patologias ela está associada.
+7. Como se caracteriza a fase secundária da sífilis e quando ela geralmente surge?
+8. Qual é o agente etiológico do Linfogranuloma Venéreo (LGV) e qual é a sua manifestação característica na segunda fase da doença?
+9. Descreva a lesão inicial da Donovanose e o método diagnóstico que confirma a infecção.
+10. Quais são os quatro estágios da DIPA segundo a Classificação de Monif e como eles determinam a abordagem terapêutica (ambulatorial ou hospitalar)?
+
+Gabarito
+
+1. O diagnóstico de DIPA requer a presença de 3 critérios maiores (dor hipogástrica, dor à palpação dos anexos e dor à mobilização do colo uterino) mais 1 critério menor (como febre ou leucocitose). Alternativamente, o diagnóstico pode ser confirmado com apenas 1 critério elaborado, como evidência de abscesso em exame de imagem ou endometrite em biópsia.
+2. O cancro duro é uma úlcera tipicamente única, indolor, com bordas endurecidas e elevadas, fundo liso e limpo, e base de cor de carne. Geralmente acompanhada de um linfonodo regional aumentado (bubão sifilítico), que também é indolor, móvel e sem sinais inflamatórios.
+3. O tratamento de primeira opção para infecção gonocócica e clamídia não complicada é a combinação de Ceftriaxona 500mg IM em dose única com Azitromicina 1g VO em dose única. A terapia combinada é indicada porque a coinfecção por clamídia ocorre em 40 a 60% dos casos de gonorreia.
+4. A infecção primária por Herpes Simples é frequentemente assintomática, mas quando manifesta, os sintomas são mais intensos, com pápulas que evoluem para vesículas e úlceras dolorosas, podendo incluir sintomas sistêmicos. As recorrências são mais brandas, de menor duração e frequentemente precedidas por um pródromo de sensibilidade, prurido ou queimação local.
+5. O agente etiológico do Cancro Mole é o Haemophilus ducreyi. O achado clínico patognomônico é a combinação de uma úlcera genital dolorosa com uma adenopatia inguinal sensível e supurativa.
+6. A Síndrome de Fitz-Hugh-Curtis é uma perihepatite, caracterizada pela inflamação da cápsula hepática e formação de aderências "em corda de violino" entre o fígado e o peritônio. Está associada à DIPA, sendo causada principalmente por Chlamydia trachomatis ou Neisseria gonorrhoeae.
+7. A sífilis secundária surge de 6 semanas a 6 meses após o contágio e caracteriza-se por lesões cutâneo-mucosas polimorfas, como roséolas no tronco e pápulas (sifílides) nas palmas das mãos e plantas dos pés. É comum a presença de linfadenopatia generalizada e sintomas sistêmicos como mal-estar e febrícula.
+8. O agente do LGV é a Chlamydia trachomatis (sorotipos L1, L2, L3). Na segunda fase, ocorre uma linfadenite inguinal crônica, geralmente unilateral e dolorosa, que pode supurar e fistulizar através de múltiplos orifícios, formando o aspecto de "bico de regador".
+9. A Donovanose inicia-se com uma ondulação subcutânea indolor ("pseudobubão"), que evolui para uma úlcera de base granulosa, vermelho-vivo, sangrante e indolor. O diagnóstico é confirmado pela identificação dos corpúsculos de Donovan (inclusões bacilares no citoplasma de macrófagos) em esfregaços da lesão.
+10. Os estágios de Monif são: Estágio 1 (endometrite/salpingite sem peritonite), tratado ambulatorialmente; Estágio 2 (salpingite com peritonite), que requer hospitalização; Estágio 3 (salpingite com abscesso tubo-ovariano), também hospitalar; e Estágio 4 (abscesso roto ou >10cm), que exige tratamento hospitalar e cirúrgico.
+
+Questões Discursivas
+
+1. Compare e contraste as características clínicas, etiológicas e de tratamento das úlceras genitais causadas por Sífilis (cancro duro), Cancro Mole e Herpes Simples, com base nas informações fornecidas.
+2. Descreva a patogênese da Doença Inflamatória Pélvica (DIPA), desde a infecção cervical inicial por Chlamydia trachomatis e Neisseria gonorrhoeae até suas complicações crônicas, como infertilidade e gravidez ectópica. Inclua a Síndrome de Fitz-Hugh-Curtis em sua discussão.
+3. Discuta a progressão da sífilis não tratada, detalhando as manifestações clínicas de cada estágio (primário, secundário, latente e terciário) e os métodos de diagnóstico e tratamento recomendados para as fases recente e tardia.
+4. Explique a importância da abordagem sindrômica no manejo de corrimentos uretrais e vaginais, conforme os fluxogramas apresentados, e detalhe o tratamento empírico para gonorreia e clamídia, justificando a terapia combinada.
+5. Analise as estratégias de prevenção e controle de ISTs mencionadas no material, discutindo a eficácia de cada método e a importância da educação, rastreamento de assintomáticos e tratamento de parceiros.
+
+Glossário de Termos Essenciais
+
+Termo	Definição
+Adenopatia	Aumento dos linfonodos (gânglios linfáticos), que pode ser regional ou generalizado, doloroso ou indolor, dependendo da IST.
+Bartolinite	Infecção e inflamação da glândula de Bartholin, geralmente precedida por um cisto. Causa dor intensa e sinais flogísticos locais, necessitando de drenagem e antibioticoterapia.
+Bubão	Linfonodo inguinal aumentado e inflamado. No Cancro Mole é doloroso e unilateral; na Sífilis é indolor; no LGV é doloroso e fistuliza em "bico de regador".
+Cancro Mole	IST causada pela bactéria Haemophilus ducreyi. Caracteriza-se por úlceras múltiplas, dolorosas, com base amolecida e fundo purulento e fétido.
+Cancro Duro	Lesão primária da sífilis. É uma úlcera geralmente única, indolor, com bordas endurecidas e fundo limpo.
+Cervicite	Inflamação do colo do útero, frequentemente causada por Neisseria gonorrhoeae e Chlamydia trachomatis. Pode ser assintomática ou apresentar corrimento mucopurulento e friabilidade do colo.
+Clamídia	IST causada pela bactéria Chlamydia trachomatis. Frequentemente assintomática, é uma das principais causas de cervicite e DIPA. Os sorotipos L1, L2 e L3 causam o Linfogranuloma Venéreo.
+Corpúsculos de Donovan	Inclusões bacilares encontradas no citoplasma de macrófagos em amostras de lesões de Donovanose. Sua identificação confirma o diagnóstico.
+DIPA (Doença Inflamatória Pélvica Aguda)	Infecção ascendente do trato genital feminino que atinge o endométrio, trompas, ovários e peritônio pélvico. Principais agentes são Clamídia e Gonococo.
+Donovanose (Granuloma Inguinal)	IST causada pela bactéria Klebsiella granulomatis. Caracteriza-se por úlceras vegetantes, indolores, vermelho-vivas e sangrantes, que podem levar a lesões extensas por autoinoculação.
+Endometrite	Inflamação do endométrio (revestimento interno do útero), um dos componentes da DIPA.
+FTA-Abs	Teste treponêmico utilizado para confirmar o diagnóstico de sífilis. Detecta anticorpos específicos contra o Treponema pallidum.
+Gonorreia (Blenorragia)	IST causada pela bactéria Neisseria gonorrhoeae. Nos homens, causa corrimento uretral purulento. Nas mulheres, é frequentemente assintomática (60-80%) e pode levar à DIPA.
+Herpes Simples (HSV)	Infecção viral (HSV-1 ou HSV-2) que causa a úlcera genital mais frequente. Caracteriza-se por lesões vesiculares dolorosas que evoluem para úlceras rasas, com períodos de latência e recorrências.
+IST (Infecção Sexualmente Transmissível)	Infecção transmitida principalmente por contato sexual (sangue, sêmen, fluidos vaginais). O termo substituiu "DST" pois a pessoa pode estar infectada sem manifestar sintomas de doença.
+Linfogranuloma Venéreo (LGV)	IST causada por sorotipos específicos da Chlamydia trachomatis. Cursa com uma lesão inicial fugaz, seguida por linfadenite inguinal dolorosa que fistuliza em múltiplos orifícios ("bico de regador").
+Molusco Contagioso	Infecção viral (Poxvírus) que causa pápulas semiesféricas, peroladas e com centro umbilicado na pele. A transmissão ocorre por contato direto.
+Salpingite	Inflamação das trompas de Falópio, um componente chave da DIPA, que pode levar à obstrução tubária e infertilidade.
+Sífilis (Lues)	IST sistêmica e crônica causada pela bactéria Treponema pallidum. Evolui em estágios (primário, secundário, latente e terciário) com manifestações clínicas distintas.
+Síndrome de Fitz-Hugh-Curtis	Perihepatite (inflamação da cápsula do fígado) associada à DIPA. Causa dor no quadrante superior direito do abdome e formação de aderências "em corda de violino" entre o fígado e o peritônio.
+Síndrome de Reiter	Tríade de artrite, conjuntivite e uretrite, que pode ser causada pela Chlamydia trachomatis.
+Tricomoníase	IST causada pelo protozoário Trichomonas vaginalis. Manifesta-se com corrimento vaginal bolhoso e um aspecto característico do colo do útero, descrito como "colo em framboesa" ou "morango".
+VDRL	Teste não treponêmico usado para triagem e monitoramento do tratamento da sífilis. Mede anticorpos não específicos e seus títulos geralmente diminuem após um tratamento eficaz.
