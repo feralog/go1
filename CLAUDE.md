@@ -18,15 +18,22 @@ This is a web-based quiz template application designed for educational purposes.
 │   └── app.js - Main application logic and UI controls
 └── subjects/ - All specialties organized by subject
     ├── GO/
-    │   ├── GOQuestions/ - JSON question files for GO
-    │   ├── GOImages/ - Images for GO questions (ECGs, diagrams, etc.)
-    │   ├── GOGuias/ - Markdown guide files
-    │   └── GOResumos/ - Markdown summary files
-    └── CardioPneumo/
-        ├── CardioPneumoQuestions/ - JSON question files
-        ├── CardioPneumoImages/ - Images for questions
-        ├── CardioPneumoGuias/ - Markdown guide files
-        └── CardioPneumoResumos/ - Markdown summary files
+    │   ├── AVC 1/
+    │   │   ├── GOQuestions/ - JSON question files for GO AVC 1
+    │   │   ├── GOGuias/ - Markdown guide files for AVC 1
+    │   │   └── GOResumos/ - Markdown summary files for AVC 1
+    │   └── AVC 2/
+    │       ├── GOQuestions/ - JSON question files for GO AVC 2
+    │       ├── GOGuias/ - Text guide files for AVC 2
+    │       └── GOResumos/ - Text summary files for AVC 2
+    ├── CardioPneumo/
+    │   ├── AVC 1/
+    │   │   └── CardioPneumoQuestions/ - JSON question files
+    │   └── AVC 2/
+    │       └── CardioPneumoQuestions/ - JSON question files
+    └── ClinicaCirurgica/
+        └── AVC 1/
+            └── ClinicaCirurgicaQuestions/ - JSON question files
 ```
 
 ## Architecture
@@ -35,7 +42,12 @@ This is a web-based quiz template application designed for educational purposes.
 The application uses a centralized configuration in `js/config.js`:
 - `quizConfig.title` - Sets the main quiz title displayed throughout the app
 - `quizConfig.storageKey` - Unique localStorage key to prevent conflicts
-- `quizConfig.modules` - Array defining available quiz modules, each pointing to a JSON file
+- `quizConfig.specialties` - Object defining specialties with support for subcategories (AVC 1, AVC 2, etc.)
+- Each specialty can have:
+  - `hasSubcategories: true` - Enables AVC subcategory selection
+  - `subcategories` - Object defining AVC 1, AVC 2, etc. with their modules
+  - `modules` - Array of quiz modules for specialties without subcategories
+  - `hasResumos` and `hasGuias` - Enables summary and guide buttons
 
 ### Data Layer (`js/data.js`)
 - **Question Loading**: Dynamically loads question data from JSON files based on module configuration
@@ -127,18 +139,25 @@ Each JSON file contains an array of question objects:
 
 ## Repository Information
 - **GitHub Repository**: https://github.com/feralog/go1.git
-- **Last Update**: Answer randomization completed - all JSON files now have properly distributed correct answer indices instead of clustering at index 2
+- **Last Update**: GO reorganized into AVC 1 and AVC 2 subcategories with support for guides and summaries. All answer indices randomized across both AVCs.
 
 ## Answer Randomization Status
 All quiz JSON files have been processed to randomize answer order while maintaining correctness:
+
+### GO - AVC 1:
 - **anatomia.json**: ✓ Valid JSON with 20 questions, randomized
 - **ciclo_menstrual.json**: ✓ Valid JSON with 20 questions, randomized
 - **desenvolvimento_puberal.json**: ✓ Valid JSON with 20 questions, randomized
 - **embrio.json**: ✓ Valid JSON with 20 questions, randomized
 - **embrio2.json**: ✓ Valid JSON with 20 questions, randomized
 - **exame_ginecologico.json**: ✓ Valid JSON with 20 questions, randomized
-- **questoes_modulo1.json**: ✓ Valid JSON with 2 questions, randomized
-- **questoes_modulo2.json**: ✓ Valid JSON with 2 questions, randomized
+
+### GO - AVC 2:
+- **1citologia-oncotica.json**: ✓ Valid JSON with 41 questions, randomized
+- **3vulvovaginites.json**: ✓ Valid JSON with 39 questions, randomized
+- **4istsdipa.json**: ✓ Valid JSON with 39 questions, randomized
+- **5patologiastgi.json**: ✓ Valid JSON with 37 questions, randomized
+- **6trabalhodepartoeparto.json**: ✓ Valid JSON with 35 questions, randomized
 
 ## Common Tasks
 - **Change quiz subject**: Edit `quizConfig.title` in `js/config.js`
