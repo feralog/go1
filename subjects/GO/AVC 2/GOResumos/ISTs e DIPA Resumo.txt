@@ -1,0 +1,228 @@
+Briefing: Infecções Sexualmente Transmissíveis (ISTs) e Doença Inflamatória Pélvica (DIPA)
+
+Resumo Executivo
+
+Este documento sintetiza uma análise aprofundada sobre Infecções Sexualmente Transmissíveis (ISTs) e a Doença Inflamatória Pélvica (DIPA), com base em material acadêmico da Universidade Santo Amaro (UNISA) e fontes como Febrasgo e CDC. As ISTs representam um problema de saúde pública global, com uma estimativa de 397 milhões de novas infecções por ano. A transmissão ocorre principalmente por contato sexual, mas também pode acontecer por via sanguínea, gestação, parto ou aleitamento. Um ponto crítico é que muitas infecções, como as por Chlamydia trachomatis e Neisseria gonorrhoeae, são frequentemente assintomáticas, especialmente em mulheres (60-80% dos casos), o que facilita a disseminação silenciosa e o desenvolvimento de complicações graves.
+
+A principal complicação abordada é a DIPA, uma infecção ascendente do trato genital feminino que pode levar a infertilidade, gravidez ectópica e dor pélvica crônica. O diagnóstico da DIPA baseia-se em critérios clínicos (maiores, menores e elaborados), e seu tratamento varia conforme a gravidade, sendo ambulatorial nos estágios iniciais e hospitalar ou cirúrgico nos casos mais avançados.
+
+As ISTs são classificadas por manifestações clínicas (úlceras, corrimentos) ou agentes etiológicos (bactérias, vírus, protozoários). Para as úlceras genitais, o diagnóstico diferencial é crucial: a sífilis (cancro duro) é tipicamente única e indolor; o cancro mole é múltiplo, doloroso e de base amolecida; e o herpes genital se manifesta como vesículas dolorosas que evoluem para úlceras. O tratamento das ISTs bacterianas depende do agente, com destaque para a Penicilina G Benzatina para sífilis, Azitromicina/Doxiciclina para clamídia e Ceftriaxona para gonorreia. A abordagem sindrômica, com fluxogramas para corrimentos e úlceras, é fundamental para o manejo clínico, especialmente em cenários com recursos diagnósticos limitados. A prevenção, centrada no uso de preservativos, educação, vacinação (HPV, Hepatites A/B) e tratamento de parceiros, é a estratégia mais eficaz para o controle das ISTs.
+
+
+--------------------------------------------------------------------------------
+
+
+1. Visão Geral das Infecções Sexualmente Transmissíveis (ISTs)
+
+1.1. Definição e Transmissão
+
+As Infecções Sexualmente Transmissíveis (ISTs) são causadas por vírus, bactérias ou protozoários. A nomenclatura foi alterada de Doenças Sexualmente Transmissíveis (DSTs) para ISTs porque um indivíduo pode estar infectado e transmitindo o agente sem apresentar sinais ou sintomas clínicos.
+
+* Prevalência: Estima-se a ocorrência de 397 milhões de novas infecções por ano em todo o mundo.
+* Vias de Transmissão:
+  * Sexual: Contato com sangue, sêmen, fluidos vaginais ou outros líquidos corporais durante sexo oral, anal ou genital.
+  * Vertical: Durante a gestação (transplacentária), parto ou aleitamento.
+  * Outras: Contato com fômites (no caso da gonorreia).
+
+1.2. Prevenção e Controle
+
+As estratégias de prevenção e controle são multifacetadas e essenciais para a saúde pública:
+
+* Educação e Aconselhamento: Informar sobre riscos e práticas seguras.
+* Identificação de Assintomáticos: Rastreamento ativo, especialmente em populações de risco.
+* Diagnóstico e Tratamento Efetivo: Tratar os pacientes infectados para curar a infecção e interromper a cadeia de transmissão.
+* Avaliação e Tratamento de Parceiros: Essencial para evitar a reinfecção e a disseminação.
+* Vacinação: Disponível para ISTs preveníveis como Hepatite A, Hepatite B e HPV.
+* Métodos de Barreira: Preservativos masculino e feminino são a principal forma de prevenção primária.
+* Abstinência Sexual: Método 100% eficaz.
+
+1.3. Notificação Compulsória
+
+Diversas ISTs são de notificação compulsória no Brasil, incluindo:
+
+* AIDS (HIV)
+* Hepatites Virais
+* Sífilis
+* Síndrome do Corrimento Uretral (indicativa de gonorreia e clamídia)
+
+
+--------------------------------------------------------------------------------
+
+
+2. Análise das Principais ISTs Bacterianas
+
+2.1. Gonorreia (Blenorragia)
+
+* Agente Etiológico: Neisseria gonorrhoeae, um diplococo Gram-negativo.
+* Incidência: 25 milhões de novas infecções anuais no mundo.
+* Risco de Transmissão: Em uma única exposição, o risco é de 20% para o homem e 80% para a mulher.
+* Quadro Clínico:
+  * Frequentemente assintomática em mulheres (60-80%), o que facilita a aquisição do HIV.
+  * Homens: Uretrite com secreção peniana purulenta e disúria. Incubação de 4 a 7 dias.
+  * Mulheres: Secreção endocervical mucopurulenta, dor pélvica, dispareunia, sangramento irregular.
+  * Complicações: Principal causa de DIPA, infertilidade tubária, gravidez ectópica e dor pélvica crônica.
+* Diagnóstico: Cultura de secreção em meios específicos (Thayer-Martin, New York City).
+* Tratamento:
+  * Esquema Principal: Ceftriaxona 500mg IM (dose única) + Azitromicina 1g VO (dose única).
+  * É fundamental tratar para clamídia concomitantemente, devido à alta taxa de coinfecção (40-60%).
+  * O parceiro deve sempre ser tratado.
+
+2.2. Infecção por Clamídia
+
+* Agente Etiológico: Chlamydia trachomatis, um bacilo Gram-negativo intracelular.
+* Prevalência: 2 a 3 vezes mais frequente que a gonorreia, especialmente em jovens abaixo de 24 anos.
+* Quadro Clínico:
+  * Principalmente uretrite e endocervicite mucopurulenta.
+  * Causa 50% dos casos da Síndrome de Reiter (uretrite + conjuntivite + artrite).
+* Diagnóstico:
+
+Método	Sensibilidade	Especificidade	Comentários
+Cultura (Padrão-ouro)	80-90%	100%	Cultura em células de McCoy.
+PCR	Próxima de 100%	Próxima de 100%	Rápido e altamente preciso.
+Imunoensaio (ELISA)	80-97%	92-97%	Teste prático.
+Imunofluorescência Direta	60-90%	98%	Detecta anticorpos monoclonais.
+
+* Tratamento:
+  * 1ª Opção: Doxiciclina 100mg VO 12/12h por 7 dias.
+  * 2ª Opção: Azitromicina 1g VO em dose única.
+
+2.3. Sífilis (Lues / Cancro Duro)
+
+* Agente Etiológico: Treponema pallidum.
+* Incubação: 10 a 90 dias.
+* Fases da Doença:
+  * Primária: Caracterizada pelo cancro duro, uma úlcera única, indolor, de bordas endurecidas e fundo limpo. Surge 1 a 3 semanas após o contágio e desaparece espontaneamente. Acompanhada de linfadenopatia regional indolor (bubão sifilítico).
+  * Secundária: Ocorre de 6 semanas a 6 meses após o contágio. Manifesta-se com lesões cutâneo-mucosas polimorfas (roséolas no tronco, pápulas nas palmas e plantas), condiloma plano (lesões papulosas úmidas) e sintomas sistêmicos (mialgia, febre).
+  * Latente: Período assintomático com sorologia positiva. Dividida em recente (<1 ano) e tardia (>1 ano).
+  * Terciária: Ocorre em 1/3 dos pacientes não tratados, após 1 a 30 anos. Manifesta-se com lesões gomosas, sífilis cardiovascular (aneurisma aórtico) ou neurossífilis. A neurossífilis pode ocorrer em qualquer estágio.
+* Diagnóstico: Requer um teste não treponêmico (VDRL, RPR) e um teste treponêmico (FTA-abs, TPHA) para confirmação.
+* Tratamento:
+
+Fase	Tratamento Recomendado
+Sífilis Recente (Primária, Secundária, Latente Recente)	Penicilina G Benzatina 2.400.000 U, IM, dose única.
+Sífilis Tardia (Latente Tardia, Terciária)	Penicilina G Benzatina 2.400.000 U, IM, 1x/semana por 3 semanas.
+Neurossífilis	Penicilina G Cristalina 18-24 milhões U/dia, IV, por 10-14 dias.
+
+* Seguimento: O VDRL quantitativo deve ser repetido em 6, 12 e 24 meses. O tratamento do parceiro é obrigatório.
+
+2.4. Cancro Mole (Cancroide)
+
+* Agente Etiológico: Haemophilus ducreyi.
+* Incubação: 2 a 7 dias.
+* Quadro Clínico: Múltiplas úlceras dolorosas, de base amolecida, fundo purulento e fétido, com bordas irregulares. Frequentemente associado a linfadenopatia inguinal unilateral (bubão cancroide), que é dolorosa e pode fistulizar por um único orifício.
+* Diagnóstico: Predominantemente clínico. A combinação de úlcera dolorosa com adenopatia supurativa é patognomônica.
+* Tratamento:
+  * 1ª Opção: Azitromicina 1g VO (dose única) ou Ceftriaxona 500mg IM (dose única).
+  * Gestantes: Eritromicina ou Ceftriaxona.
+  * A aspiração do bubão pode ser necessária para alívio sintomático.
+
+2.5. Linfogranuloma Venéreo (LGV)
+
+* Agente Etiológico: Chlamydia trachomatis (sorotipos L1, L2, L3).
+* Incubação: 3 a 21 dias.
+* Quadro Clínico:
+  * 1ª Fase: Lesão de inoculação (pápula ou úlcera) pequena, indolor e fugaz.
+  * 2ª Fase: Linfadenite inguinal crônica, dolorosa, que evolui para supuração e fistulização por múltiplos orifícios ("bico de regador").
+  * 3ª Fase: Fibrose cicatricial, estenose retal ou uretral e elefantíase genital.
+* Diagnóstico: Clínico, apoiado por sorologia (ELISA) ou PCR.
+* Tratamento: Doxiciclina 100mg VO, 12/12h, por 21 dias.
+
+2.6. Donovanose (Granuloma Inguinal)
+
+* Agente Etiológico: Klebsiella granulomatis.
+* Incubação: Aproximadamente 50 dias.
+* Quadro Clínico: Inicia-se com um "pseudobubão" (ondulação subcutânea indolor). Evolui para uma úlcera de borda hipertrófica, com base granulosa vermelho-vivo, friável e sangrante. A lesão é extensa, vegetante, indolor e pode ocorrer autoinoculação (lesões em espelho).
+* Diagnóstico: Identificação dos corpúsculos de Donovan em esfregaços de tecido corados por Giemsa ou Wright.
+* Tratamento: Doxiciclina 100mg VO, 12/12h, por no mínimo 21 dias ou até a cura clínica.
+
+
+--------------------------------------------------------------------------------
+
+
+3. Análise das Principais ISTs Virais
+
+3.1. Herpes Genital
+
+* Agente Etiológico: Herpes Simplex Vírus (HSV) tipos 1 ou 2. É a causa mais frequente de úlcera genital.
+* Incubação: 4 dias.
+* Quadro Clínico:
+  * Primoinfecção: Geralmente assintomática. Quando sintomática, é mais intensa, com pápulas eritematosas que evoluem para vesículas dolorosas agrupadas. As vesículas se rompem, formando úlceras rasas. Pode haver adenopatia inguinal bilateral e sintomas sistêmicos (febre, mialgia).
+  * Recorrência: Reativação do vírus latente, geralmente desencadeada por estresse, menstruação ou queda da imunidade. Os episódios são mais brandos e curtos, frequentemente precedidos por pródromos (prurido, queimação local).
+* Diagnóstico: Clínico. Pode ser confirmado por Citodiagnóstico de Tzanck, sorologia ou PCR.
+* Tratamento: Utiliza-se Aciclovir. A duração varia conforme a situação:
+  * Primeiro episódio: 7 dias.
+  * Recidiva: 5 dias.
+  * Supressão (≥6 episódios/ano): Tratamento contínuo por até 6 meses.
+  * Gestantes: Tratar sempre como primeiro episódio. Lesão ativa no momento do parto é indicação de cesariana.
+
+3.2. Molusco Contagioso
+
+* Agente Etiológico: Poxvírus.
+* Transmissão: Contato direto.
+* Quadro Clínico: Pápulas pequenas (3-6 mm), semiesféricas, de coloração perolada, com umbilicação central característica. Localizam-se geralmente no períneo e raiz da coxa.
+
+
+--------------------------------------------------------------------------------
+
+
+4. Doença Inflamatória Pélvica (DIPA)
+
+A DIPA é uma infecção ascendente do trato genital feminino superior, sendo uma das complicações mais graves das ISTs.
+
+4.1. Etiologia e Fisiopatologia
+
+* Principais Agentes: Chlamydia trachomatis e Neisseria gonorrhoeae.
+* Outros Agentes: Flora polimicrobiana (anaeróbios, Gardnerella vaginalis, Mycoplasma hominis).
+* Progressão: A infecção ascende do colo do útero para o endométrio (endometrite), trompas (salpingite), ovários (ooforite) e peritônio pélvico (pelviperitonite).
+
+4.2. Quadro Clínico e Complicações
+
+* Sintomas Típicos: Dor pélvica, corrimento vaginal anormal e febre.
+* Sintomas Atípicos: Sangramento uterino anormal (SUA), dispareunia, sintomas urinários.
+* Exame Físico: Dor à mobilização do colo uterino e dor à palpação anexial são achados fundamentais.
+* Complicações Graves:
+  * Crônicas: Infertilidade (por obstrução tubária), gravidez ectópica e dor pélvica crônica.
+  * Agudas: Peritonite e abscesso tubo-ovariano.
+  * Síndrome de Fitz-Hugh-Curtis: Peri-hepatite com formação de aderências "em corda de violino" entre o fígado e o peritônio, causando dor em hipocôndrio direito.
+
+4.3. Diagnóstico e Estadiamento
+
+O diagnóstico é clínico, baseado em uma combinação de critérios:
+
+* Critérios Maiores: Dor hipogástrica, dor à palpação dos anexos, dor à mobilização do colo uterino.
+* Critérios Menores: Febre (>37,5°C), secreção anormal, leucocitose, PCR/VHS elevados.
+* Critérios Elaborados: Evidência de endometrite em biópsia, abscesso em exame de imagem ou DIPA visualizada por laparoscopia.
+
+Diagnóstico é confirmado com: 3 critérios maiores + 1 critério menor, OU 1 critério elaborado.
+
+A gravidade é classificada pelos Estádios de Monif:
+
+Estágio	Descrição	Tratamento Indicado
+1	Salpingite aguda sem peritonite	Ambulatorial
+2	Salpingite aguda com peritonite	Hospitalar
+3	Abscesso tubo-ovariano	Hospitalar
+4	Abscesso roto (>10cm)	Hospitalar e Cirúrgico
+
+4.4. Tratamento
+
+O tratamento visa erradicar a infecção, aliviar os sintomas e prevenir sequelas.
+
+* Ambulatorial (Estágio 1):
+  * 1ª Opção: Ceftriaxona 500mg IM (dose única) + Doxiciclina 100mg VO 12/12h (14 dias) + Metronidazol 250mg VO 12/12h (14 dias).
+* Hospitalar (Estágios 2, 3 e 4):
+  * 1ª Opção: Cefotaxima 2g IV 6/6h + Doxiciclina 100mg VO 12/12h (14 dias).
+  * 2ª Opção: Clindamicina 900mg IV 8/8h + Gentamicina IV/IM (14 dias).
+
+
+--------------------------------------------------------------------------------
+
+
+5. Abordagens Sindrômicas
+
+Os fluxogramas de abordagem sindrômica são ferramentas para o manejo de pacientes com queixas genitais, permitindo tratamento imediato com base nos sinais e sintomas.
+
+* Úlcera Genital: A decisão de tratamento se baseia na presença de vesículas (sugestivo de herpes), na duração da lesão e na soroprevalência local. Em geral, o tratamento empírico cobre sífilis e cancro mole.
+* Corrimento Vaginal: A abordagem varia com a disponibilidade de microscopia. Sem microscopia, o tratamento é guiado por fatores de risco para cervicite (gonorreia/clamídia) e características clínicas (pH, teste de KOH) para vaginose/tricomoníase ou candidíase.
+* Corrimento Uretral: Na ausência de bacterioscopia, trata-se empiricamente para gonorreia e clamídia. Se a bacterioscopia estiver disponível e for negativa para diplococos Gram-negativos, trata-se apenas para clamídia.
+
+Em todas as abordagens, é imperativo o aconselhamento, a oferta de testagem para HIV e hepatites, a vacinação para hepatite B, o tratamento de parceiros e o agendamento de retorno.

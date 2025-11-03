@@ -1,0 +1,126 @@
+Briefing: Análise do Trabalho de Parto e Parto
+
+Resumo Executivo
+
+Este documento sintetiza os conceitos fundamentais e as evidências científicas relacionadas ao trabalho de parto e ao parto. O processo é definido como um evento fisiológico multifásico, iniciado por contrações uterinas que resultam na dilatação cervical e na expulsão do feto. A compreensão da progressão do trabalho de parto evoluiu significativamente; o modelo clássico de Emanuel Friedman, que descreve uma curva sigmoide com uma transição para a fase ativa por volta dos 3-4 cm de dilatação, foi atualizado por estudos mais recentes, como o de Jun Zhang. A pesquisa de Zhang, baseada em uma amostra populacional maior e mais diversa, propõe que a aceleração do trabalho de parto ocorre mais tardiamente, a partir dos 6 cm de dilatação, e que as fases do parto podem ser mais longas do que o tradicionalmente aceito.
+
+O sucesso do parto vaginal é determinado pela interação de quatro fatores principais: o canal pélvico (trajeto), as forças uterinas e abdominais (motor), o feto (objeto) e sua relação com a pelve. A análise da estática fetal — incluindo atitude, situação, apresentação e posição — juntamente com a avaliação da anatomia pélvica materna, é crucial para o prognóstico e manejo do parto. Finalmente, o feto executa uma série de movimentos cardinais sequenciais e precisos para navegar pelo canal de parto, culminando na sua expulsão, seguida pela dequitação (expulsão da placenta).
+
+1. Definição e Fases do Trabalho de Parto
+
+Conceitos Fundamentais
+
+* Parto: É o processo fisiológico para a obtenção de um feto com mais de 500g ou 22 semanas de gestação, vivo ou morto, por vias naturais. Pode ser espontâneo ("natural") ou operatório (com auxílio de fórceps ou vácuo extrator).
+* Trabalho de Parto: Corresponde ao conjunto de mudanças hormonais e físicas que preparam o corpo para o nascimento. É caracterizado por contrações uterinas fortes e regulares que provocam o apagamento (afinamento) e a dilatação (abertura) do colo do útero, permitindo a passagem fetal.
+
+Os Estágios do Processo
+
+O trabalho de parto é dividido em quatro estágios sequenciais:
+
+1. Dilatação e Apagamento: A fase inicial, focada nas modificações do colo uterino.
+2. Período Expulsivo: Começa com a dilatação completa e termina com o nascimento do bebê.
+3. Dequitação: A expulsão da placenta e das membranas.
+4. Puerpério: O período pós-parto imediato.
+
+2. A Evolução do Conhecimento sobre a Progressão do Parto
+
+A compreensão da "normalidade" da progressão do trabalho de parto foi moldada por dois estudos seminais que apresentaram curvas de evolução distintas.
+
+O Paradigma de Friedman (Décadas de 1950-60)
+
+Emanuel Friedman, através de um estudo retrospectivo com 500 nulíparas (mulheres na primeira gestação) em um único centro, demonstrou que a relação entre a dilatação cervical e o tempo pode ser representada por uma curva sigmoide. Seu modelo divide o primeiro estágio do parto em:
+
+* Fase Latente:
+  * Dilatação: O colo do útero afina e dilata até 3-4 cm.
+  * Contrações: Leves a moderadas, irregulares e com intervalos variáveis.
+  * Duração: É a fase mais longa, podendo ultrapassar 8 horas em primíparas. A mulher geralmente consegue realizar atividades normais.
+* Fase Ativa:
+  * Dilatação: Progressão rápida e constante, a uma média de 1 cm por hora a partir de 3-4 cm.
+  * Contrações: Tornam-se mais fortes, longas e frequentes.
+  * Implicação: A entrada nesta fase sinaliza a necessidade de internação hospitalar.
+* Período Expulsivo:
+  * Começa com a dilatação total (10 cm).
+  * Duração Limite: 2,5 horas para primíparas e 1 hora para multíparas.
+
+A Revisão de Zhang (2002)
+
+Jun Zhang conduziu um estudo retrospectivo multicêntrico (Consortium on Safe Labor) com dados de 62.415 mulheres em 19 hospitais nos EUA. O estudo incluiu gestações a termo, de fetos únicos em apresentação cefálica e trabalho de parto espontâneo com desfecho vaginal normal. As conclusões de Zhang atualizaram o modelo de Friedman:
+
+* Transição de Fase: A passagem da fase latente para a ativa é mais gradual.
+* Velocidade de Dilatação: A progressão entre 4 e 6 cm é mais lenta do que a descrita por Friedman. A aceleração característica da fase ativa só ocorre de forma consistente após os 6 cm de dilatação.
+* Período Expulsivo: Os limites de duração são maiores, especialmente com o uso de analgesia:
+  * Primigestas com analgesia: 3,6 horas.
+  * Primigestas sem analgesia: 2,8 horas.
+
+A prática obstétrica moderna, que frequentemente inclui o uso de analgesia, tende a se alinhar mais com as curvas de Zhang, que refletem uma progressão mais lenta do trabalho de parto.
+
+3. Fatores Determinantes no Trabalho de Parto
+
+O progresso e o desfecho do parto dependem da interação de quatro elementos principais: o canal pélvico, a dinâmica uterina, a prensa abdominal e o feto.
+
+3.1 O Canal Pélvico (Trajeto)
+
+A pelve óssea, ou bacia, constitui o trajeto que o feto deve percorrer.
+
+* Anatomia da Pelve: É composta pelos ossos sacro, cóccix, ílio, ísquio e púbis. A pelve verdadeira (pequena bacia) é dividida em três planos principais: estreito superior, plano de maiores dimensões e estreito inferior.
+* Tipos de Bacia: A morfologia do estreito superior classifica a pelve em quatro tipos, cada um com diferentes prognósticos para o parto vaginal.
+
+Tipo de Pelve	Frequência	Características do Estreito Superior	Prognóstico para o Parto
+Ginecoide	50%	Arredondado.	Bom prognóstico.
+Antropoide	25%	Elíptico, alongado no sentido anteroposterior.	Pode haver dificuldades no estreito superior.
+Androide	20%	Triangular, em formato de coração.	Dificuldades crescentes com a progressão.
+Platipelóide	5%	Ovalado, com diâmetro anteroposterior reduzido.	Dificuldade maior na insinuação (encaixamento).
+
+* Mobilidade Pélvica: A pelve não é uma estrutura fixa. Movimentos como a nutação (sacro se move para frente e para baixo) aumentam o diâmetro do estreito inferior, favorecendo a passagem fetal, enquanto a contranutação o diminui. A lordose gestacional também altera a inclinação pélvica.
+
+3.2 As Forças Motrizes (Motor)
+
+* Dinâmica Uterina: As contrações seguem um padrão conhecido como Tríplice Gradiente Descendente: a onda contrátil se origina no fundo do útero, onde é mais forte e duradoura, e diminui em intensidade e duração em direção ao colo. Isso garante que o feto seja empurrado eficientemente para o canal de parto.
+* Prensa Abdominal: Durante o período expulsivo, a contração voluntária da musculatura abdominal e torácica (semelhante à manobra de Valsalva) aumenta a pressão intra-abdominal, auxiliando na expulsão do feto.
+
+3.3 O Feto (Objeto Móvel)
+
+A forma como o feto se posiciona e se move dentro do útero e da pelve é fundamental.
+
+* Estática Fetal:
+  * Atitude: Relação das partes fetais entre si. A atitude típica é de flexão generalizada, formando o "ovoide fetal".
+  * Situação: Relação entre o maior eixo fetal (cabeça-nádegas) e o maior eixo uterino. Pode ser longitudinal, transversal (córmica) ou oblíqua.
+  * Apresentação: A parte do feto que se relaciona com o estreito superior da pelve. As principais são a cefálica (cabeça, 95% dos casos), pélvica (nádegas, <4%) e córmica (ombro, <1%).
+  * Posição: Relação do dorso fetal com o lado direito ou esquerdo do abdome materno.
+* Avaliação Fetal (Manobras de Leopold): Um método de palpação abdominal em quatro tempos para determinar a situação, apresentação, posição e insinuação (encaixamento) fetal.
+* Crânio Fetal: As suturas e fontanelas permitem a moldagem da cabeça, e os diferentes diâmetros cefálicos se apresentam à pelve dependendo do grau de flexão da cabeça. O diâmetro suboccipitobregmático (9,5 cm), da apresentação fletida, é o menor e mais favorável.
+* Variações da Apresentação Cefálica: O grau de deflexão da cabeça fetal determina qual diâmetro se apresentará, impactando a progressão do parto.
+
+Atitude	Apresentação	Diâmetro Apresentado	Medida (cm)	Prognóstico
+Flexão Completa	De vértice (occipital)	Suboccipitobregmático	9,5	Ideal, menor diâmetro.
+Deflexão de 1º Grau	De bregma	Occipitofrontal	11,5	Progressão mais difícil.
+Deflexão de 2º Grau	De fronte	Occipitomentoniano	13,0	Normalmente incompatível com parto vaginal.
+Deflexão de 3º Grau	De face	Submentobregmático	9,5	Parto vaginal possível se o mento (queixo) for anterior.
+
+* Relação Feto-Pélvis:
+  * Variedade de Posição: Relação entre o ponto de referência da apresentação fetal (ex: occipital) e os pontos de referência da pelve materna (anterior, posterior, etc.). Exemplos: Occípito-Anterior (OA), Occípito-Transversa Esquerda (OTE).
+  * Estação (Planos de De Lee): Mede a descida da apresentação fetal em relação às espinhas ciáticas da mãe, variando de -4 a +3. O "plano 0" indica que a parte mais baixa do feto está no nível das espinhas.
+  * Sinclitismo e Assinclitismo: Refere-se ao alinhamento da sutura sagital do feto em relação ao púbis e ao sacro maternos. O sinclitismo (equidistante) é o ideal.
+
+4. O Mecanismo do Parto: Movimentos Cardinais
+
+Para nascer, o feto em apresentação cefálica de vértice realiza uma série de movimentos sequenciais, conhecidos como movimentos cardinais:
+
+1. Acomodação: Ajuste do polo cefálico ao estreito superior da pelve.
+2. Flexão: O queixo do feto se encosta em seu tórax, apresentando o menor diâmetro cefálico.
+3. Dessenso e Encaixamento: A descida contínua do feto pelo canal de parto. O encaixamento ocorre quando o maior diâmetro da apresentação passa pelo estreito superior.
+4. Rotação Interna: A cabeça fetal gira para que o occipital fique sob a sínfise púbica.
+5. Extensão e Desprendimento: A cabeça se estende para passar pela sínfise púbica e nascer.
+6. Rotação Externa: Após o desprendimento da cabeça, ela retorna à sua posição original, alinhando-se com os ombros.
+7. Desprendimento dos Ombros e Expulsão: O ombro anterior nasce, seguido pelo posterior e pelo resto do corpo.
+
+5. A Fase Final: Dequitação Placentária
+
+Após o nascimento do bebê, inicia-se o terceiro período do trabalho de parto, a dequitação.
+
+* Processo: O útero se contrai para descolar a placenta de sua parede.
+* Duração: Geralmente dura até 30 minutos.
+* Perda Sanguínea: Uma perda de 300 a 500 ml de sangue é considerada normal.
+* Mecanismos:
+  * Baudelocque-Schultze: O descolamento ocorre no centro da placenta, que é expulsa com a face fetal primeiro.
+  * Baudelocque-Duncan: O descolamento começa pela borda, e a placenta é expulsa com a face materna primeiro.
