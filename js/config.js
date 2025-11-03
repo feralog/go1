@@ -20,38 +20,76 @@ const quizConfig = {
             name: "Ginecologia e Obstetrícia",
             hasResumos: true,
             hasGuias: true,
-            modules: [
-                {
-                    id: "exame_ginecologico",
-                    name: "Exame Ginecológico",
-                    file: "subjects/GO/GOQuestions/exame_ginecologico"
+            hasSubcategories: true,
+            subcategories: {
+                avc1: {
+                    id: "avc1",
+                    name: "AVC 1",
+                    modules: [
+                        {
+                            id: "exame_ginecologico",
+                            name: "Exame Ginecológico",
+                            file: "subjects/GO/AVC 1/GOQuestions/exame_ginecologico"
+                        },
+                        {
+                            id: "ciclo_menstrual",
+                            name: "Ciclo Menstrual",
+                            file: "subjects/GO/AVC 1/GOQuestions/ciclo_menstrual"
+                        },
+                        {
+                            id: "desenvolvimento_puberal",
+                            name: "Desenvolvimento Puberal",
+                            file: "subjects/GO/AVC 1/GOQuestions/desenvolvimento_puberal"
+                        },
+                        {
+                            id: "embriologia",
+                            name: "Embriologia",
+                            file: "subjects/GO/AVC 1/GOQuestions/embrio"
+                        },
+                        {
+                            id: "embriologia_avancada",
+                            name: "Embriologia Avançada",
+                            file: "subjects/GO/AVC 1/GOQuestions/embrio2"
+                        },
+                        {
+                            id: "anatomia",
+                            name: "Anatomia",
+                            file: "subjects/GO/AVC 1/GOQuestions/anatomia"
+                        }
+                    ]
                 },
-                {
-                    id: "ciclo_menstrual",
-                    name: "Ciclo Menstrual",
-                    file: "subjects/GO/GOQuestions/ciclo_menstrual"
-                },
-                {
-                    id: "desenvolvimento_puberal",
-                    name: "Desenvolvimento Puberal",
-                    file: "subjects/GO/GOQuestions/desenvolvimento_puberal"
-                },
-                {
-                    id: "embriologia",
-                    name: "Embriologia",
-                    file: "subjects/GO/GOQuestions/embrio"
-                },
-                {
-                    id: "embriologia_avancada",
-                    name: "Embriologia Avançada",
-                    file: "subjects/GO/GOQuestions/embrio2"
-                },
-                {
-                    id: "anatomia",
-                    name: "Anatomia",
-                    file: "subjects/GO/GOQuestions/anatomia"
+                avc2: {
+                    id: "avc2",
+                    name: "AVC 2",
+                    modules: [
+                        {
+                            id: "citologia_oncotica",
+                            name: "Citologia Oncótica",
+                            file: "subjects/GO/AVC 2/GOQuestions/1citologia-oncotica"
+                        },
+                        {
+                            id: "vulvovaginites",
+                            name: "Vulvovaginites",
+                            file: "subjects/GO/AVC 2/GOQuestions/3vulvovaginites"
+                        },
+                        {
+                            id: "ists_dipa",
+                            name: "ISTs e DIPA",
+                            file: "subjects/GO/AVC 2/GOQuestions/4istsdipa"
+                        },
+                        {
+                            id: "patologias_tgi",
+                            name: "Patologias TGI",
+                            file: "subjects/GO/AVC 2/GOQuestions/5patologiastgi"
+                        },
+                        {
+                            id: "trabalho_parto",
+                            name: "Trabalho de Parto e Parto",
+                            file: "subjects/GO/AVC 2/GOQuestions/6trabalhodepartoeparto"
+                        }
+                    ]
                 }
-            ]
+            }
         },
         cardio: {
             id: "cardio",

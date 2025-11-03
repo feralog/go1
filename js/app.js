@@ -1080,18 +1080,36 @@ function generateQuestionReview() {
  */
 const specialtyFiles = {
     go: {
-        resumos: [
-            { file: '1exame.md', title: 'Exame Ginecológico', icon: 'file-medical' },
-            { file: '2ciclomenstrual.md', title: 'Ciclo Menstrual', icon: 'calendar-alt' },
-            { file: '3embrio.md', title: 'Embriologia', icon: 'baby' },
-            { file: '4desenvolvimentopuberal.md', title: 'Desenvolvimento Puberal', icon: 'user-graduate' }
-        ],
-        guias: [
-            { file: '1exame.md', title: 'Exame Ginecológico', icon: 'file-medical' },
-            { file: '2ciclomenstrual.md', title: 'Ciclo Menstrual', icon: 'calendar-alt' },
-            { file: '3embrio.md', title: 'Embriologia', icon: 'baby' },
-            { file: '4desenvolvimento_puberal.md', title: 'Desenvolvimento Puberal', icon: 'user-graduate' }
-        ]
+        avc1: {
+            resumos: [
+                { file: '1exame.md', title: 'Exame Ginecológico', icon: 'file-medical' },
+                { file: '2ciclomenstrual.md', title: 'Ciclo Menstrual', icon: 'calendar-alt' },
+                { file: '3embrio.md', title: 'Embriologia', icon: 'baby' },
+                { file: '4desenvolvimentopuberal.md', title: 'Desenvolvimento Puberal', icon: 'user-graduate' }
+            ],
+            guias: [
+                { file: '1exame.md', title: 'Exame Ginecológico', icon: 'file-medical' },
+                { file: '2ciclomenstrual.md', title: 'Ciclo Menstrual', icon: 'calendar-alt' },
+                { file: '3embrio.md', title: 'Embriologia', icon: 'baby' },
+                { file: '4desenvolvimento_puberal.md', title: 'Desenvolvimento Puberal', icon: 'user-graduate' }
+            ]
+        },
+        avc2: {
+            resumos: [
+                { file: 'Citologia Oncotica Resumo.txt', title: 'Citologia Oncótica', icon: 'microscope' },
+                { file: 'Vulvovaginitesresumo.txt', title: 'Vulvovaginites', icon: 'notes-medical' },
+                { file: 'ISTs e DIPA Resumo.txt', title: 'ISTs e DIPA', icon: 'virus' },
+                { file: 'Trabalho de Parto e Parto Resumo.txt', title: 'Trabalho de Parto e Parto', icon: 'baby' },
+                { file: 'Puerperio e Amamentacao Resumo.txt', title: 'Puerpério e Amamentação', icon: 'heart' }
+            ],
+            guias: [
+                { file: 'Citologia Oncotica Guia.txt', title: 'Citologia Oncótica', icon: 'microscope' },
+                { file: 'Vulvovaginites Guia.txt', title: 'Vulvovaginites', icon: 'notes-medical' },
+                { file: 'ISTs e DIPA Guia.txt', title: 'ISTs e DIPA', icon: 'virus' },
+                { file: 'Trabalho de Parto e Parto Guia.txt', title: 'Trabalho de Parto e Parto', icon: 'baby' },
+                { file: 'Puerperio Normal e Amamentacao Guia.txt', title: 'Puerpério e Amamentação', icon: 'heart' }
+            ]
+        }
     },
     cardio: {
         resumos: [],
@@ -1119,7 +1137,15 @@ function populateResumosList() {
         return;
     }
 
-    const files = specialtyFiles[currentSpecialty].resumos;
+    // Get files based on subcategory if applicable
+    let files = [];
+    const specialtyData = specialtyFiles[currentSpecialty];
+
+    if (currentSubcategory && specialtyData[currentSubcategory]) {
+        files = specialtyData[currentSubcategory].resumos || [];
+    } else if (specialtyData.resumos) {
+        files = specialtyData.resumos;
+    }
 
     if (files.length === 0) {
         resumosList.innerHTML = '<div class="alert alert-info">Nenhum resumo disponível para esta especialidade.</div>';
@@ -1147,7 +1173,15 @@ function populateGuiasList() {
         return;
     }
 
-    const files = specialtyFiles[currentSpecialty].guias;
+    // Get files based on subcategory if applicable
+    let files = [];
+    const specialtyData = specialtyFiles[currentSpecialty];
+
+    if (currentSubcategory && specialtyData[currentSubcategory]) {
+        files = specialtyData[currentSubcategory].guias || [];
+    } else if (specialtyData.guias) {
+        files = specialtyData.guias;
+    }
 
     if (files.length === 0) {
         guiasList.innerHTML = '<div class="alert alert-info">Nenhum guia disponível para esta especialidade.</div>';
@@ -1191,11 +1225,17 @@ async function loadFile(type, filename) {
         currentFileType = type;
         currentFileName = filename;
 
-        // Mapeamento de caminhos por especialidade
+        // Mapeamento de caminhos por especialidade e subcategoria
         const specialtyPaths = {
             go: {
-                resumos: 'subjects/GO/GOResumos',
-                guias: 'subjects/GO/GOGuias'
+                avc1: {
+                    resumos: 'subjects/GO/AVC 1/GOResumos',
+                    guias: 'subjects/GO/AVC 1/GOGuias'
+                },
+                avc2: {
+                    resumos: 'subjects/GO/AVC 2/GOResumos',
+                    guias: 'subjects/GO/AVC 2/GOGuias'
+                }
             },
             cardio: {
                 resumos: 'subjects/CardioPneumo/CardioPneumoResumos',
@@ -1211,8 +1251,14 @@ async function loadFile(type, filename) {
             }
         };
 
-        // Obtém o caminho correto baseado na especialidade
-        const basePath = specialtyPaths[currentSpecialty]?.[type];
+        // Obtém o caminho correto baseado na especialidade e subcategoria
+        let basePath;
+
+        if (currentSubcategory && specialtyPaths[currentSpecialty]?.[currentSubcategory]) {
+            basePath = specialtyPaths[currentSpecialty][currentSubcategory][type];
+        } else if (specialtyPaths[currentSpecialty]?.[type]) {
+            basePath = specialtyPaths[currentSpecialty][type];
+        }
 
         if (!basePath) {
             throw new Error('Especialidade ou tipo de arquivo inválido');
