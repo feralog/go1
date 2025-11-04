@@ -68,6 +68,11 @@ const quizConfig = {
                             file: "subjects/GO/AVC 2/GOQuestions/1citologia-oncotica"
                         },
                         {
+                            id: "puerperio_amamentacao",
+                            name: "Puerpério e Amamentação",
+                            file: "subjects/GO/AVC 2/GOQuestions/2puerperio_amamentacao_questoes"
+                        },
+                        {
                             id: "vulvovaginites",
                             name: "Vulvovaginites",
                             file: "subjects/GO/AVC 2/GOQuestions/3vulvovaginites"
@@ -86,6 +91,16 @@ const quizConfig = {
                             id: "trabalho_parto",
                             name: "Trabalho de Parto e Parto",
                             file: "subjects/GO/AVC 2/GOQuestions/6trabalhodepartoeparto"
+                        },
+                        {
+                            id: "revisao_geral_parte1",
+                            name: "Revisão Geral - Parte 1",
+                            file: "subjects/GO/AVC 2/GOQuestions/revisao-geral-parte"
+                        },
+                        {
+                            id: "revisao_geral_parte2",
+                            name: "Revisão Geral - Parte 2",
+                            file: "subjects/GO/AVC 2/GOQuestions/revisao-geral-parte2"
                         }
                     ]
                 }
