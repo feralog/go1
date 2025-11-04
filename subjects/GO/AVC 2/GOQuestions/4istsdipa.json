@@ -80,11 +80,11 @@
   {
     "question": "Paciente com diagnóstico de gonorreia deve receber qual orientação sobre manejo de parceiros?",
     "options": [
-      "Encaminhar parceiros para avaliação apenas se houver recidiva dos sintomas",
-      "Orientar uso de preservativo sem necessidade de tratamento dos parceiros",
-      "Tratamento simultâneo do(s) parceiro(s) sexual(is) e abstinência até conclusão do tratamento",
-      "Aguardar surgimento de sintomas nos parceiros antes de iniciar tratamento",
-      "Tratamento apenas se os parceiros apresentarem exames laboratoriais positivos"
+      "Encaminhar parceiros para avaliação apenas se houver recidiva dos sintomas e abstinência sexual até conclusão do tratamento",
+      "Orientar uso de preservativo sem necessidade de tratamento dos parceiros e abstinência sexual até conclusão do tratamento",
+      "Tratamento simultâneo do(s) parceiro(s) sexual(is) e abstinência sexual até conclusão do tratamento",
+      "Aguardar surgimento de sintomas nos parceiros antes de iniciar tratamento e abstinência sexual até conclusão do tratamento",
+      "Tratamento apenas se os parceiros apresentarem exames laboratoriais positivos e abstinência sexual até conclusão do tratamento"
     ],
     "correctIndex": 2,
     "explanation": "É fundamental tratar simultaneamente todos os parceiros sexuais dos últimos 60 dias (ou o último parceiro se não for possível identificar todos) e orientar abstinência sexual até a conclusão do tratamento e desaparecimento dos sintomas. Esta medida previne a reinfecção e interrompe a cadeia de transmissão.",
@@ -93,10 +93,10 @@
   {
     "question": "Qual é a principal complicação da gonorreia não tratada adequadamente em mulheres?",
     "options": [
-      "Nefrite intersticial aguda com insuficiência renal rapidamente progressiva",
+      "Nefrite intersticial aguda com insuficiência renal rapidamente progressiva e gravidez ectópica",
       "Hepatite fulminante por disseminação hematogênica do gonococo",
       "Endocardite infecciosa com formação de vegetações valvares destrutivas",
-      "Doença inflamatória pélvica (DIPA) com risco de infertilidade tubária e gravidez ectópica",
+      "Doença inflamatória pélvica com risco de infertilidade tubária e gravidez ectópica",
       "Meningite bacteriana por contiguidade com o sistema nervoso central"
     ],
     "correctIndex": 3,
@@ -147,7 +147,7 @@
     "options": [
       "Rastreio anual para clamídia com tratamento presuntivo se biologia molecular não disponível",
       "Aguardar surgimento de sintomas antes de iniciar investigação para ISTs",
-      "Encaminhar para consulta com infectologista para avaliação especializada",
+      "Encaminhar para consulta com infectologista (Papanicolaou) para avaliação especializada",
       "Rastreio apenas para HIV e sífilis, sem investigação para infecções bacterianas",
       "Solicitar apenas exame citopatológico de colo uterino (Papanicolaou) de rotina"
     ],
@@ -171,11 +171,11 @@
   {
     "question": "Qual é a sequência temporal correta das fases da sífilis não tratada?",
     "options": [
-      "Primária (cancro) → Secundária (roséolas/sifílides) → Latente → Terciária (gomas)",
+      "Primária (cancro) → Secundária (roséolas/sifílides) → Latente → Terciária",
       "Secundária (roséolas) → Primária (cancro) → Terciária (gomas) → Latente",
       "Terciária (gomas) → Secundária (roséolas) → Primária (cancro) → Latente",
       "Latente → Primária (cancro) → Secundária (sifílides) → Terciária (gomas)",
-      "Primária (cancro) → Terciária (gomas) → Secundária (sifílides) → Latente"
+      "Primária → Secundária → Terciária → Quaternária → Morte"
     ],
     "correctIndex": 0,
     "explanation": "A sequência temporal correta das fases da sífilis não tratada é: Primária (cancro duro com 3 semanas em média) → Secundária (roséolas sifilíticas e sifílides com 10 semanas) → Latente (assintomática) → Terciária (gomas, alterações cardiovasculares e neurológicas após 3-20 anos).",
@@ -238,7 +238,7 @@
     "options": [
       "Lesão vegetante indolor com base granulosa vermelho-vivo e sangramento fácil",
       "Úlcera única indolor com bordas endurecidas e fundo limpo sem formação de vesículas",
-      "Pápulas eritematosas dolorosas que evoluem para vesículas, úlceras rasas e depois crostas",
+      "Pápulas eritematosas dolorosas que evoluem para vesículas, úlceras rasas e crostas",
       "Pápulas umbilicadas indolores que liberam material esbranquiçado à expressão",
       "Múltiplas úlceras dolorosas com base amolecida e exsudato necrótico fétido"
     ],
@@ -277,9 +277,9 @@
     "options": [
       "Indicar aciclovir tópico em todos os trimestres e parto vaginal independente de lesões",
       "Tratar qualquer episódio como primoinfecção com Aciclovir por 7 dias e cesariana se lesão ativa no parto",
-      "Tratar apenas no terceiro trimestre com doses reduzidas de Aciclovir por 5 dias",
+      "Tratar qualquer episódio como primoinfecção apenas no terceiro trimestre com doses reduzidas de Aciclovir por 5 dias",
       "Internar para administração de aciclovir EV apenas no trabalho de parto estabelecido",
-      "Não tratar durante a gestação devido a riscos teratogênicos dos antivirais"
+      "Tratar qualquer episódio como primoinfecção durante a gestação devido a riscos teratogênicos dos antivirais"
     ],
     "correctIndex": 1,
     "explanation": "Na gestação, trata-se qualquer episódio de herpes genital como primoinfecção com Aciclovir por 7 dias. A presença de lesão herpética ativa no momento do parto contraindica o parto vaginal devido ao risco de herpes neonatal, indicando cesariana para prevenir a transmissão vertical.",
@@ -392,11 +392,11 @@
   {
     "question": "Quais são os principais agentes etiológicos da DIPA?",
     "options": [
-      "Staphylococcus aureus e Streptococcus pyogenes como bactérias piogênicas",
+      "Staphylococcus aureus e Streptococcus pyogenes como bactérias piogênicas por estarem sempre presentes na flora vaginal",
       "Chlamydia trachomatis e Neisseria gonorrhoeae como principais, além de flora polimicrobiana",
-      "Mycoplasma hominis e Ureaplasma urealyticum como únicos agentes responsáveis",
-      "Candida albicans e Trichomonas vaginalis como patógenos fúngico e protozoário",
-      "Herpes simplex vírus e HPV como agentes virais predominantes"
+      "Mycoplasma hominis e Neisseria gonorrhoeae como únicos agentes responsáveis",
+      "Candida albicans e Chlamydia trachomatis como patógenos fúngico e protozoário",
+      "Chlamydia trachomatis e HPV como agentes virais predominantes"
     ],
     "correctIndex": 1,
     "explanation": "Os principais agentes etiológicos da DIPA são Chlamydia trachomatis e Neisseria gonorrhoeae, que iniciam o processo infeccioso ascendente. Posteriormente, há envolvimento de flora polimicrobiana anaeróbia e facultativa, incluindo Gardnerella vaginalis, Mycoplasma hominis, Bacteroides spp, Escherichia coli e outros componentes da microbiota genital.",
@@ -485,7 +485,7 @@
     "options": [
       "Tratamento sintomático apenas com analgésicos e observação clínica expectante",
       "Mesma abordagem da DIPA de base, pois representa complicação da infecção genital ascendente",
-      "Corticosteroides em altas doses para controle do processo inflamatório peritoneal",
+      "Corticosteroides em altas doses para controle do processo inflamatório peritoneal descendente",
       "Tratamento cirúrgico imediato para liberação das aderências hepáticas",
       "Antibioticoterapia dirigida exclusivamente para patógenos hepáticos específicos"
     ],
