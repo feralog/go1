@@ -1309,10 +1309,11 @@ function convertMarkdownToHTML(markdown) {
     // Horizontal rules
     html = html.replace(/^---\s*$/gim, '<hr>');
 
-    // Bold and italic (order matters)
-    html = html.replace(/\*\*\*(.*?)\*\*\*/g, '<strong><em>$1</em></strong>');
-    html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-    html = html.replace(/\*(.*?)\*/g, '<em>$1</em>');
+    // Bold and italic (order matters) - improved to avoid conflict with lists
+    html = html.replace(/\*\*\*((?!\s).+?(?<!\s))\*\*\*/g, '<strong><em>$1</em></strong>');
+    html = html.replace(/\*\*((?!\s).+?(?<!\s))\*\*/g, '<strong>$1</strong>');
+    // Only match italic if not at start of line (to avoid conflict with lists)
+    html = html.replace(/([^\n])\*((?!\s).+?(?<!\s))\*/g, '$1<em>$2</em>');
 
     // Code (inline and blocks)
     html = html.replace(/```[\s\S]*?```/g, (match) => {
@@ -1323,20 +1324,18 @@ function convertMarkdownToHTML(markdown) {
     // Links
     html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank">$1</a>');
 
-    // Line breaks and paragraphs
-    html = html.replace(/\n\s*\n/g, '</p><p>');
-    html = html.replace(/\n/g, '<br>');
-
-    // Lists (improved handling)
-    const lines = html.split('<br>');
+    // Process lists BEFORE line break conversion
+    const lines = html.split('\n');
     let inList = false;
     let listType = '';
     const processedLines = [];
 
     for (let i = 0; i < lines.length; i++) {
-        const line = lines[i].trim();
+        let line = lines[i];
+        const trimmedLine = line.trim();
 
-        if (line.match(/^[\*\-\+] /)) {
+        // Check for unordered list
+        if (trimmedLine.match(/^[\*\-\+] /)) {
             if (!inList) {
                 processedLines.push('<ul>');
                 inList = true;
@@ -1345,8 +1344,10 @@ function convertMarkdownToHTML(markdown) {
                 processedLines.push('</ol><ul>');
                 listType = 'ul';
             }
-            processedLines.push('<li>' + line.replace(/^[\*\-\+] /, '') + '</li>');
-        } else if (line.match(/^\d+\. /)) {
+            processedLines.push('<li>' + trimmedLine.replace(/^[\*\-\+] /, '') + '</li>');
+        }
+        // Check for ordered list
+        else if (trimmedLine.match(/^\d+\. /)) {
             if (!inList) {
                 processedLines.push('<ol>');
                 inList = true;
@@ -1355,16 +1356,16 @@ function convertMarkdownToHTML(markdown) {
                 processedLines.push('</ul><ol>');
                 listType = 'ol';
             }
-            processedLines.push('<li>' + line.replace(/^\d+\. /, '') + '</li>');
-        } else {
+            processedLines.push('<li>' + trimmedLine.replace(/^\d+\. /, '') + '</li>');
+        }
+        // Not a list item
+        else {
             if (inList) {
                 processedLines.push(listType === 'ul' ? '</ul>' : '</ol>');
                 inList = false;
                 listType = '';
             }
-            if (line.trim() !== '') {
-                processedLines.push(line);
-            }
+            processedLines.push(line);
         }
     }
 
@@ -1372,7 +1373,11 @@ function convertMarkdownToHTML(markdown) {
         processedLines.push(listType === 'ul' ? '</ul>' : '</ol>');
     }
 
-    html = processedLines.join('<br>');
+    html = processedLines.join('\n');
+
+    // Line breaks and paragraphs
+    html = html.replace(/\n\s*\n/g, '</p><p>');
+    html = html.replace(/\n/g, '<br>');
 
     // Wrap in paragraphs
     html = '<p>' + html + '</p>';
