@@ -1,162 +1,171 @@
-Briefing sobre Vulvovaginites
+# Briefing: Vulvovaginites
 
-Resumo Executivo
+## Resumo executivo
 
-As vulvovaginites representam um conjunto de processos inflamatórios que afetam o trato genital inferior (vulva, vagina e colo do útero), constituindo a principal causa de consultas ginecológicas, respondendo por 30% a 50% delas. A condição surge de um desequilíbrio na flora vaginal normal, que é predominantemente composta por Lactobacillus e mantida por um pH ácido (3,8-4,2) durante a menacme. Fatores como doenças sistêmicas, uso de antibióticos, duchas vaginais e alterações hormonais podem predispor a esse desequilíbrio.
+As **vulvovaginites** são processos inflamatórios do trato genital inferior (vulva, vagina e colo do útero) e constituem a principal causa de consultas ginecológicas (≈ **30–50%**). Decorrem, em geral, de **desequilíbrio da flora vaginal normal**, predominantemente composta por **Lactobacillus** e mantida por **pH ácido (3,8–4,2)** durante a menacme. Doenças sistêmicas, uso de antibióticos, duchas vaginais e alterações hormonais podem predispor ao desequilíbrio.
 
-As três principais etiologias infecciosas são a Vaginose Bacteriana (VB), a Candidíase Vulvovaginal e a Tricomoníase. A VB é caracterizada por um odor fétido ("peixe podre"), corrimento branco-acinzentado, pH > 4,5 e a presença de "clue cells" na microscopia. A Candidíase apresenta prurido intenso, corrimento branco e espesso ("ricota"), com pH normal ou ácido (< 4,5) e hifas visíveis ao microscópio. A Tricomoníase, uma Infecção Sexualmente Transmissível (IST), causa corrimento amarelo-esverdeado e bolhoso, com pH > 4,5 e o clássico "colo em aspecto de morango".
+As três principais etiologias infecciosas são **Vaginose Bacteriana (VB)**, **Candidíase vulvovaginal** e **Tricomoníase**.
 
-O diagnóstico preciso requer uma anamnese detalhada e exame físico, complementados por testes como a medição do pH, o teste das aminas (whiff test) e o exame a fresco (microscopia). O tratamento varia conforme a etiologia, sendo crucial diferenciar as condições para evitar recidivas e tratar corretamente os parceiros, quando indicado (como na Tricomoníase).
+* **VB:** odor fétido (“peixe”), corrimento branco-acinzentado, **pH > 4,5** e **“clue cells”** na microscopia.
+* **Candidíase:** prurido intenso, corrimento branco espesso (“ricota”), **pH normal/ácido (< 4,5)** e hifas ao microscópio.
+* **Tricomoníase (IST):** corrimento amarelo-esverdeado espumoso, **pH > 4,5** e “**colo em morango**”.
 
+O diagnóstico exige **anamnese + exame físico**, complementados por **pH**, **teste das aminas (whiff)** e **exame a fresco**. O tratamento varia conforme a etiologia; diferenciar corretamente evita recidivas e orienta o **tratamento de parceiros** quando indicado (p.ex., tricomoníase).
 
---------------------------------------------------------------------------------
+---
 
+## 1. Flora vaginal normal e mecanismos de defesa
 
-1. Flora Vaginal Normal e Mecanismos de Defesa
+A compreensão da microbiota vaginal normal é fundamental para o diagnóstico das vulvovaginites. O **equilíbrio** desse ecossistema é o principal mecanismo de defesa contra patógenos.
 
-A compreensão da microbiota vaginal normal é fundamental para o diagnóstico das vulvovaginites. O equilíbrio desse ecossistema é o principal mecanismo de defesa contra patógenos.
+### 1.1. Composição da flora vaginal
 
-1.1. Composição da Flora Vaginal
+A flora varia ao longo da vida e é influenciada pelos níveis de **estrogênio**.
 
-A flora vaginal varia ao longo da vida da mulher, influenciada principalmente pelos níveis de estrogênio.
+* **Menacme (vida reprodutiva):**
 
-* Menacme (Vida Reprodutiva):
-  * pH: Ácido, entre 3,8 e 4,2.
-  * Composição: Dominada por Lactobacillus (90% das bactérias), que produzem ácido lático e peróxido de hidrogênio, inibindo o crescimento de organismos nocivos.
-  * Outros Microrganismos Presentes:
-    * Aeróbios: Lactobacillus acidophilus, Staphylococcus epidermidis, aureus, Streptococcus agalactiae, E. Coli.
-    * Anaeróbios Facultativos: Gardnerella vaginalis, Enterococcus.
-    * Anaeróbios Obrigatórios: Prevotella sp., Bacterióides spp., Peptostreptococcus, Ureaplasma urealyticum, Mycoplasma hominis.
-    * Fungos: Candida sp. (presente como saprófita em até 30% das mulheres saudáveis).
-* Menopausa:
-  * pH: Alcalino, entre 6,0 e 7,5.
-  * Alterações: O hipoestrogenismo leva a um epitélio vaginal mais fino e a uma queda nos níveis de glicogênio, o que reduz a população de Lactobacillus.
-* Gravidez:
-  * Alterações: O aumento de estrogênio e progesterona torna o microbioma mais estável. O pH vaginal se reduz e a exsudação aumenta, protegendo contra patógenos.
-  * Risco: A quebra desse equilíbrio, com redução acentuada do pH, pode predispor a infecções fúngicas e vaginite citolítica.
+  * **pH:** ácido, **3,8–4,2**.
+  * **Composição:** dominada por **Lactobacillus** (~90%), que produzem **ácido lático** e **peróxido de hidrogênio**, inibindo microrganismos nocivos.
+  * **Outros microrganismos presentes:**
 
-1.2. Mecanismos de Defesa Naturais
+    * **Aeróbios:** *Lactobacillus acidophilus*, *Staphylococcus epidermidis*, *Staphylococcus aureus*, *Streptococcus agalactiae*, *Escherichia coli*.
+    * **Anaeróbios facultativos:** *Gardnerella vaginalis*, *Enterococcus* spp.
+    * **Anaeróbios obrigatórios:** *Prevotella* spp., *Bacteroides* spp., *Peptostreptococcus* spp., *Ureaplasma urealyticum*, *Mycoplasma hominis*.
+    * **Fungos:** *Candida* spp. (saprófita em até 30% das mulheres saudáveis).
+* **Menopausa:**
 
-O trato genital inferior possui múltiplas barreiras de proteção:
+  * **pH:** mais alcalino, **6,0–7,5**.
+  * **Alterações:** hipoestrogenismo → epitélio mais fino, menos glicogênio → redução de **Lactobacillus**.
+* **Gravidez:**
 
-Localização	Mecanismo de Defesa
-Vulva	• Pelos<br>• Pequenos lábios (barreira anatômica)
-Vagina	• Integridade da mucosa (epitélio escamoso)<br>• Níveis adequados de estrogênio<br>• Microbiota saudável com Lactobacillus<br>• pH ácido
-Colo do Útero	• Barreira anatômica<br>• Muco endocervical com ação bactericida
+  * **Alterações:** ↑ estrogênio/progesterona → microbioma mais **estável**; ↓ pH e ↑ exsudação, com proteção contra patógenos.
+  * **Risco:** desequilíbrios (pH muito baixo) podem predispor a **infecções fúngicas** e **vaginose/vaginite citolítica**.
 
-2. Vulvovaginite: Definição, Relevância e Fatores de Risco
+### 1.2. Mecanismos de defesa naturais
 
-Vulvovaginite é um termo que descreve o processo inflamatório do trato genital inferior, popularmente conhecido como "corrimento".
+| Localização       | Mecanismos de defesa                                                                                                      |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| **Vulva**         | Pelos; pequenos lábios (barreira anatômica)                                                                               |
+| **Vagina**        | Integridade da mucosa (epitélio escamoso); níveis adequados de estrogênio; microbiota com **Lactobacillus**; **pH ácido** |
+| **Colo do útero** | Barreira anatômica; **muco endocervical** com ação bactericida                                                            |
 
-* Definição: Uma alteração do equilíbrio vaginal que pode ser causada por infecções, agentes irritantes, alergias, alterações hormonais ou doenças sistêmicas.
-* Importância Clínica:
-  * Principal causa de consulta ginecológica (30% a 50% dos atendimentos).
-  * Causa grande impacto na qualidade de vida.
-  * Aumenta o risco de aquisição de Infecções Sexualmente Transmissíveis (ISTs).
-  * Frequentemente apresenta quadros de recidiva.
+---
 
-2.1. Fatores Predisponentes
+## 2. Vulvovaginite: definição, relevância e fatores de risco
 
-Diversos fatores podem romper o equilíbrio da flora vaginal e predispor ao desenvolvimento de vulvovaginites:
+**Vulvovaginite** descreve o processo inflamatório do trato genital inferior — popularmente “corrimento”.
 
-* Doenças sistêmicas (ex: diabetes descompensado)
-* Imunossupressão
-* Uso de antibióticos e corticoides
-* Uso de anticoncepcionais (especialmente com progesterona isolada ou ACHO com alto E2)
-* Higiene excessiva ou inadequada
-* Duchas vaginais e perfumes vaginais
-* Uso de absorventes e protetores diários
-* Depilação excessiva (remove barreira de pelos)
-* Roupas apertadas ou de material sintético
-* Relações sexuais frequentes ou com múltiplos parceiros
-* Uso de lubrificantes vaginais
-* Hábitos de vida (estresse, tabagismo, dieta rica em carboidratos)
-* Trauma local ou presença de corpo estranho
+* **Definição:** alteração do equilíbrio vaginal por **infecções**, **irritantes**, **alergias**, **alterações hormonais** ou **doenças sistêmicas**.
+* **Importância clínica:**
 
-3. Abordagem Diagnóstica
+  * Principal causa de consulta ginecológica (**30–50%**).
+  * Impacto na **qualidade de vida**.
+  * Aumenta o risco de aquisição de **ISTs**.
+  * Alta **recorrência** em muitos casos.
 
-Um diagnóstico preciso é essencial, pois o quadro clínico isolado pode ser insuficiente, especialmente em casos de repetição. É crucial diferenciar a secreção vaginal fisiológica da patológica.
+### 2.1. Fatores predisponentes
 
-3.1. Anamnese e Exame Físico
+* Doenças sistêmicas (p.ex., **diabetes** descompensado)
+* **Imunossupressão**
+* Uso de **antibióticos** e **corticoides**
+* Anticoncepcionais (progesterona isolada; ACHO com alto E2)
+* **Higiene excessiva** ou inadequada; **duchas** e **perfumes** vaginais
+* Absorventes/protetores diários contínuos
+* Depilação excessiva (perda da barreira de pelos)
+* Roupas **apertadas** ou **sintéticas**
+* Relações sexuais **frequentes** ou com **múltiplos parceiros**
+* Uso de **lubrificantes** vaginais
+* Estresse, tabagismo, **dieta rica em carboidratos**
+* Trauma local ou **corpo estranho**
 
-* Anamnese: Questionar sobre volume, cor, odor e consistência da secreção, além de sintomas associados como prurido, ardência, disúria e dispareunia. Investigar hábitos pessoais, dieta, práticas sexuais, métodos contraceptivos, histórico de ISTs e fatores de melhora ou piora.
-* Exame Físico:
-  * Inspeção: Avaliar vulva e intróito vaginal em busca de hiperemia, edema, fissuras e escoriações.
-  * Exame Especular: Visualizar as paredes vaginais e o colo do útero, observando as características do conteúdo vaginal (cor, aspecto, aderência) e a presença de sinais como o "colo em morango" (tricomoníase). É importante avaliar se a secreção provém do orifício do colo uterino.
-  * Toque Vaginal: Avaliar a presença de dor à mobilização do colo uterino, o que pode sugerir uma complicação como Doença Inflamatória Pélvica (DIP).
+---
 
-3.2. Testes Complementares
+## 3. Abordagem diagnóstica
 
-* Fitas de pH: Medem a acidez vaginal, auxiliando na diferenciação das etiologias.
-* Teste das Aminas (Whiff Test): Uma gota de hidróxido de potássio (KOH) a 10% é adicionada a uma amostra de secreção. Um resultado positivo (liberação de odor fétido de "peixe podre") é sugestivo de Vaginose Bacteriana.
-* Exame a Fresco (Microscopia): A secreção vaginal é diluída em solução salina e examinada ao microscópio para identificar Trichomonas móveis, "clue cells" (VB), ou hifas e esporos fúngicos (Candidíase), que são melhor visualizados com a adição de KOH 10%.
-* Coloração de Gram (Escore de Nugent): Considerado o padrão-ouro para diagnóstico de Vaginose Bacteriana, avalia a morfologia bacteriana para gerar um escore que classifica a flora como normal (0-3), intermediária (4-6) ou compatível com VB (7-10).
+O quadro clínico isolado pode ser **insuficiente**, especialmente nas **recidivas**. É crucial diferenciar **secreção fisiológica** da **patológica**.
 
-4. Principais Etiologias Infecciosas
+### 3.1. Anamnese e exame físico
 
-4.1. Vaginose Bacteriana (VB)
+* **Anamnese:** volume, cor, odor, consistência; **prurido**, **ardor**, **disúria**, **dispareunia**; hábitos, dieta, práticas sexuais, contracepção, histórico de ISTs, fatores de melhora/piora.
+* **Exame físico:**
 
-* Definição: Desequilíbrio da flora vaginal com diminuição de Lactobacillus e proliferação polimicrobiana de bactérias anaeróbias (Gardnerella, Prevotella, Atopobium, etc.). Não é uma IST, mas predispõe a elas.
-* Quadro Clínico: Queixa principal é o odor fétido ("peixe podre"), que piora após relação sexual desprotegida ou durante a menstruação. O corrimento é branco-acinzentado, homogêneo, fluido e aderente às paredes vaginais.
-* Diagnóstico (Critérios de Amsel - 3 de 4 necessários):
-  1. Corrimento branco-acinzentado, homogêneo.
-  2. pH vaginal > 4,5.
-  3. Teste das aminas (whiff test) positivo.
-  4. Presença de "clue cells" (células-alvo) na microscopia.
-* Tratamento:
-  * Padrão: Metronidazol 500 mg VO, 2x/dia por 7 dias; OU Metronidazol gel 0,75% intravaginal por 5 dias; OU Clindamicina creme 2% intravaginal por 7 dias.
-  * Parceiro: Não é necessário tratar o parceiro.
-  * Gestantes: O tratamento de pacientes assintomáticas é indicado devido à associação com parto prematuro e rotura prematura de membranas. Opções incluem Metronidazol oral ou Clindamicina oral/vaginal. No primeiro trimestre, prefere-se a via vaginal.
+  * **Inspeção:** hiperemia, edema, fissuras, escoriações.
+  * **Especular:** avaliar paredes vaginais e **colo**; características do conteúdo (cor, aspecto, aderência) e sinais como **“colo em morango”** (tricomoníase); verificar se a secreção vem do **orifício cervical**.
+  * **Toque vaginal:** dor à **mobilização do colo** pode sugerir **Doença Inflamatória Pélvica (DIP)**.
 
-4.2. Candidíase Vulvovaginal
+### 3.2. Testes complementares
 
-* Definição: Infecção causada pela proliferação de fungos do gênero Candida, sendo a C. albicans a mais comum (85-95%). Define-se como recorrente a ocorrência de 4 ou mais episódios em 12 meses.
-* Quadro Clínico: O prurido é o sintoma predominante. Outros sintomas incluem ardência, disúria, dispareunia e corrimento branco, espesso, com grumos ("leite coalhado" ou "ricota"), geralmente aderido. O exame pode revelar hiperemia, edema e fissuras vulvares.
-* Diagnóstico:
-  * pH vaginal < 4,5.
-  * Teste das aminas negativo.
-  * Microscopia com KOH 10% revela a presença de leveduras (esporos) e/ou pseudo-hifas.
-* Tratamento:
-  * Via Vaginal (Tópico): Miconazol, Clotrimazol, Fenticonazol, Nistatina (cremes, óvulos ou comprimidos vaginais).
-  * Via Sistêmica (Oral): Fluconazol 150 mg em dose única; ou Itraconazol.
-  * Gestantes: O tratamento deve ser feito exclusivamente por via vaginal (Miconazol, Clotrimazol) por 7 dias ou mais. Antifúngicos orais são contraindicados. Para Candida não-albicans, Nistatina creme por 14 dias é uma opção.
+* **Fitas de pH**
+* **Teste das aminas (whiff):** KOH 10%; odor “peixe” → sugere **VB**
+* **Exame a fresco (microscopia):** solução salina → **Trichomonas** móveis, **“clue cells”** (VB), **hifas/leveduras** (candidíase; melhor com KOH 10%)
+* **Gram (Escore de Nugent):** padrão-ouro para **VB** (0–3 normal; 4–6 intermediário; 7–10 VB)
 
-4.3. Tricomoníase
+---
 
-* Definição: Infecção Sexualmente Transmissível (IST) causada pelo protozoário flagelado Trichomonas vaginalis. Facilita a aquisição de outras ISTs, incluindo o HIV.
-* Quadro Clínico: Corrimento profuso, amarelo ou amarelo-esverdeado, bolhoso/espumoso. Sintomas incluem ardor, disúria e dispareunia. Ao exame especular, o achado clássico é a colpite macular ("colo em framboesa" ou "em morango").
-* Diagnóstico:
-  * pH vaginal > 4,5 (geralmente > 5,0).
-  * Teste das aminas pode ser positivo.
-  * Microscopia a fresco (padrão obrigatório) identifica o parasita móvel.
-  * Cultura (meio Diamond) ou testes moleculares (PCR/NAAT) são o padrão-ouro.
-* Tratamento:
-  * Padrão: Metronidazol 2g VO em dose única; OU Tinidazol 2g VO em dose única. Tratamento via vaginal não é eficaz.
-  * Parceiros: É obrigatório tratar todos os parceiros sexuais e pesquisar outras ISTs.
-  * Gestantes: Tratamento com Metronidazol 500 mg VO, 2x/dia por 7 dias. Tinidazol é contraindicado na gestação.
+## 4. Principais etiologias infecciosas
 
-Tabela Resumo das Principais Vulvovaginites Infecciosas
+### 4.1. Vaginose bacteriana (VB)
 
-Diagnóstico	Queixa Principal	Características do Corrimento	Teste das Aminas	pH Vaginal	Microscopia
-Normal	Nenhuma	Claro, fluido, esbranquiçado	Negativo	3.8-4.2	Células epiteliais, lactobacilos
-Vaginose Bacteriana	Odor fétido ("peixe podre")	Esbranquiçado ou cinzento, fluido, aderente	Positivo	> 4.5	Clue cells, raros lactobacilos
-Candidíase	Prurido, ardor	Esbranquiçado, espesso, com grumos	Negativo	< 4.5	Brotos, hifas, pseudo-hifas
-Tricomoníase	Corrimento espumoso, prurido	Verde-amarelado, espumoso, abundante	Pode ser positivo	> 4.5	Tricomonas móveis
+* **Definição:** desequilíbrio com ↓ **Lactobacillus** e proliferação **polimicrobiana** anaeróbia (*Gardnerella*, *Prevotella*, *Atopobium vaginae*, etc.). **Não** é IST, mas **predispõe**.
+* **Clínica:** odor fétido (piora pós-relação/menstruação); corrimento **branco-acinzentado**, homogêneo, fluido e **aderente**.
+* **Diagnóstico (Amsel — 3/4):**
 
-5. Outras Etiologias de Vulvovaginite
+  1. corrimento típico; 2) **pH > 4,5**; 3) **whiff** positivo; 4) **“clue cells”**.
+* **Tratamento:**
 
-5.1. Causas Infecciosas Menos Comuns
+  * **Metronidazol 500 mg VO 2×/dia por 7 dias** **OU** gel 0,75% por 5 dias **OU** **clindamicina** creme 2% por 7 dias.
+  * **Parceiro:** não tratar.
+  * **Gestantes:** tratar mesmo assintomáticas (risco obstétrico). Preferir via **vaginal** no 1º trimestre; metronidazol/clindamicina são opções.
 
-* Vaginose Citolítica: Causada pela proliferação excessiva de Lactobacillus. Causa prurido e corrimento esbranquiçado, com pH ≤ 4,0. O tratamento visa alcalinizar o meio vaginal (ex: duchas com bicarbonato de sódio).
-* Vaginite Inflamatória Descamativa: Causa rara, de etiologia desconhecida, com inflamação intensa, corrimento amarelado e profuso, e pH > 4,5. O tratamento pode incluir clindamicina e/ou hidrocortisona tópica.
-* Vaginite Aeróbica: Desequilíbrio da flora com predomínio de bactérias aeróbicas entéricas (E. coli, Enterococcus). Causa corrimento purulento com odor desagradável. O tratamento depende dos achados microscópicos.
+### 4.2. Candidíase vulvovaginal
 
-5.2. Causas Não Infecciosas
+* **Definição:** proliferação de *Candida* (85–95% **C. albicans**). **Recorrente**: ≥4 episódios/12 meses.
+* **Clínica:** **prurido** predominante; ardor, disúria, dispareunia; corrimento **branco espesso grumoso** (“leite coalhado/ricota”); hiperemia/edema/fissuras.
+* **Diagnóstico:** **pH < 4,5**, **whiff negativo**, KOH 10% → **leveduras/pseudo-hifas**.
+* **Tratamento:**
 
-* Vaginite Atrófica: Ocorre no climatério devido à queda de estrogênio. Causa secura, corrimento purulento e dispareunia. O tratamento é a reposição de estrogênio tópico.
-* Vaginite Irritativa/Alérgica: Reação a agentes químicos (sabonetes, perfumes, látex, espermicidas), resultando em ardor, prurido e eritema. O tratamento consiste na remoção do agente causal e, se necessário, uso de anti-histamínicos ou corticoides tópicos.
-* Vaginite Actínica: Descarga purulenta que ocorre após radioterapia pélvica.
+  * **Vaginal (tópico):** miconazol, clotrimazol, fenticonazol, nistatina.
+  * **Oral:** **fluconazol 150 mg dose única** (ou itraconazol).
+  * **Gestantes:** **apenas via vaginal** por 7+ dias (miconazol/clotrimazol). Para **não-albicans**, considerar **nistatina** 14 dias.
 
-Conclusão
+### 4.3. Tricomoníase
 
-A abordagem das vulvovaginites exige uma avaliação clínica criteriosa, pois nem toda descarga vaginal é patológica. Os mecanismos de defesa, como o pH ácido e a integridade da microbiota, são essenciais para a saúde vaginal. Embora a clínica seja sugestiva, a confirmação diagnóstica por meio de testes complementares ("propedêutica armada") é fundamental para evitar erros, tratamentos inadequados e a recorrência dos quadros. Um diagnóstico acurado permite uma terapia direcionada, melhorando a qualidade de vida da paciente e prevenindo complicações.
+* **Definição:** **IST** por *Trichomonas vaginalis*; facilita aquisição de outras ISTs (incl. **HIV**).
+* **Clínica:** corrimento **profuso**, **amarelo-esverdeado**, **espumoso**; ardor, disúria, dispareunia; **colpite macular** (“colo em framboesa/morango”).
+* **Diagnóstico:** **pH > 4,5** (geralmente >5,0); whiff pode ser +; **microscopia a fresco** identifica o parasita; cultura (meio **Diamond**) e **NAAT/PCR** são padrão-ouro.
+* **Tratamento:**
+
+  * **Metronidazol 2 g VO dose única** **OU** **tinidazol 2 g VO dose única** (via vaginal não é eficaz).
+  * **Parceiros:** **obrigatório** tratar e investigar outras ISTs.
+  * **Gestantes:** **metronidazol 500 mg VO 2×/dia por 7 dias**; tinidazol **contraindicado**.
+
+### Tabela-resumo das principais vulvovaginites infecciosas
+
+| Diagnóstico             | Queixa principal                 | Características do corrimento                | Teste das aminas | pH vaginal  | Microscopia                           |
+| ----------------------- | -------------------------------- | -------------------------------------------- | ---------------- | ----------- | ------------------------------------- |
+| **Normal**              | —                                | Claro, fluido, esbranquiçado                 | Negativo         | **3,8–4,2** | Células epiteliais, lactobacilos      |
+| **Vaginose bacteriana** | Odor fétido (“peixe”)            | Esbranquiçado/cinzento, fluido, **aderente** | **Positivo**     | **> 4,5**   | **“Clue cells”**, poucos lactobacilos |
+| **Candidíase**          | **Prurido**, ardor               | Esbranquiçado, **espesso**, grumoso          | Negativo         | **< 4,5**   | Brotamento, **hifas/pseudo-hifas**    |
+| **Tricomoníase**        | Corrimento **espumoso**, prurido | Verde-amarelado, espumoso, abundante         | ± Positivo       | **> 4,5**   | **Trichomonas** móveis                |
+
+---
+
+## 5. Outras etiologias de vulvovaginite
+
+### 5.1. Causas infecciosas menos comuns
+
+* **Vaginose citolítica:** proliferação excessiva de **Lactobacillus**; prurido e corrimento esbranquiçado com **pH ≤ 4,0**. Tratamento: **alcalinizar** o meio (p.ex., duchas com **bicarbonato**).
+* **Vaginite inflamatória descamativa:** rara; inflamação intensa, corrimento **amarelado** profuso, **pH > 4,5**; pode responder a **clindamicina** e/ou **hidrocortisona** tópica.
+* **Vaginite aeróbica:** predomínio de aeróbios entéricos (*E. coli*, *Enterococcus*); corrimento **purulento** com odor; conduta conforme microscopia/cultura.
+
+### 5.2. Causas não infecciosas
+
+* **Vaginite atrófica (climatério):** hipoestrogenismo → **secura**, corrimento purulento, **dispareunia**; tratamento: **estrogênio tópico**.
+* **Vaginite irritativa/alérgica:** reação a químicos (sabonetes, perfumes), látex, espermicidas → ardor, prurido, eritema; manejo: **remover agente** ± anti-histamínicos/corticoides tópicos.
+* **Vaginite actínica:** descarga purulenta após **radioterapia pélvica**.
+
+---
+
+## Conclusão
+
+A abordagem das vulvovaginites requer **avaliação clínica criteriosa**: nem toda descarga é patológica. **pH ácido** e **microbiota íntegra** são pilares da saúde vaginal. Embora a clínica oriente, a **confirmação com testes** reduz erros e **recorrências**, permitindo **terapia direcionada**, melhora da **qualidade de vida** e prevenção de complicações.
