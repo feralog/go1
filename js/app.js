@@ -904,7 +904,7 @@ function confirmAnswer() {
 function applyMentorColors() {
     const question = currentQuestions[currentQuestionIndex];
     const userAnswer = userAnswers[currentQuestionIndex];
-    const optionButtons = document.querySelectorAll('.option-btn');
+    const optionButtons = document.getElementById('options-container').querySelectorAll('.option-btn');
 
     optionButtons.forEach((btn, index) => {
         // Remove classes anteriores
