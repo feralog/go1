@@ -468,19 +468,6 @@
     "type": "conteudista"
   },
   {
-    "question": "Paciente de 22 anos com LSIL (NIC I) confirmada histologicamente. Qual abordagem é preferencial considerando a história natural?",
-    "options": [
-      "Histerectomia profilática pelo risco acumulado ao longo da vida",
-      "Observação com citologia e colposcopia a cada 6 meses por 2 anos pela alta taxa de regressão",
-      "Radioterapia localizada para erradicação completa da lesão",
-      "Quimioterapia tópica seguida de reevaliação em 3 meses",
-      "Conização imediata devido ao risco de progressão rápida em jovens"
-    ],
-    "correctIndex": 1,
-    "explanation": "Para LSIL (NIC I) em mulheres jovens, a observação com citologia e colposcopia a cada 6 meses por 2 anos é a abordagem preferencial devido à alta taxa de regressão espontânea.",
-    "type": "raciocínio"
-  },
-  {
     "question": "Qual vacina contra HPV está disponível no SUS e protege contra os tipos 6, 11, 16 e 18?",
     "options": [
       "Vacina pentavalente protege contra HPV 6, 11, 16 e 18 e está disponível no SUS",
