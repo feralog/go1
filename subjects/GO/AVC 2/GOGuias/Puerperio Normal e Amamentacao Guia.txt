@@ -1,71 +1,70 @@
-Guia de Estudo: Puerpério Normal e Amamentação
+# Guia de Estudo: Puerpério Normal e Amamentação
 
-Questionário de Resposta Curta
+---
 
-Instruções: Responda a cada pergunta de forma concisa, utilizando 2 a 3 frases completas. Baseie todas as respostas exclusivamente no material de estudo fornecido.
+## Questionário de Resposta Curta
+
+**Instruções:** Responda a cada pergunta de forma concisa, em **2–3 frases**, usando **exclusivamente** o material de estudo.
 
 1. O que é o puerpério e quais são suas três fases principais de acordo com a classificação mais comum?
-2. Explique o conceito de "Globo de segurança de Pinard" e sua importância no pós-parto imediato.
-3. Descreva a progressão da coloração dos lóquios, indicando os nomes e os períodos de tempo aproximados para cada fase.
+2. Explique o conceito de “Globo de segurança de Pinard” e sua importância no pós-parto imediato.
+3. Descreva a progressão da coloração dos lóquios, indicando os nomes e os períodos aproximados de cada fase.
 4. Como a amamentação influencia a involução uterina no período puerperal?
 5. Defina os três estágios da fisiologia da lactação: mamogênese, lactogênese e lactopoese.
-6. Quais são as principais diferenças na composição de proteínas, lipídios e glicídios entre o colostro e o leite maduro?
+6. Quais são as principais diferenças de proteínas, lipídios e glicídios entre o colostro e o leite maduro?
 7. Qual o papel dos hormônios prolactina e ocitocina na manutenção da lactação (lactopoese)?
-8. Descreva as características de uma "pega correta" do bebê na mama durante a amamentação.
-9. Quais as duas principais infecções virais que representam uma contraindicação absoluta à amamentação?
-10. Cite duas alterações fisiológicas importantes que ocorrem no sistema sanguíneo da mulher durante o puerpério.
+8. Descreva as características de uma “pega correta” do bebê na mama.
+9. Quais são as duas principais infecções virais que contra-indicam a amamentação?
+10. Cite duas alterações fisiológicas importantes no sistema sanguíneo durante o puerpério.
 
+---
 
---------------------------------------------------------------------------------
+## Gabarito do Questionário
 
+1. **Puerpério e fases:** O puerpério (sobreparto/pós-parto) é o período de **6–8 semanas** após a saída da placenta, no qual ocorrem fenômenos hormonais, psíquicos e metabólicos que retornam o organismo ao estado pré-gravídico. Divide-se em **imediato (1º–10º dia)**, **tardio (10º–45º dia)** e **remoto (após 45 dias)**.
+2. **Globo de segurança de Pinard:** É o **útero firmemente contraído** logo após o parto, palpado um pouco acima da cicatriz umbilical. A contração e a **retração miometrial (miotamponamento)** comprimem vasos na ferida placentária e **previnem hemorragia pós-parto**.
+3. **Progressão dos lóquios:** Inicia com **lóquia rubra** (vermelha, rica em eritrócitos) até o **3º–4º dia**; segue para **lóquia fusca** (acastanhada) até o **10º dia**. Depois ocorre **lóquia flava** (amarelada) até ~**21º dia** e, por fim, **lóquia alba** (esbranquiçada) **a partir do 21º dia**.
+4. **Amamentação e involução uterina:** A sucção estimula **ocitocina**, que intensifica as contrações uterinas e **acelera a involução**. Em lactantes o útero regride, em média, **~1,5 cm/dia** (vs. ~**1 cm/dia** em não lactantes).
+5. **Fases da lactação:** **Mamogênese**: desenvolvimento da glândula mamária (puberdade → gestação). **Lactogênese**: início da secreção láctea nos primeiros dias pós-parto, desencadeada pela **queda de estrogênio/progesterona** e ação da **prolactina**. **Lactopoese**: manutenção da produção, dependente do **estímulo de sucção**.
+6. **Composição – colostro vs. leite maduro:** O **colostro** tem **proteínas ~6%** (muitas imunoglobulinas) e **menos lipídios (~2,5%)** e **glicídios (~3,0%)**. O **leite maduro** tem **proteínas ~1%**, **lipídios ~3,5%** e **glicídios ~7,0%**, sendo mais calórico.
+7. **Papel de PRL e ocitocina:** Na **lactopoese**, a **prolactina** mantém a **síntese** (proteínas, ácidos graxos, lactose). A **ocitocina** contrai as **células mioepiteliais**, promovendo a **ejeção** (“descida”) do leite.
+8. **Pega correta:** Boca **bem aberta**, abocanhando **grande parte da aréola** (não só o mamilo), **lábios evertidos** e **queixo tocando a mama**. As sucções devem ser **rítmicas e profundas**, garantindo extração eficiente e prevenindo **fissuras**.
+9. **Contraindicações virais absolutas:** **HIV (1 e 2)** e **HTLV (1 e 2)** contra-indicam a amamentação para prevenir transmissão vertical.
+10. **Alterações sanguíneas no puerpério:** Ocorre **leucocitose fisiológica** (até ~**25.000/mm³**). Há **estado de hipercoagulabilidade** que começa a normalizar a partir do **2º dia**, e os **níveis de hemoglobina** retornam ao normal em cerca de **6 semanas**.
 
-Gabarito do Questionário
+---
 
-1. O que é o puerpério e quais são suas três fases principais de acordo com a classificação mais comum? O puerpério, também chamado de sobreparto ou pós-parto, é o período de 6 a 8 semanas que se inicia após a saída da placenta, no qual ocorrem fenômenos hormonais, psíquicos e metabólicos para o retorno do organismo à condição pré-gravídica. Suas fases são o puerpério imediato (do 1º ao 10º dia), o tardio (do 10º ao 45º dia) e o remoto (após 45 dias).
-2. Explique o conceito de "Globo de segurança de Pinard" e sua importância no pós-parto imediato. O "Globo de segurança" refere-se ao útero firmemente contraído, localizado um pouco acima da cicatriz umbilical logo após o parto. Essa contração, junto à retração miometrial (miotamponamento), é fundamental para a hemostase da ferida placentária, comprimindo os vasos sanguíneos e prevenindo a hemorragia pós-parto.
-3. Descreva a progressão da coloração dos lóquios, indicando os nomes e os períodos de tempo aproximados para cada fase. A loquiação inicia-se com a lochia rubra (vermelha), rica em eritrócitos, que dura até o 3º ou 4º dia. Em seguida, torna-se lochia fusca (acastanhada) devido à degradação da hemoglobina, persistindo até o 10º dia. Após o 10º dia, assume uma coloração amarelada (lochia flava) e, por fim, esbranquiçada (lochia alba), a partir do 21º dia.
-4. Como a amamentação influencia a involução uterina no período puerperal? A amamentação acelera a involução uterina através do reflexo uteromamário. A sucção do mamilo estimula a liberação de ocitocina, hormônio que promove contrações uterinas mais eficazes, fazendo com que o útero regrida mais rapidamente (cerca de 1,5 cm/dia) em comparação com mulheres que não amamentam (1 cm/dia).
-5. Defina os três estágios da fisiologia da lactação: mamogênese, lactogênese e lactopoese. A mamogênese é o desenvolvimento completo da glândula mamária, que ocorre em fases desde a puberdade até a gestação. A lactogênese é o início da produção de leite, que acontece nos primeiros dias pós-parto, impulsionada pela prolactina após a queda dos hormônios placentários. A lactopoese é a manutenção da produção de leite, estimulada pela sucção contínua do bebê.
-6. Quais são as principais diferenças na composição de proteínas, lipídios e glicídios entre o colostro e o leite maduro? O colostro é significativamente mais rico em proteínas (6%) em comparação com o leite maduro (1%), fornecendo muitos anticorpos. Por outro lado, o leite maduro possui maiores concentrações de lipídios (3,5% contra 2,5% do colostro) e glicídios (7,0% contra 3,0% do colostro), sendo mais calórico para sustentar o crescimento do bebê.
-7. Qual o papel dos hormônios prolactina e ocitocina na manutenção da lactação (lactopoese)? Durante a lactopoese, a prolactina (PRL) é responsável por manter a secreção láctea, estimulando a produção de proteínas, caseína, ácidos graxos e lactose. A ocitocina age nas células mioepiteliais ao redor dos ácinos mamários, causando sua contração e a consequente ejeção (descida) do leite.
-8. Descreva as características de uma "pega correta" do bebê na mama durante a amamentação. Na pega correta, a boca do bebê está bem aberta, abocanhando não apenas o mamilo, mas uma grande parte da aréola. Os lábios devem estar evertidos (virados para fora), o queixo tocando a mama e as sugadas devem ser rítmicas e profundas, garantindo a extração eficiente do leite e prevenindo fissuras mamilares.
-9. Quais as duas principais infecções virais que representam uma contraindicação absoluta à amamentação? A infecção materna pelo vírus HIV (tipos 1 e 2) e pelos vírus HTLV (tipos 1 e 2) são contraindicações para a amamentação, visando prevenir a transmissão vertical para o lactente.
-10. Cite duas alterações fisiológicas importantes que ocorrem no sistema sanguíneo da mulher durante o puerpério. No puerpério, ocorre uma leucocitose fisiológica (aumento de leucócitos até 25 mil), que atua como uma proteção natural contra infecções. Além disso, há um estado de hipercoagulabilidade no pós-parto imediato, que se normaliza a partir do segundo dia, e os níveis de hemoglobina retornam ao normal em cerca de 6 semanas.
+## Questões Discursivas
 
+> **Instruções:** Responda de forma integrada, sintetizando todo o material (não é necessário responder aqui).
 
---------------------------------------------------------------------------------
+1. Manifestações involutivas e fisiológicas no útero, colo e vagina no puerpério **imediato** e **tardio**, diferenciando **lactantes** e **não lactantes**.
+2. **Reflexo neuroendócrino da lactação:** trajetória do estímulo de sucção → eixo **hipotálamo-hipófise** → liberação/ação hormonal (**PRL/ocitocina**).
+3. **Dificuldades do aleitamento:** pega incorreta, **fissuras**, **ingurgitamento** e **mastite** — causas, sinais, manejo e prevenção.
+4. **Leite humano vs. leite de vaca/fórmulas:** proteínas, **absorção do ferro**, eletrólitos e **fatores imunológicos**.
+5. **Assistência pós-natal ideal:** exames diários até o **2º dia** hospitalar e tópicos da consulta de **6 semanas** (incl. **contracepção** adequada à lactação).
 
+---
 
-Questões Discursivas
+## Glossário de Termos-Chave
 
-Instruções: Elabore respostas detalhadas para as seguintes questões, sintetizando as informações de todo o material de estudo. Não é necessário fornecer as respostas aqui.
+| Termo                            | Definição                                                                                                                                  |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Apojadura**                    | Aumento da produção láctea por volta do **3º dia**; mamas **pesadas, congestas, dolorosas e quentes**.                                     |
+| **Colostro**                     | Primeiro leite (2–7 dias), **espesso e amarelado**, **~6% proteínas**, rico em **IgA** e células de defesa.                                |
+| **Crise genital**                | Fenômenos catabólicos e **involutivos** do pós-parto imediato nas estruturas genitais.                                                     |
+| **Estrangúria**                  | Micção **lenta e dolorosa** (“gota a gota”) no puerpério por tocotrauma uretral/perineal.                                                  |
+| **Globo de segurança de Pinard** | Útero **firmemente contraído** no pós-parto imediato; essencial para a **hemostase** e prevenção de hemorragia.                            |
+| **Ingurgitamento mamário**       | Mamas **excessivamente cheias, dolorosas e edemaciadas** (3º–5º dia), por **estase láctea**; alivia com **amamentação frequente/ordenha**. |
+| **Lactogênese**                  | Início da secreção de leite pós-parto pela queda de **E2/PG** e ação da **prolactina**.                                                    |
+| **Lactopoese**                   | **Manutenção** da produção de leite dependente da sucção, via **PRL** (produção) e **ocitocina** (ejeção).                                 |
+| **Loquiação (lóquios)**          | Secreção pós-parto: **rubra → fusca → flava → alba** conforme cicatrização e involução.                                                    |
+| **Mamogênese**                   | Desenvolvimento da glândula mamária (puberdade→gestação) sob **estrogênio, progesterona, PRL** e outros.                                   |
+| **Mastite**                      | Inflamação (± infecciosa) da mama lactante, geralmente **unilateral**, após 2ª semana; relacionada a **ingurgitamento/fissuras**.          |
+| **Miotamponamento**              | Hemostase por **contração/retração** miometrial que **comprime os vasos** da ferida placentária.                                           |
+| **Ocitocina**                    | Hormônio que **contrai células mioepiteliais** (ejeção do leite) e **estimula contrações uterinas** no pós-parto.                          |
+| **Pega correta**                 | Boca **bem aberta**, grande parte da **aréola** na boca, **lábios evertidos**, **queixo** na mama; sucções **rítmicas/profundas**.         |
+| **Prolactina (PRL)**             | Hormônio chave para **produção de leite** (lactogênese/lactopoese); sua liberação é **estimulada pela sucção** e **inibe a ovulação**.     |
+| **Puerpério**                    | **6–8 semanas** pós-parto; retorno à condição pré-gravídica. Fases: **imediato**, **tardio** e **remoto**.                                 |
 
-1. Discorra sobre as manifestações involutivas e fisiológicas que ocorrem no útero, colo uterino e vagina durante o puerpério imediato e tardio. Detalhe as diferenças observadas entre mulheres lactantes e não lactantes.
-2. Explique detalhadamente o reflexo neuroendócrino da lactação. Descreva o processo desde o estímulo de sucção no mamilo, o eixo hipotálamo-hipófise (HH) e a liberação e ação dos principais hormônios envolvidos na produção e ejeção do leite.
-3. Analise as principais dificuldades e complicações associadas ao aleitamento materno, como pega incorreta, fissuras mamilares, ingurgitamento mamário e mastite. Descreva as causas, os sinais característicos e as estratégias de manejo e prevenção para cada uma dessas condições.
-4. Compare a composição e os benefícios do leite humano com os do leite de vaca (utilizado em fórmulas infantis). Destaque as diferenças em termos de proteínas, absorção de ferro, eletrólitos e presença de fatores imunológicos.
-5. Descreva a assistência pós-natal ideal, abordando os exames diários realizados no ambiente hospitalar (até o 2º dia) e os componentes essenciais da consulta de retorno ambulatorial com 6 semanas, incluindo a orientação sobre contracepção.
-
-
---------------------------------------------------------------------------------
-
-
-Glossário de Termos-Chave
-
-Termo	Definição
-Apojadura	O aumento significativo da produção de leite que ocorre por volta do 3º dia pós-parto. Caracteriza-se por mamas que se tornam pesadas, congestas, dolorosas e quentes, devido ao aumento do fluxo sanguíneo local.
-Colostro	O primeiro leite produzido nos primeiros 2 a 7 dias pós-parto. É um líquido espesso, amarelado, com altas concentrações de proteínas (6%), anticorpos (como IgA) e células de defesa, essenciais para a imunidade do recém-nascido.
-Crise Genital	Conjunto de fenômenos catabólicos e involutivos que ocorrem no pós-parto imediato, afetando as estruturas genitais que foram hipertrofiadas ou hiperplasiadas durante a gestação.
-Estrangúria	Micção lenta e dolorosa, "gota a gota", que pode ocorrer no puerpério devido a tocotraumatismos durante o parto, que afetam a uretra, o meato e o vestíbulo, causando incapacidade esfincteriana temporária.
-Globo de Segurança de Pinard	Termo usado para descrever o útero firmemente contraído no pós-parto imediato. Essa contração é essencial para comprimir os vasos sanguíneos no local de inserção da placenta e prevenir hemorragias.
-Ingurgitamento Mamário	Condição em que as mamas se tornam excessivamente cheias, dolorosas, edemaciadas e, por vezes, avermelhadas, geralmente entre o 3º e o 5º dia pós-parto. Ocorre devido à estase láctea e pode ser evitado ou aliviado com amamentação frequente e ordenha manual.
-Lactogênese	O segundo estágio da fisiologia da lactação, correspondendo ao início da secreção de leite. É desencadeado pela queda dos níveis de estrogênio e progesterona após o parto, permitindo que a prolactina atue e inicie a produção láctea.
-Lactopoese	O terceiro estágio da fisiologia da lactação, que consiste na manutenção da produção de leite. Este processo depende da sucção contínua do bebê, que estimula a liberação de prolactina (para produção) e ocitocina (para ejeção).
-Loquiação (Lóquios)	Sangramento e secreção vaginal que ocorre após o parto, resultante da cicatrização da ferida placentária e da involução uterina. Sua coloração e composição mudam progressivamente de vermelha (rubra) para acastanhada (fusca), amarelada (flava) e branca (alba).
-Mamogênese	O primeiro estágio da fisiologia da lactação, que se refere ao desenvolvimento da glândula mamária. Inicia-se na puberdade e atinge seu desenvolvimento completo durante a gestação, sob a influência de hormônios como estrogênio, progesterona, prolactina e outros.
-Mastite	Processo inflamatório, que pode se tornar infeccioso, da mama lactante, geralmente unilateral e ocorrendo a partir da segunda semana pós-parto. Frequentemente é consequência de um ingurgitamento mamário não tratado ou de fissuras mamilares.
-Miotamponamento	Processo de hemostase natural no qual a contração e a retração das fibras musculares do miométrio comprimem (tamponam) os vasos sanguíneos uterinos após a saída da placenta, controlando o sangramento.
-Ocitocina	Hormônio liberado pela neuroipófise que, na lactação, atua nas células mioepiteliais dos alvéolos mamários, causando sua contração e a consequente ejeção ("descida") do leite. Também é fundamental para as contrações uterinas no pós-parto.
-Pega Correta	A forma adequada como o bebê abocanha a mama, envolvendo grande parte da aréola, com a boca bem aberta, lábios evertidos e queixo tocando o seio. É crucial para a extração eficiente de leite, satisfação do bebê e prevenção de dor e fissuras para a mãe.
-Prolactina (PRL)	Principal hormônio responsável pela produção de leite (lactogênese e lactopoese). Sua secreção pela hipófise é estimulada pela sucção do mamilo e inibe a ovulação, contribuindo para o espaçamento entre gestações.
-Puerpério	Período de 6 a 8 semanas após o parto, no qual ocorrem as manifestações involutivas dos órgãos reprodutivos e a readaptação do organismo materno à condição pré-gravídica. Divide-se em imediato, tardio e remoto.
+---
