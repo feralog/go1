@@ -292,6 +292,51 @@ const quizConfig = {
                 }
             }
         },
+        ped: {
+            id: "ped",
+            name: "Pediatria",
+            hasResumos: false,
+            hasGuias: false,
+            hasSubcategories: true,
+            subcategories: {
+                avc1: {
+                    id: "avc1",
+                    name: "AVC 1",
+                    modules: [
+                        {
+                            id: "prenatal_eca",
+                            name: "Pré-Natal e ECA",
+                            file: "subjects/Ped/AVC 1/PedQuestions/PreNatal+ECA"
+                        },
+                        {
+                            id: "aleitamento",
+                            name: "Aleitamento Materno",
+                            file: "subjects/Ped/AVC 1/PedQuestions/questoes-aleitamento-corrigidas"
+                        },
+                        {
+                            id: "crescimento",
+                            name: "Crescimento e Antropometria + DPNM",
+                            file: "subjects/Ped/AVC 1/PedQuestions/Crescimento_Antropometria+DPNM"
+                        },
+                        {
+                            id: "imunizacao",
+                            name: "Imunização",
+                            file: "subjects/Ped/AVC 1/PedQuestions/imunizacao"
+                        },
+                        {
+                            id: "ecopediatria",
+                            name: "Ecopediatria e Prevenção de Acidentes",
+                            file: "subjects/Ped/AVC 1/PedQuestions/questoes-ecopediatria-prevencao-acidentes-corrigidas"
+                        },
+                        {
+                            id: "saude_digital",
+                            name: "Saúde Digital e Telas",
+                            file: "subjects/Ped/AVC 1/PedQuestions/saudedigital_telas"
+                        }
+                    ]
+                }
+            }
+        },
         tc: {
             id: "tc",
             name: "Técnicas Cirúrgicas",

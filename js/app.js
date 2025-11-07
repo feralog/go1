@@ -129,6 +129,7 @@ function setupEventListeners() {
     document.getElementById('go-specialty-btn').addEventListener('click', () => selectSpecialty('go'));
     document.getElementById('cardio-specialty-btn').addEventListener('click', () => selectSpecialty('cardio'));
     document.getElementById('tc-specialty-btn').addEventListener('click', () => selectSpecialty('tc'));
+    document.getElementById('ped-specialty-btn').addEventListener('click', () => selectSpecialty('ped'));
     document.getElementById('clinica-specialty-btn').addEventListener('click', () => selectSpecialty('clinica'));
     document.getElementById('specialty-back-btn').addEventListener('click', showLoginScreen);
 
